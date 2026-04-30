@@ -14,7 +14,7 @@ export const DEPARTMENTS: Department[] = [
     careers: ["أخصائي تكنولوجيا تعليم", "أخصائي تطوير تكنولوجي", "مصمم برمجيات تعليمية", "أخصائي مكتبات ومراكز مصادر تعلم", "مصمم جرافيك ووسائط متعددة"],
     headOfDept: {
       name: "أ.د. نبيل السيد محمد حسن",
-      image: "/Faculty-of-Specific-Education/images/nabil-head.jpg",
+      image: "/Faculty-of-Specific-Education/images/doctors/nabil_elsayed.webp",
       role: "رئيس قسم تكنولوجيا ومنسق برنامج اعداد معلم الحاسب الآلي لذوى الاحتياجات الخاصة",
       gender: "male",
     },
@@ -83,7 +83,7 @@ export const DEPARTMENTS: Department[] = [
     careers: ["معلم تربية موسيقية", "مدرب كورال وعزف", "مؤلف وموزع موسيقي"],
     headOfDept: {
       name: "أ.د. هيام النجار",
-      image: "/Faculty-of-Specific-Education/images/staff/hayam_nagar.png",
+      image: "/Faculty-of-Specific-Education/images/doctors/hayam_nagar.webp",
       role: "رئيسة قسم التربية الموسيقية",
       gender: "female",
     },
@@ -131,7 +131,7 @@ export const DEPARTMENTS: Department[] = [
     careers: ["معلم تربية فنية", "فنان تشكيلي", "مصمم جرافيك وفنون", "صاحب مشروعات فنية صغيرة"],
     headOfDept: {
       name: "أ.د. معروف أحمد معروف",
-      image: "/Faculty-of-Specific-Education/images/staff/maarouf_ahmed.png",
+      image: "/Faculty-of-Specific-Education/images/doctors/maarouf_ahmed.webp",
       role: "رئيس قسم التربية الفنية",
       gender: "male",
     },
@@ -176,7 +176,7 @@ export const DEPARTMENTS: Department[] = [
     careers: ["معلمة اقتصاد منزلي", "أخصائية تغذية", "مصممة أزياء", "مديرة مؤسسات أسرية"],
     headOfDept: {
       name: "أ.د. إيناس السيد الدريدي",
-      image: "/Faculty-of-Specific-Education/images/doctors/enas.jpg",
+      image: "/Faculty-of-Specific-Education/images/doctors/enas_elderidy.webp",
       role: "رئيس قسم الاقتصاد المنزلي",
       gender: "female",
     },
@@ -221,7 +221,7 @@ export const DEPARTMENTS: Department[] = [
     careers: ["معلمة رياض أطفال", "أخصائية تعديل سلوك", "مصممة ألعاب وبرامج أطفال"],
     headOfDept: {
       name: "أ.د. أمل عبيد مصطفى",
-      image: "/Faculty-of-Specific-Education/images/staff/amal_obeid.png",
+      image: "/Faculty-of-Specific-Education/images/doctors/amal_obeid.webp",
       role: "رئيس قسم الطفولة المبكرة والتربية ومنسق برنامج إعداد معلم ذوى الاحتياجات الخاصة فى مرحلة الطفولة المبكرة",
       gender: "female",
     },
@@ -267,7 +267,7 @@ export const DEPARTMENTS: Department[] = [
     careers: ["أخصائي إعلام تربوي", "معد برامج تعليمية", "صحفي ومخرج مسرحي مدرسي"],
     headOfDept: {
       name: "أ.د. محمود منصور هيبة",
-      image: "/Faculty-of-Specific-Education/images/doctors/mahmoud_media.jpg",
+      image: "/Faculty-of-Specific-Education/images/doctors/mahmoud_mansour.webp",
       role: "رئيس قسم الإعلام التربوي",
       gender: "male",
     },
@@ -313,7 +313,7 @@ export const DEPARTMENTS: Department[] = [
     careers: ["باحث تربوي ونفسي", "أخصائي نشاط تعليمي", "مخطط مناهج"],
     headOfDept: {
       name: "أ.م.د. نهاد مرزوق قابيل",
-      image: "/Faculty-of-Specific-Education/images/doctors/nehad.jpg",
+      image: "/Faculty-of-Specific-Education/images/doctors/nehad_kabeel.webp",
       role: "القائمة بأعمال رئيسة قسم العلوم التربوية",
       gender: "female",
     },
@@ -356,7 +356,7 @@ export const DEPARTMENTS: Department[] = [
     careers: ["أخصائي مسرح مدرسي", "مخرج مسرحي تعليمي", "ممثل ومصمم ديكور مسرحي", "ناقد مسرحي"],
     headOfDept: {
       name: "أ.م.د. وجيه جرجس فرنسيس",
-      image: "/Faculty-of-Specific-Education/images/doctors/wagih.jpg",
+      image: "/Faculty-of-Specific-Education/images/doctors/wagih_gergis.webp",
       role: "القائم بأعمال رئيس قسم المسرح التربوي",
       gender: "male",
     },
@@ -399,7 +399,7 @@ export const DEPARTMENTS: Department[] = [
     careers: ["معلم تربية خاصة (طفولة)", "أخصائي تدخل مبكر", "مستشار دمج تعليمي"],
     headOfDept: {
       name: "أ.د. أمل عبيد",
-      image: "/Faculty-of-Specific-Education/images/doctors/amal.jpg",
+      image: "/Faculty-of-Specific-Education/images/doctors/amal_obeid.webp",
       role: "منسق البرنامج",
       gender: "female",
     },
@@ -420,7 +420,7 @@ export const DEPARTMENTS: Department[] = [
     careers: ["معلم حاسب آلي تربية خاصة", "مصمم تقنيات مساعدة"],
     headOfDept: {
       name: "د. هاني شفيق",
-      image: "/Faculty-of-Specific-Education/images/staff/hany_shafiq.jpg",
+      image: "/Faculty-of-Specific-Education/images/doctors/hany_shafiq.webp",
       role: "منسق برنامج إعداد معلم الحاسب الآلي لذوي الاحتياجات الخاصة",
       gender: "male",
     },
@@ -441,7 +441,7 @@ export const DEPARTMENTS: Department[] = [
     careers: ["معلم موسيقى تربية خاصة", "أخصائي علاج بالموسيقى"],
     headOfDept: {
       name: "أ.د. هيام النجار",
-      image: "/Faculty-of-Specific-Education/images/staff/hayam_nagar.png",
+      image: "/Faculty-of-Specific-Education/images/doctors/hayam_nagar.webp",
       role: "منسق برنامج إعداد معلم التربية الموسيقية لذوى الاحتياجات الخاصة",
       gender: "female",
     },
@@ -462,7 +462,7 @@ export const DEPARTMENTS: Department[] = [
     careers: ["أخصائي تخاطب", "أخصائي صعوبات تعلم", "مستشار دمج لغوي"],
     headOfDept: {
       name: "د. سارة نبيل السيد",
-      image: "/Faculty-of-Specific-Education/images/staff/sara_nabil.png",
+      image: "/Faculty-of-Specific-Education/images/doctors/sara_nabil.webp",
       role: "منسق برنامج إعداد أخصائي التخاطب واضطرابات النطق والكلام",
       gender: "female",
     },
@@ -485,7 +485,7 @@ export const FACULTY_MESSAGES = [
     name: "أ.د. نبيل السيد",
     role: "رئيس قسم تكنولوجيا التعليم",
     quote: "نسعى من خلال قسم تكنولوجيا التعليم إلى إعداد خريج قادر على مواكبة التحول الرقمي وتطوير الوسائط التعليمية الحديثة.",
-    image: "/Faculty-of-Specific-Education/images/nabil-head.jpg",
+    image: "/Faculty-of-Specific-Education/images/doctors/nabil_elsayed.webp",
     gender: "male" as const
   },
   {
@@ -493,7 +493,7 @@ export const FACULTY_MESSAGES = [
     name: "أ.د. أمل عبيد",
     role: "رئيسة قسم الطفولة المبكرة والتربية",
     quote: "نعمل على بناء شخصية الطفل في مراحلها الأولى وفق أحدث النظريات التربوية، مع التركيز على دمج ذوي الاحتياجات الخاصة.",
-    image: "/Faculty-of-Specific-Education/images/staff/amal_obeid.png ",
+    image: "/Faculty-of-Specific-Education/images/doctors/amal_obeid.webp",
     gender: "female" as const
   },
   {
@@ -501,7 +501,7 @@ export const FACULTY_MESSAGES = [
     name: "أ.د. هيام النجار",
     role: "رئيسة قسم التربية الموسيقية",
     quote: "الموسيقى هي لغة الروح، وفي كليتنا نصقل المواهب ونبني الكوادر الفنية القادرة على إثراء الوجدان المجتمعي.",
-    image: "/Faculty-of-Specific-Education/images/staff/hayam_nagar.png",
+    image: "/Faculty-of-Specific-Education/images/doctors/hayam_nagar.webp",
     gender: "female" as const
   },
   {
@@ -509,7 +509,7 @@ export const FACULTY_MESSAGES = [
     name: "أ.م.د. نهاد قابيل",
     role: "رئيسة قسم العلوم التربوية والنفسية",
     quote: "نركز على الجانب النفسي والتربوي لإعداد معلمين مؤهلين نفسياً وعلمياً للتعامل مع مختلف الفئات الطلابية.",
-    image: "/Faculty-of-Specific-Education/images/doctors/nehad.jpg",
+    image: "/Faculty-of-Specific-Education/images/doctors/nehad_kabeel.webp",
     gender: "female" as const
   },
   {
@@ -517,7 +517,7 @@ export const FACULTY_MESSAGES = [
     name: "أ.د. إيناس الدريدي",
     role: "رئيسة قسم الاقتصاد المنزلي",
     quote: "نهدف إلى تمكين المرأة والأسرة من خلال تدريب الكوادر في مجالات التغذية والنسيج وإدارة الموارد بأسلوب علمي متطور.",
-    image: "/Faculty-of-Specific-Education/images/doctors/enas.jpg",
+    image: "/Faculty-of-Specific-Education/images/doctors/enas_elderidy.webp",
     gender: "female" as const
   },
   {
@@ -525,7 +525,7 @@ export const FACULTY_MESSAGES = [
     name: "أ.د. وجيه جرجس",
     role: "رئيس قسم المسرح التربوي",
     quote: "نؤمن بأن المسرح وسيلة تربوية سامية لبناء الشخصية وتعديل السلوك وتنمية الوعي الوطني والجمالي لدى الطلاب.",
-    image: "/Faculty-of-Specific-Education/images/doctors/wagih.jpg",
+    image: "/Faculty-of-Specific-Education/images/doctors/wagih_gergis.webp",
     gender: "male" as const
   },
   {
@@ -533,7 +533,7 @@ export const FACULTY_MESSAGES = [
     name: "أ.د. محمود منصور",
     role: "رئيس قسم الإعلام التربوي",
     quote: "نسعى لإعداد أخصائي إعلامي تربوي متمكن من أدوات الاتصال الحديثة وقادر على نشر القيم التربوية في المجتمع.",
-    image: "/Faculty-of-Specific-Education/images/doctors/mahmoud_media.jpg",
+    image: "/Faculty-of-Specific-Education/images/doctors/mahmoud_mansour.webp",
     gender: "male" as const
   },
   {
@@ -549,7 +549,7 @@ export const FACULTY_MESSAGES = [
     name: "د. سارة نبيل السيد",
     role: "منسقة برنامج التخاطب",
     quote: "برامجنا النوعية تهدف لتقديم خدمة مجتمعية حقيقية من خلال تأهيل أخصائيين متميزين في علاج اضطرابات النطق.",
-    image: "/Faculty-of-Specific-Education/images/staff/sara_nabil.png",
+    image: "/Faculty-of-Specific-Education/images/doctors/sara_nabil.webp",
     gender: "female" as const
   },
   {
@@ -557,28 +557,28 @@ export const FACULTY_MESSAGES = [
     name: "د. هاني شفيق",
     role: "منسق برنامج الحاسب (ذوي احتياجات)",
     quote: "نسخر التكنولوجيا لتمكين ذوي القدرات الخاصة وتوفير أدوات تعليمية رقمية متطورة تفتح لهم آفاقاً جديدة للمستقبل.",
-    image: "/Faculty-of-Specific-Education/images/staff/hany_shafiq.jpg",
+    image: "/Faculty-of-Specific-Education/images/doctors/hany_shafiq.webp",
     gender: "male" as const
   }
 ];
 
 export const VIDEOS: VideoCard[] = [
-  { id: 1, title: "كلمة عميد الكلية", role: "أ.د. هاني شحته", thumbnail: "/Faculty-of-Specific-Education/images/dean_hany.jpg", videoUrl: "https://youtu.be/AYDX4SUiD78" },
-  { id: 2, title: "كلمة وكيل الكلية لشئون الدراسات العليا", role: "أ.د. بشري عبد الباقي", thumbnail: "/Faculty-of-Specific-Education/images/doctors/bushra.jpg", videoUrl: "https://youtu.be/oZ6IMKPO_DI" },
-  { id: 3, title: "كلمة رئيس قسم تكنولوجيا التعليم", role: "أ.د. نبيل السيد", thumbnail: "/Faculty-of-Specific-Education/images/nabil-head.jpg", videoUrl: "https://youtu.be/px_xR5sN6eo" },
-  { id: 4, title: "كلمة رئيسة قسم الطفولة المبكرة", role: "أ.د. أمل عبيد", thumbnail: "/Faculty-of-Specific-Education/images/doctors/amal.jpg", videoUrl: "https://youtu.be/2N270-UbKy4" },
-  { id: 5, title: "كلمة رئيسة قسم الاقتصاد المنزلي", role: "أ.د. إيناس الدريدي", thumbnail: "/Faculty-of-Specific-Education/images/doctors/enas.jpg", videoUrl: "https://youtu.be/VE8EYNoxzt8" },
-  { id: 6, title: "كلمة رئيس قسم التربية الموسيقية", role: "أ.د. محمد عبد الغفار", thumbnail: "/Faculty-of-Specific-Education/images/doctors/ghaffar.jpg", videoUrl: "https://youtu.be/9FIq7QrdyX8" },
-  { id: 7, title: "كلمة رئيس قسم الإعلام التربوي", role: "أ.د. محمود منصور", thumbnail: "/Faculty-of-Specific-Education/images/doctors/mahmoud_media.jpg", videoUrl: "https://youtu.be/nvUFAITadCg" },
-  { id: 8, title: "كلمة رئيسة قسم العلوم التربوية", role: "أ.م.د. نهاد قابيل", thumbnail: "/Faculty-of-Specific-Education/images/doctors/nehad.jpg", videoUrl: "https://youtu.be/oZ6IMKPO_DI" },
-  { id: 9, title: "كلمة منسق برنامج ذوي الاحتياجات الخاصة", role: "أ.د. أمل عبيد", thumbnail: "/Faculty-of-Specific-Education/images/staff/amal_obeid.png", videoUrl: "https://youtu.be/nGenIi1iimI" },
+  { id: 1, title: "كلمة عميد الكلية", role: "أ.د. هاني شحته", thumbnail: "/Faculty-of-Specific-Education/images/doctors/dean_hany.webp", videoUrl: "https://youtu.be/AYDX4SUiD78" },
+  { id: 2, title: "كلمة وكيل الكلية لشئون الدراسات العليا", role: "أ.د. بشري عبد الباقي", thumbnail: "/Faculty-of-Specific-Education/images/doctors/bushra.webp", videoUrl: "https://youtu.be/oZ6IMKPO_DI" },
+  { id: 3, title: "كلمة رئيس قسم تكنولوجيا التعليم", role: "أ.د. نبيل السيد", thumbnail: "/Faculty-of-Specific-Education/images/doctors/nabil_elsayed.webp", videoUrl: "https://youtu.be/px_xR5sN6eo" },
+  { id: 4, title: "كلمة رئيسة قسم الطفولة المبكرة", role: "أ.د. أمل عبيد", thumbnail: "/Faculty-of-Specific-Education/images/doctors/amal_obeid.webp", videoUrl: "https://youtu.be/2N270-UbKy4" },
+  { id: 5, title: "كلمة رئيسة قسم الاقتصاد المنزلي", role: "أ.د. إيناس الدريدي", thumbnail: "/Faculty-of-Specific-Education/images/doctors/enas_elderidy.webp", videoUrl: "https://youtu.be/VE8EYNoxzt8" },
+  { id: 6, title: "كلمة رئيس قسم التربية الموسيقية", role: "أ.د. محمد عبد الغفار", thumbnail: "/Faculty-of-Specific-Education/images/doctors/mohamed_abdelghaffar.webp", videoUrl: "https://youtu.be/9FIq7QrdyX8" },
+  { id: 7, title: "كلمة رئيس قسم الإعلام التربوي", role: "أ.د. محمود منصور", thumbnail: "/Faculty-of-Specific-Education/images/doctors/mahmoud_mansour.webp", videoUrl: "https://youtu.be/nvUFAITadCg" },
+  { id: 8, title: "كلمة رئيسة قسم العلوم التربوية", role: "أ.م.د. نهاد قابيل", thumbnail: "/Faculty-of-Specific-Education/images/doctors/nehad_kabeel.webp", videoUrl: "https://youtu.be/oZ6IMKPO_DI" },
+  { id: 9, title: "كلمة منسق برنامج ذوي الاحتياجات الخاصة", role: "أ.د. أمل عبيد", thumbnail: "/Faculty-of-Specific-Education/images/doctors/amal_obeid.webp", videoUrl: "https://youtu.be/nGenIi1iimI" },
 ];
 
 export const FACULTY_LEADERSHIP = [
   {
     name: "أ.د. هاني شحته إبراهيم",
     role: "عميد الكلية والقائم بعمل وكيل الكلية لشئون خدمة المجتمع",
-    image: "/Faculty-of-Specific-Education/images/dean_hany.jpg",
+    image: "/Faculty-of-Specific-Education/images/doctors/dean_hany.webp",
     gender: "male" as const
   },
   {
@@ -590,19 +590,19 @@ export const FACULTY_LEADERSHIP = [
   {
     name: "أ.د. ياسر جودة",
     role: "وكيل الكلية لشئون خدمة المجتمع وتنمية البيئة",
-    image: "/Faculty-of-Specific-Education/images/doctors/yasser.jpg",
+    image: "/Faculty-of-Specific-Education/images/doctors/yasser.webp",
     gender: "male" as const
   },
   {
     name: "أ.د. بشرى عبدالباقي",
     role: "وكيل الكلية لشئون الدراسات العليا والبحوث",
-    image: "/Faculty-of-Specific-Education/images/doctors/bushra.jpg",
+    image: "/Faculty-of-Specific-Education/images/doctors/bushra.webp",
     gender: "male" as const
   },
   {
     name: "د. هاني شفيق",
     role: "منسق برنامج إعداد معلم الحاسب الآلي لذوي الاحتياجات الخاصة",
-    image: "/Faculty-of-Specific-Education/images/staff/hany_shafiq.jpg",
+    image: "/Faculty-of-Specific-Education/images/doctors/hany_shafiq.webp",
     gender: "male" as const
   }
 ];

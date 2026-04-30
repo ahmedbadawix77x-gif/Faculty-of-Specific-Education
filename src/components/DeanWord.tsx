@@ -25,7 +25,7 @@ export default function DeanWord() {
               
               <div className="relative aspect-[4/5] rounded-[3.5rem] overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.15)] bg-gray-100 border-8 border-white">
                 <img 
-                  src="/Faculty-of-Specific-Education/images/dean_hany.jpg" 
+                  src="/Faculty-of-Specific-Education/images/doctors/dean_hany.webp" 
                   alt="أ.د. هاني شحته" 
                   className="w-full h-full object-cover relative z-10"
                   onError={(e) => {
