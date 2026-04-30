@@ -4,37 +4,19 @@ import { DEPARTMENTS } from "../data/constants";
 
 const GALLERY_IMAGES = [
   "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.30%20PM%20(1).webp",
-  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.30%20PM.webp",
   "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.32%20PM%20(1).webp",
-  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.32%20PM%20(2).webp",
-  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.32%20PM.webp",
   "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.33%20PM%20(1).webp",
-  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.33%20PM.webp",
   "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.35%20PM%20(1).webp",
-  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.35%20PM%20(2).webp",
-  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.35%20PM%20(3).webp",
-  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.35%20PM.webp",
   "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.36%20PM%20(1).webp",
-  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.36%20PM%20(2).webp",
-  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.36%20PM%20(3).webp",
-  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.36%20PM%20(4).webp",
-  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.36%20PM.webp",
   "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.37%20PM%20(1).webp",
-  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.37%20PM%20(2).webp",
-  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.37%20PM%20(3).webp",
-  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.37%20PM%20(4).webp",
-  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.37%20PM%20(5).webp",
-  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.37%20PM%20(6).webp",
-  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.37%20PM.webp",
   "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.38%20PM%20(1).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.36%20PM%20(2).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.37%20PM%20(2).webp",
   "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.38%20PM%20(2).webp",
-  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.38%20PM%20(3).webp",
-  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.38%20PM.webp",
 ];
 
 export default function About() {
   const getImagePath = (path: string) => {
-    // Check if we're on GitHub Pages
     const isGithubPages = window.location.hostname.includes('github.io');
     const repoName = '/Faculty-of-Specific-Education/';
     return isGithubPages ? repoName + path : '/' + path;
@@ -108,13 +90,13 @@ export default function About() {
         </div>
       </section>
 
-      {/* Departments Overview Section */}
-      <section className="py-24 bg-primary text-white overflow-hidden relative">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-[100px]" />
+      {/* Departments Overview Section - CHANGED TO LIGHT THEME */}
+      <section className="py-24 bg-gray-50 overflow-hidden relative">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-[100px]" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold font-arabic mb-4">أقسام <span className="text-accent">الكلية</span></h2>
-            <p className="text-white/60 font-arabic max-w-2xl mx-auto">تضم الكلية نخبة من الأقسام العلمية المتميزة التي تغطي مختلف المجالات التربوية والنوعية.</p>
+            <h2 className="text-4xl md:text-5xl font-bold font-arabic mb-4 text-primary">أقسام <span className="text-accent">الكلية</span></h2>
+            <p className="text-text-muted font-arabic max-w-2xl mx-auto">تضم الكلية نخبة من الأقسام العلمية المتميزة التي تغطي مختلف المجالات التربوية والنوعية.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -125,13 +107,13 @@ export default function About() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05 }}
-                className="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-all group"
+                className="bg-white border border-gray-100 p-8 rounded-3xl hover:border-accent/30 hover:shadow-xl hover:shadow-accent/5 transition-all group"
               >
                 <div className="w-12 h-12 bg-accent rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-accent/20">
                   <BookOpen className="text-white" size={24} />
                 </div>
-                <h4 className="text-xl font-bold mb-3 font-arabic group-hover:text-accent transition-colors">{dept.title}</h4>
-                <p className="text-white/60 text-sm font-arabic leading-relaxed line-clamp-3">{dept.description}</p>
+                <h4 className="text-xl font-bold mb-3 font-arabic text-primary group-hover:text-accent transition-colors">{dept.title}</h4>
+                <p className="text-text-muted text-sm font-arabic leading-relaxed line-clamp-3">{dept.description}</p>
               </motion.div>
             ))}
           </div>
