@@ -46,7 +46,7 @@ export default function About() {
 
   return (
     <div className="pt-24 min-h-screen bg-white" dir="rtl">
-      {/* Centered Hero Section */}
+      {/* Centered Hero Section - Clean & Simple */}
       <section className="relative pt-32 pb-20 overflow-hidden bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
@@ -72,36 +72,8 @@ export default function About() {
             transition={{ delay: 0.2 }}
             className="text-text-muted text-xl md:text-2xl font-arabic leading-relaxed max-w-2xl mx-auto"
           >
-            بوابة الإبداع والتميز الأكاديمي، نعد أجيالاً متميزة من المتخصصين وفقاً لأحدث المعايير العالمية.
+            صرح تعليمي متميز يهدف إلى إعداد أجيال مبدعة تساهم في بناء المستقبل من خلال برامج تعليمية نوعية مبتكرة.
           </motion.p>
-        </div>
-      </section>
-
-      {/* Main Entrance Image Section (صورة عادية محطوطة تحت) */}
-      <section className="pb-24 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="relative group"
-          >
-            {/* The Frame (البرواز) */}
-            <div className="bg-white p-4 rounded-[3rem] shadow-2xl border border-gray-100 overflow-hidden">
-              <div className="rounded-[2.5rem] overflow-hidden aspect-[21/9]">
-                <img 
-                  src={getImagePath("images/gallery/%D8%B5%D9%88%D8%B1%D9%87%20%D9%84%D9%84%D9%85%D8%AF%D8%AE%D9%84%20.webp")} 
-                  alt="مدخل الكلية" 
-                  className="w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1541339907198-e08756ebafe1?auto=format&fit=crop&q=80&w=1920";
-                  }}
-                />
-              </div>
-            </div>
-            {/* Decorative elements */}
-            <div className="absolute -z-10 -bottom-8 -right-8 w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
-          </motion.div>
         </div>
       </section>
 
