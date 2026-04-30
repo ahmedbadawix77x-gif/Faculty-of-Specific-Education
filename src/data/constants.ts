@@ -584,7 +584,7 @@ export const FACULTY_LEADERSHIP = [
   {
     name: "أ.د. غادة شاكر عبد الفتاح",
     role: "وكيل الكلية لشئون التعليم والطلاب",
-    image: "/Faculty-of-Specific-Education/images/logo.png",
+    image: "/Faculty-of-Specific-Education/images/doctors/doctor_9.webp",
     gender: "female" as const
   },
   {
@@ -597,7 +597,7 @@ export const FACULTY_LEADERSHIP = [
     name: "أ.د. بشرى عبدالباقي",
     role: "وكيل الكلية لشئون الدراسات العليا والبحوث",
     image: "/Faculty-of-Specific-Education/images/doctors/bushra.webp",
-    gender: "male" as const
+    gender: "female" as const
   },
   {
     name: "د. هاني شفيق",
