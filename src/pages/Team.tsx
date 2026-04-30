@@ -40,10 +40,8 @@ export default function Team() {
           <div className="bg-white rounded-[3rem] border border-gray-100 shadow-2xl shadow-blue-900/5 overflow-hidden">
             {/* Table Header - Desktop Only */}
             <div className="hidden md:grid grid-cols-12 bg-primary text-white p-8 font-arabic font-bold text-lg">
-              <div className="col-span-2 text-center">الصورة</div>
-              <div className="col-span-4 pr-8">الاسم</div>
-              <div className="col-span-4 pr-8">رقم الهاتف</div>
-              <div className="col-span-2 text-center">التواصل</div>
+              <div className="col-span-3 text-center">الصورة</div>
+              <div className="col-span-9 pr-8">الاسم</div>
             </div>
 
             {/* List Items */}
@@ -58,7 +56,7 @@ export default function Team() {
                   className="grid grid-cols-1 md:grid-cols-12 items-center p-6 md:p-8 hover:bg-blue-50/30 transition-all group"
                 >
                   {/* Image Area */}
-                  <div className="col-span-2 flex justify-center mb-4 md:mb-0">
+                  <div className="col-span-3 flex justify-center mb-4 md:mb-0">
                     <div className="relative">
                       <div className="absolute inset-0 bg-accent rounded-full blur-md opacity-0 group-hover:opacity-20 transition-opacity" />
                       <img
@@ -73,29 +71,11 @@ export default function Team() {
                   </div>
 
                   {/* Name Area */}
-                  <div className="col-span-4 pr-0 md:pr-8 text-center md:text-right">
-                    <h3 className="text-2xl font-bold text-primary font-arabic group-hover:text-accent transition-colors">
+                  <div className="col-span-9 pr-0 md:pr-8 text-center md:text-right">
+                    <h3 className="text-3xl font-bold text-primary font-arabic group-hover:text-accent transition-colors">
                       {member.name}
                     </h3>
-                    <p className="text-text-muted text-sm font-arabic mt-1">عضو فريق التطوير</p>
-                  </div>
-
-                  {/* Phone Area */}
-                  <div className="col-span-4 pr-0 md:pr-8 text-center md:text-right mt-2 md:mt-0">
-                    <div className="inline-flex items-center gap-3 bg-gray-50 px-4 py-2 rounded-xl group-hover:bg-accent/10 group-hover:text-accent transition-all">
-                      <Phone size={16} />
-                      <span className="font-sans font-bold tracking-wider">{member.phone}</span>
-                    </div>
-                  </div>
-
-                  {/* Action Area */}
-                  <div className="col-span-2 flex justify-center mt-4 md:mt-0">
-                    <a 
-                      href={`tel:${member.phone}`}
-                      className="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center hover:bg-accent transition-all hover:rotate-12 shadow-lg"
-                    >
-                      <ArrowLeft size={20} />
-                    </a>
+                    <p className="text-text-muted text-lg font-arabic mt-1">عضو فريق التطوير</p>
                   </div>
                 </motion.div>
               ))}
