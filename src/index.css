@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+@theme {
+  /* Brand Colors - Calm & Professional */
+  --color-primary: #0A2540;      /* Deep Navy */
+  --color-accent: #2563EB;       /* Royal Blue */
+  --color-accent-soft: #EFF6FF;  /* Very Light Blue */
+  --color-surface: #F8FAFC;      /* Ice White */
+  --color-text-muted: #64748B;   /* Slate Gray */
+  
+  /* Fonts */
+  --font-arabic: "IBM Plex Sans Arabic", sans-serif;
+  --font-sans: "Inter", sans-serif;
+
+  /* Timing & Easing for Calm Motion */
+  --ease-calm: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --duration-calm: 0.8s;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-surface text-primary antialiased;
+    font-family: var(--font-arabic);
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight text-primary;
+  }
+
+  /* Section Spacing Consistency */
+  section {
+    @apply py-24 md:py-32;
+  }
+}
+
+@layer components {
+  /* Controlled Animation Helper */
+  .reveal-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity var(--duration-calm) var(--ease-calm), 
+                transform var(--duration-calm) var(--ease-calm);
+  }
+
+  .reveal-up.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-lg border border-white/30 shadow-sm transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply bg-accent hover:bg-blue-700 text-white px-8 py-3 rounded-2xl font-bold transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-blue-600/10;
+  }
+}
+
+/* Scrollbar Style */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-surface;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-blue-100 rounded-full border-2 border-surface hover:bg-blue-200 transition-colors;
+}
