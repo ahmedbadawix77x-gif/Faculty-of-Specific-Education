@@ -100,9 +100,7 @@ export default function Footer() {
               © 2026 Faculty of Specific Education - Benha University. All rights reserved.
             </p>
             <div className="flex items-center gap-3">
-              <span className="text-primary/60 font-arabic text-sm font-bold">إعداد الطالب: أحمد بدوي</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-              <span className="text-accent font-sans text-xs font-bold tracking-wider">01011349615</span>
+              <span className="text-primary/60 font-arabic text-sm font-bold">إعداد طلاب كلية التربية النوعية</span>
             </div>
           </div>
           <div className="flex items-center gap-8">
