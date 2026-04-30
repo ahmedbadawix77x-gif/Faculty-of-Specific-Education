@@ -462,7 +462,7 @@ export const DEPARTMENTS: Department[] = [
     careers: ["أخصائي تخاطب", "أخصائي صعوبات تعلم", "مستشار دمج لغوي"],
     headOfDept: {
       name: "د. سارة نبيل السيد",
-      image: "/Faculty-of-Specific-Education/images/doctors/sara_nabil.webp",
+      image: "/Faculty-of-Specific-Education/images/logo.png",
       role: "منسق برنامج إعداد أخصائي التخاطب واضطرابات النطق والكلام",
       gender: "female",
     },
@@ -541,7 +541,7 @@ export const FACULTY_MESSAGES = [
     name: "أ.د. معروف أحمد معروف",
     role: "رئيس قسم التربية الفنية",
     quote: "الفن هو مرآة الحضارة، ونحن في قسم التربية الفنية نصقل الإبداع ونعد معلمين وفنانين قادرين على تجميل الحياة.",
-    image: "/Faculty-of-Specific-Education/images/art-head.jpg",
+    image: "/Faculty-of-Specific-Education/images/doctors/maarouf_ahmed.webp",
     gender: "male" as const
   },
   {
@@ -549,7 +549,7 @@ export const FACULTY_MESSAGES = [
     name: "د. سارة نبيل السيد",
     role: "منسقة برنامج التخاطب",
     quote: "برامجنا النوعية تهدف لتقديم خدمة مجتمعية حقيقية من خلال تأهيل أخصائيين متميزين في علاج اضطرابات النطق.",
-    image: "/Faculty-of-Specific-Education/images/doctors/sara_nabil.webp",
+    image: "/Faculty-of-Specific-Education/images/logo.png",
     gender: "female" as const
   },
   {
@@ -584,7 +584,7 @@ export const FACULTY_LEADERSHIP = [
   {
     name: "أ.د. غادة شاكر عبد الفتاح",
     role: "وكيل الكلية لشئون التعليم والطلاب",
-    image: "/Faculty-of-Specific-Education/images/doctors/ghada.jpg",
+    image: "/Faculty-of-Specific-Education/images/logo.png",
     gender: "female" as const
   },
   {
