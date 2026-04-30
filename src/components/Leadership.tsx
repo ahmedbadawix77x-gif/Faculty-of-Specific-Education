@@ -5,7 +5,7 @@ import StaffCard from "./StaffCard";
 
 export default function Leadership() {
   const deptHeads = DEPARTMENTS
-    .filter(dept => !dept.isProgram)
+    .filter(dept => !dept.isProgram || dept.id === 'prog-speech-therapy')
     .map(dept => ({
       ...dept.headOfDept,
       deptTitle: dept.title
