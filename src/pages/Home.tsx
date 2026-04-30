@@ -4,6 +4,7 @@ import Departments from "../components/Departments";
 import Videos from "../components/Videos";
 import Leadership from "../components/Leadership";
 import Testimonials from "../components/Testimonials";
+import CollegeGallery from "../components/CollegeGallery";
 import Contact from "../components/Contact";
 import { Department } from "../types";
 
@@ -16,6 +17,7 @@ export default function Home() {
       <Videos />
       <Leadership />
       <Testimonials />
+      <CollegeGallery />
       <Contact />
     </main>
   );
