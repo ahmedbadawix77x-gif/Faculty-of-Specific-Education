@@ -46,46 +46,73 @@ export default function About() {
 
   return (
     <div className="pt-24 min-h-screen bg-white" dir="rtl">
-      {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+      {/* Hero Section with Premium Frame */}
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
         {/* Entrance Image Background */}
         <div className="absolute inset-0 z-0">
           <img 
             src={getImagePath("images/gallery/%D8%B5%D9%88%D8%B1%D9%87%20%D9%84%D9%84%D9%85%D8%AF%D8%AE%D9%84%20.webp")} 
             alt="مدخل الكلية" 
-            className="w-full h-full object-cover transition-transform duration-[20s] scale-110"
+            className="w-full h-full object-cover"
             onError={(e) => {
               (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1541339907198-e08756ebafe1?auto=format&fit=crop&q=80&w=1920";
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/40 to-white z-10" />
+          <div className="absolute inset-0 bg-primary/40 backdrop-blur-[2px] z-10" />
         </div>
 
-        <div className="relative z-20 max-w-7xl mx-auto px-6 text-center">
+        <div className="relative z-20 max-w-5xl mx-auto px-6 w-full">
+          {/* The Premium Frame (البرواز) */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-accent/20 backdrop-blur-md text-white border border-white/20 font-bold text-xs uppercase tracking-widest mb-8 shadow-2xl"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-[3rem] p-8 md:p-20 shadow-2xl relative overflow-hidden group"
           >
-            <Sparkles size={14} className="text-accent" />
-            <span>نبذة عن الصرح التعليمي</span>
+            {/* Decorative Corner Ornaments */}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-accent/20 blur-3xl -translate-y-16 translate-x-16 rounded-full" />
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-blue-500/20 blur-3xl translate-y-16 -translate-x-16 rounded-full" />
+            
+            <div className="relative z-10 text-center">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.3 }}
+                className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-white/10 text-white border border-white/20 font-bold text-sm uppercase tracking-widest mb-10"
+              >
+                <Sparkles size={16} className="text-accent" />
+                <span className="font-arabic">صرح تعليمي متميز</span>
+              </motion.div>
+              
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="text-4xl md:text-7xl font-bold text-white mb-8 font-arabic leading-[1.2]"
+              >
+                كلية <span className="text-accent">التربية النوعية</span>
+                <span className="block text-2xl md:text-4xl mt-4 opacity-90">بجامعة بنها</span>
+              </motion.h1>
+              
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+                className="w-24 h-1 bg-accent mx-auto mb-8 rounded-full"
+              />
+              
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+                className="text-white/80 text-lg md:text-2xl font-arabic max-w-2xl mx-auto leading-relaxed"
+              >
+                إعداد أجيال مبدعة تساهم في بناء المستقبل من خلال برامج تعليمية نوعية مبتكرة.
+              </motion.p>
+            </div>
+            
+            {/* Inner Border Frame */}
+            <div className="absolute inset-4 border border-white/5 rounded-[2.5rem] pointer-events-none" />
           </motion.div>
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-6xl md:text-8xl font-bold text-white mb-8 font-arabic leading-tight drop-shadow-2xl"
-          >
-            كلية <span className="text-accent italic">التربية النوعية</span>
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="text-white/90 text-xl md:text-2xl font-arabic max-w-3xl mx-auto leading-relaxed font-medium drop-shadow-lg"
-          >
-            بوابة الإبداع والتميز الأكاديمي بجامعة بنها
-          </motion.p>
         </div>
       </section>
 
