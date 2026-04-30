@@ -3,12 +3,32 @@ import { Sparkles, History, Target, Eye, BookOpen } from "lucide-react";
 import { DEPARTMENTS } from "../data/constants";
 
 const GALLERY_IMAGES = [
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.30%20PM%20(1).webp",
   "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.30%20PM.webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.32%20PM%20(1).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.32%20PM%20(2).webp",
   "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.32%20PM.webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.33%20PM%20(1).webp",
   "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.33%20PM.webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.35%20PM%20(1).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.35%20PM%20(2).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.35%20PM%20(3).webp",
   "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.35%20PM.webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.36%20PM%20(1).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.36%20PM%20(2).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.36%20PM%20(3).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.36%20PM%20(4).webp",
   "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.36%20PM.webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.37%20PM%20(1).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.37%20PM%20(2).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.37%20PM%20(3).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.37%20PM%20(4).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.37%20PM%20(5).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.37%20PM%20(6).webp",
   "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.37%20PM.webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.38%20PM%20(1).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.38%20PM%20(2).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.38%20PM%20(3).webp",
   "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.38%20PM.webp",
 ];
 
@@ -133,33 +153,29 @@ export default function About() {
             <p className="text-text-muted font-arabic max-w-xl mx-auto">استكشف مرافق الكلية، المعامل المتطورة، والبيئة التعليمية المحفزة للإبداع والتميز.</p>
           </div>
 
-          <div className="space-y-20">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
             {GALLERY_IMAGES.map((img, idx) => (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                className="relative group"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: (idx % 4) * 0.1 }}
+                className="relative group cursor-pointer"
               >
-                <div className="relative aspect-[21/9] rounded-[3rem] overflow-hidden shadow-2xl shadow-blue-900/10 border-8 border-white">
+                <div className="relative aspect-square rounded-2xl md:rounded-[2rem] overflow-hidden shadow-lg border-2 md:border-4 border-white">
                   <img 
                     src={getImagePath(img)} 
                     alt={`Gallery ${idx}`} 
-                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     onError={(e) => {
-                      (e.target as HTMLImageElement).src = `https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1200&auto=format&fit=crop&sig=${idx}`;
+                      (e.target as HTMLImageElement).src = `https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=400&auto=format&fit=crop&sig=${idx}`;
                     }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 flex items-end p-16">
-                    <div className="translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
-                      <h3 className="text-white text-3xl font-bold font-arabic mb-2">أروقة الكلية</h3>
-                      <p className="text-white/70 font-arabic">لقطة تعكس جمال البيئة التعليمية داخل الكلية</p>
-                    </div>
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <Sparkles className="text-white w-6 h-6 md:w-8 md:h-8" />
                   </div>
                 </div>
-                {/* Decorative background element */}
-                <div className="absolute -z-10 -bottom-6 -right-6 w-1/3 h-full bg-accent/5 rounded-[3rem] blur-2xl" />
               </motion.div>
             ))}
           </div>
