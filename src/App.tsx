@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Preloader from "./components/Preloader";
 import Navbar from "./components/Navbar";
@@ -29,7 +29,7 @@ export default function App() {
   }, []);
 
   return (
-    <Router basename="/Faculty-of-Specific-Education/">
+    <Router>
       <ScrollToTop />
       <div className="min-h-screen bg-white selection:bg-blue-100 selection:text-blue-900">
         <Preloader />

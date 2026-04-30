@@ -50,13 +50,22 @@ export default function VideoPlayer({ videoUrl, poster, title }: VideoPlayerProp
 
   if (!videoUrl) {
     return (
-      <div className="relative aspect-video overflow-hidden rounded-t-[2rem]">
+      <div className="relative aspect-video overflow-hidden rounded-t-[2rem] group/player">
         <img
           src={getSafeImage(poster, 'dept')}
           alt={title}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           loading="lazy"
         />
+        {/* Play Icon Placeholder */}
+        <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover/player:bg-black/0 transition-colors">
+          <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-white/50 group-hover/player:scale-110 transition-transform duration-500">
+            <Play className="text-accent fill-accent ml-1" size={28} />
+          </div>
+        </div>
+        <div className="absolute bottom-4 right-4 left-4 text-center">
+          <span className="text-white text-[10px] font-arabic bg-black/40 backdrop-blur-md px-3 py-1 rounded-full opacity-0 group-hover/player:opacity-100 transition-opacity">قريباً</span>
+        </div>
       </div>
     );
   }
