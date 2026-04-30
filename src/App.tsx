@@ -29,7 +29,7 @@ export default function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/Faculty-of-Specific-Education/">
       <ScrollToTop />
       <div className="min-h-screen bg-white selection:bg-blue-100 selection:text-blue-900">
         <Preloader />
