@@ -104,9 +104,9 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="p-8 rounded-[2rem] bg-gray-50/50 border border-transparent hover:border-accent/20 transition-all group"
+                className="p-8 rounded-[2rem] bg-white border border-gray-100 hover:border-accent/20 transition-all group shadow-sm"
               >
-                <div className="w-16 h-16 rounded-2xl bg-accent/10 text-accent flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 rounded-2xl bg-white border border-accent/10 text-accent flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-sm">
                   <item.icon size={32} />
                 </div>
                 <h3 className="text-2xl font-bold text-primary mb-4 font-arabic">{item.title}</h3>
@@ -117,9 +117,8 @@ export default function About() {
         </div>
       </section>
 
-      {/* Departments Overview Section - CHANGED TO LIGHT THEME */}
-      <section className="py-24 bg-gray-50 overflow-hidden relative">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-[100px]" />
+      {/* Departments Overview Section - Pure White Theme */}
+      <section className="py-24 bg-white overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold font-arabic mb-4 text-primary">أقسام <span className="text-accent">الكلية</span></h2>
@@ -155,9 +154,9 @@ export default function About() {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="inline-block p-4 bg-accent/5 rounded-3xl mb-6"
+              className="mb-6"
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-primary font-arabic"><span className="text-accent">جولة</span> بصرية في الكلية</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-primary font-arabic">جولة بصرية في الكلية</h2>
             </motion.div>
             <p className="text-text-muted font-arabic max-w-xl mx-auto">استكشف مرافق الكلية، المعامل المتطورة، والبيئة التعليمية المحفزة للإبداع والتميز.</p>
           </div>
