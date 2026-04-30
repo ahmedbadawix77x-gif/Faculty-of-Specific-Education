@@ -604,5 +604,11 @@ export const FACULTY_LEADERSHIP = [
     role: "منسق برنامج إعداد معلم الحاسب الآلي لذوي الاحتياجات الخاصة",
     image: "/Faculty-of-Specific-Education/images/doctors/hany_shafiq.webp",
     gender: "male" as const
+  },
+  {
+    name: "د. سارة نبيل السيد",
+    role: "منسق برنامج إعداد أخصائي التخاطب واضطرابات النطق والكلام",
+    image: "/Faculty-of-Specific-Education/images/doctors/sara_nabil.webp",
+    gender: "female" as const
   }
 ];
