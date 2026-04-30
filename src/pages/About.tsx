@@ -46,73 +46,83 @@ export default function About() {
 
   return (
     <div className="pt-24 min-h-screen bg-white" dir="rtl">
-      {/* Hero Section with Premium Frame */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-        {/* Entrance Image Background */}
-        <div className="absolute inset-0 z-0">
-          <img 
-            src={getImagePath("images/gallery/%D8%B5%D9%88%D8%B1%D9%87%20%D9%84%D9%84%D9%85%D8%AF%D8%AE%D9%84%20.webp")} 
-            alt="مدخل الكلية" 
-            className="w-full h-full object-cover"
-            onError={(e) => {
-              (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1541339907198-e08756ebafe1?auto=format&fit=crop&q=80&w=1920";
-            }}
-          />
-          <div className="absolute inset-0 bg-primary/40 backdrop-blur-[2px] z-10" />
-        </div>
+      {/* Modern Split Hero Section */}
+      <section className="relative pt-20 pb-32 overflow-hidden bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Text Side */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-right"
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent font-bold text-xs uppercase tracking-widest mb-8">
+                <Sparkles size={14} />
+                <span>عن كليتنا</span>
+              </div>
+              <h1 className="text-5xl md:text-7xl font-bold text-primary mb-8 font-arabic leading-tight">
+                كلية <span className="text-accent">التربية النوعية</span> <br />
+                بجامعة بنها
+              </h1>
+              <div className="w-20 h-2 bg-accent mb-8 rounded-full" />
+              <p className="text-text-muted text-xl font-arabic leading-relaxed mb-10 max-w-xl">
+                صرح تعليمي عريق يجمع بين الأصالة والابتكار، نهدف من خلاله لإعداد كوادر مؤهلة متميز في المجالات النوعية المختلفة وفقاً لأحدث المعايير.
+              </p>
+              <div className="flex items-center gap-6">
+                <div className="flex -space-x-4 space-x-reverse">
+                  {[1, 2, 3, 4].map(i => (
+                    <div key={i} className="w-12 h-12 rounded-full border-4 border-white bg-gray-200 overflow-hidden shadow-sm">
+                      <img src={`https://i.pravatar.cc/150?u=${i}`} alt="Avatar" />
+                    </div>
+                  ))}
+                  <div className="w-12 h-12 rounded-full border-4 border-white bg-accent text-white flex items-center justify-center text-xs font-bold shadow-sm">
+                    +500
+                  </div>
+                </div>
+                <div className="text-sm font-arabic text-text-muted">
+                  <span className="block font-bold text-primary">أكثر من 500 طالب</span>
+                  خريجون سنوياً
+                </div>
+              </div>
+            </motion.div>
 
-        <div className="relative z-20 max-w-5xl mx-auto px-6 w-full">
-          {/* The Premium Frame (البرواز) */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-[3rem] p-8 md:p-20 shadow-2xl relative overflow-hidden group"
-          >
-            {/* Decorative Corner Ornaments */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-accent/20 blur-3xl -translate-y-16 translate-x-16 rounded-full" />
-            <div className="absolute bottom-0 left-0 w-32 h-32 bg-blue-500/20 blur-3xl translate-y-16 -translate-x-16 rounded-full" />
-            
-            <div className="relative z-10 text-center">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.3 }}
-                className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-white/10 text-white border border-white/20 font-bold text-sm uppercase tracking-widest mb-10"
-              >
-                <Sparkles size={16} className="text-accent" />
-                <span className="font-arabic">صرح تعليمي متميز</span>
-              </motion.div>
+            {/* Image Side - The Elegant Frame (البرواز) */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              {/* Decorative Background Elements */}
+              <div className="absolute -top-12 -right-12 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
+              <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl" />
               
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-                className="text-4xl md:text-7xl font-bold text-white mb-8 font-arabic leading-[1.2]"
-              >
-                كلية <span className="text-accent">التربية النوعية</span>
-                <span className="block text-2xl md:text-4xl mt-4 opacity-90">بجامعة بنها</span>
-              </motion.h1>
-              
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
-                className="w-24 h-1 bg-accent mx-auto mb-8 rounded-full"
-              />
-              
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6 }}
-                className="text-white/80 text-lg md:text-2xl font-arabic max-w-2xl mx-auto leading-relaxed"
-              >
-                إعداد أجيال مبدعة تساهم في بناء المستقبل من خلال برامج تعليمية نوعية مبتكرة.
-              </motion.p>
-            </div>
-            
-            {/* Inner Border Frame */}
-            <div className="absolute inset-4 border border-white/5 rounded-[2.5rem] pointer-events-none" />
-          </motion.div>
+              {/* The Frame (البرواز) */}
+              <div className="relative z-10 p-4 bg-white rounded-[3rem] shadow-2xl border border-gray-100 rotate-2 hover:rotate-0 transition-transform duration-700">
+                <div className="rounded-[2.5rem] overflow-hidden aspect-[4/3]">
+                  <img 
+                    src={getImagePath("images/gallery/%D8%B5%D9%88%D8%B1%D9%87%20%D9%84%D9%84%D9%85%D8%AF%D8%AE%D9%84%20.webp")} 
+                    alt="مدخل الكلية" 
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1541339907198-e08756ebafe1?auto=format&fit=crop&q=80&w=1920";
+                    }}
+                  />
+                </div>
+                {/* Overlay Badge */}
+                <div className="absolute bottom-12 -right-6 bg-white p-6 rounded-2xl shadow-xl border border-gray-50 flex items-center gap-4">
+                  <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center text-accent">
+                    <History size={24} />
+                  </div>
+                  <div className="text-right">
+                    <span className="block text-[10px] text-text-muted uppercase font-sans font-bold">Established</span>
+                    <span className="text-xl font-bold text-primary">1990</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
