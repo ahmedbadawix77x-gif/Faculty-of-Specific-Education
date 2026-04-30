@@ -101,7 +101,7 @@ export default function Hero() {
       <VideoModal 
         isOpen={showVideo} 
         onClose={() => setShowVideo(false)} 
-        videoUrl="https://www.youtube.com/embed/zNf274_H3vM" 
+        videoUrl="https://www.youtube.com/embed/AYDX4SUiD78" 
         title="كلمة السيد الأستاذ الدكتور هاني شحته - عميد الكلية"
       />
 

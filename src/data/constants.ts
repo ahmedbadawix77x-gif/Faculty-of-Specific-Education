@@ -564,7 +564,7 @@ export const FACULTY_MESSAGES = [
 
 export const VIDEOS: VideoCard[] = [
   { id: 1, title: "كلمة عميد الكلية", role: "أ.د. هاني شحته", thumbnail: "/Faculty-of-Specific-Education/images/doctors/dean_hany.webp", videoUrl: "https://youtu.be/AYDX4SUiD78" },
-  { id: 2, title: "كلمة وكيل الكلية لشئون الدراسات العليا", role: "أ.د. بشري عبد الباقي", thumbnail: "/Faculty-of-Specific-Education/images/doctors/bushra.webp", videoUrl: "https://youtube.com/shorts/P031X4zvZ3A?feature=share" },
+  { id: 2, title: "كلمة وكيل الكلية لشئون الدراسات العليا", role: "أ.د. بشري عبد الباقي", thumbnail: "/Faculty-of-Specific-Education/images/doctors/bushra.webp", videoUrl: "https://www.youtube.com/embed/P031X4zvZ3A" },
   { id: 3, title: "كلمة رئيس قسم تكنولوجيا التعليم", role: "أ.د. نبيل السيد", thumbnail: "/Faculty-of-Specific-Education/images/doctors/nabil_elsayed.webp", videoUrl: "https://youtu.be/px_xR5sN6eo" },
   { id: 4, title: "كلمة رئيسة قسم الطفولة المبكرة", role: "أ.د. أمل عبيد", thumbnail: "/Faculty-of-Specific-Education/images/doctors/amal_obeid.webp", videoUrl: "https://youtu.be/2N270-UbKy4" },
   { id: 5, title: "كلمة رئيسة قسم الاقتصاد المنزلي", role: "أ.د. إيناس الدريدي", thumbnail: "/Faculty-of-Specific-Education/images/doctors/enas_elderidy.webp", videoUrl: "https://youtu.be/VE8EYNoxzt8" },
