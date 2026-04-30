@@ -96,12 +96,7 @@ export default function Footer() {
 
         <div className="pt-12 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex flex-col items-center md:items-start gap-2">
-            <p className="text-text-muted/40 text-[10px] font-sans font-bold uppercase tracking-widest">
-              © 2026 Faculty of Specific Education - Benha University. All rights reserved.
-            </p>
-            <div className="flex items-center gap-3">
-              <span className="text-primary/60 font-arabic text-sm font-bold">إعداد طلاب كلية التربية النوعية</span>
-            </div>
+            {/* Attribution removed as requested */}
           </div>
           <div className="flex items-center gap-8">
             <a href="#" className="text-text-muted/40 hover:text-accent transition-colors text-[10px] font-arabic font-bold uppercase tracking-widest">سياسة الخصوصية</a>
