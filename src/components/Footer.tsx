@@ -40,15 +40,14 @@ export default function Footer() {
             <h4 className="text-primary font-bold mb-8 font-arabic text-lg">روابط سريعة</h4>
             <ul className="space-y-4">
               {[
-                { name: "الرئيسية", href: "#home" },
+                { name: "الرئيسية", href: "/" },
                 { name: "عن الكلية", href: "/about" },
-                { name: "الأقسام العلمية", href: "#departments" },
-                { name: "شروط القبول واللوائح", href: "/regulations" },
-                { name: "البرامج النوعية", href: "/programs" },
-                { name: "تواصل معنا", href: "#contact" },
+                { name: "الأقسام العلمية", href: "/#departments" },
+                { name: "أعضاء الجروب", href: "/team" },
+                { name: "تواصل معنا", href: "/#contact" },
               ].map((link) => (
                 <li key={link.name}>
-                  {link.href.startsWith("/") ? (
+                  {link.href.startsWith("/") && !link.href.includes('#') ? (
                     <Link 
                       to={link.href} 
                       className="text-text-muted hover:text-accent transition-colors text-sm font-arabic font-medium"
@@ -56,47 +55,41 @@ export default function Footer() {
                       {link.name}
                     </Link>
                   ) : (
-                    <a 
-                      href={link.href} 
+                    <button 
+                      onClick={() => {
+                        const [path, hash] = link.href.split('#');
+                        if (window.location.pathname !== path) {
+                          window.location.href = link.href;
+                        } else {
+                          document.getElementById(hash)?.scrollIntoView({ behavior: 'smooth' });
+                        }
+                      }}
                       className="text-text-muted hover:text-accent transition-colors text-sm font-arabic font-medium"
                     >
                       {link.name}
-                    </a>
+                    </button>
                   )}
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Social Media and Info */}
           <div>
-            <h4 className="text-primary font-bold mb-8 font-arabic text-lg">خدمات إلكترونية</h4>
-            <ul className="space-y-4">
-              {["منصة التعلم", "نتائج الطلاب", "البريد الجامعي", "بوابة الموظفين", "المجلة العلمية"].map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-text-muted hover:text-accent transition-colors text-sm font-arabic font-medium">
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Newsletter */}
-          <div>
-            <h4 className="text-primary font-bold mb-8 font-arabic text-lg">النشرة الإخبارية</h4>
+            <h4 className="text-primary font-bold mb-8 font-arabic text-lg">تواصل معنا</h4>
             <p className="text-text-muted text-sm font-arabic mb-6 leading-relaxed">
-              اشترك معنا ليصلك كل جديد عن أخبار وفعاليات الكلية.
+              يمكنك متابعتنا على منصات التواصل الاجتماعي لمعرفة آخر الأخبار.
             </p>
-            <div className="relative">
-              <input
-                type="email"
-                placeholder="بريدك الإلكتروني..."
-                className="w-full bg-surface border border-gray-100 rounded-2xl px-6 py-4 text-primary focus:border-accent focus:outline-none transition-all font-arabic shadow-sm placeholder:text-text-muted/50"
-              />
-              <button className="absolute left-2 top-2 bottom-2 px-6 bg-accent hover:bg-blue-700 text-white rounded-xl transition-all font-arabic text-xs font-bold">
-                اشترك
-              </button>
+            <div className="flex items-center gap-4">
+              {[Facebook, Twitter, Instagram, Youtube].map((Icon, i) => (
+                <a
+                  key={i}
+                  href="#"
+                  className="w-12 h-12 bg-gray-50 hover:bg-accent text-primary hover:text-white rounded-2xl flex items-center justify-center transition-all shadow-sm border border-gray-100"
+                >
+                  <Icon className="w-5 h-5" />
+                </a>
+              ))}
             </div>
           </div>
         </div>
