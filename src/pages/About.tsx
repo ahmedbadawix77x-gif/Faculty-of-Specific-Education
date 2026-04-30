@@ -3,16 +3,38 @@ import { Sparkles, History, Target, Eye, BookOpen } from "lucide-react";
 import { DEPARTMENTS } from "../data/constants";
 
 const GALLERY_IMAGES = [
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.05.06%20PM%20(1).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.05.06%20PM.webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.05.07%20PM%20(2).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.05.07%20PM.webp",
   "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.30%20PM%20(1).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.30%20PM.webp",
   "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.32%20PM%20(1).webp",
-  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.33%20PM%20(1).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.32%20PM%20(2).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.32%20PM.webp",
   "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.35%20PM%20(1).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.35%20PM%20(2).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.35%20PM%20(3).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.35%20PM.webp",
   "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.36%20PM%20(1).webp",
-  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.37%20PM%20(1).webp",
-  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.38%20PM%20(1).webp",
   "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.36%20PM%20(2).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.36%20PM%20(3).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.36%20PM%20(4).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.36%20PM.webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.37%20PM%20(1).webp",
   "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.37%20PM%20(2).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.37%20PM%20(3).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.37%20PM%20(4).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.37%20PM%20(5).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.37%20PM%20(6).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.37%20PM.webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.38%20PM%20(1).webp",
   "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.38%20PM%20(2).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.38%20PM%20(3).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.09.38%20PM.webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.11.06%20PM.webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.11.07%20PM%20(1).webp",
+  "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.11.07%20PM%20(2).webp",
 ];
 
 export default function About() {
@@ -25,28 +47,45 @@ export default function About() {
   return (
     <div className="pt-24 min-h-screen bg-white" dir="rtl">
       {/* Hero Section */}
-      <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-blue-50/50 -z-10" />
-        <div className="max-w-7xl mx-auto px-6 text-center">
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+        {/* Entrance Image Background */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={getImagePath("images/gallery/%D8%B5%D9%88%D8%B1%D9%87%20%D9%84%D9%84%D9%85%D8%AF%D8%AE%D9%84%20.webp")} 
+            alt="مدخل الكلية" 
+            className="w-full h-full object-cover transition-transform duration-[20s] scale-110"
+            onError={(e) => {
+              (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1541339907198-e08756ebafe1?auto=format&fit=crop&q=80&w=1920";
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/40 to-white z-10" />
+        </div>
+
+        <div className="relative z-20 max-w-7xl mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent font-bold text-xs uppercase tracking-widest mb-6"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-accent/20 backdrop-blur-md text-white border border-white/20 font-bold text-xs uppercase tracking-widest mb-8 shadow-2xl"
           >
-            <Sparkles size={14} />
-            <span>عن كليتنا</span>
+            <Sparkles size={14} className="text-accent" />
+            <span>نبذة عن الصرح التعليمي</span>
           </motion.div>
           <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-6xl md:text-8xl font-bold text-white mb-8 font-arabic leading-tight drop-shadow-2xl"
+          >
+            كلية <span className="text-accent italic">التربية النوعية</span>
+          </motion.h1>
+          <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-5xl md:text-7xl font-bold text-primary mb-8 font-arabic leading-tight"
+            transition={{ delay: 0.3 }}
+            className="text-white/90 text-xl md:text-2xl font-arabic max-w-3xl mx-auto leading-relaxed font-medium drop-shadow-lg"
           >
-            منارة العلم والتميز <br /> <span className="text-accent">بجامعة بنها</span>
-          </motion.h1>
-          <p className="text-text-muted text-lg font-arabic max-w-3xl mx-auto leading-relaxed">
-            تعتبر كلية التربية النوعية بجامعة بنها من الكليات الرائدة التي تهدف إلى إعداد معلم متميز في مجالات التربية الفنية والموسيقية والاقتصاد المنزلي وتكنولوجيا التعليم والإعلام التربوي، وفقاً لأحدث المعايير العالمية.
-          </p>
+            بوابة الإبداع والتميز الأكاديمي بجامعة بنها
+          </motion.p>
         </div>
       </section>
 
