@@ -31,13 +31,11 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "الرئيسية", href: "#home" },
-    { name: "عن الكلية", href: "/about", isExternal: true },
+    { name: "الرئيسية", href: "/" },
+    { name: "عن الكلية", href: "/about" },
     { name: "الأقسام", href: "#departments" },
-    { name: "البرامج النوعية", href: "/programs", isExternal: true },
-    { name: "شروط القبول واللوائح", href: "/regulations", isExternal: true },
-    { name: "الفيديوهات", href: "#videos" },
-    { name: "القيادات", href: "#leadership" },
+    { name: "أعضاء الجروب", href: "/team" },
+    { name: "معرض الصور", href: "/about#gallery" },
     { name: "تواصل معنا", href: "#contact" },
   ];
 
@@ -65,36 +63,60 @@ export default function Navbar() {
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            link.isExternal ? (
-              <Link
-                key={link.name}
-                to={link.href}
-                className="text-primary/70 hover:text-accent transition-colors font-medium text-sm font-arabic cursor-pointer"
-              >
-                {link.name}
-              </Link>
-            ) : (
+          {navLinks.map((link) => {
+            const isRoute = link.href.startsWith('/') && !link.href.includes('#');
+            const isHashInRoute = link.href.includes('#');
+
+            if (isRoute) {
+              return (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className={cn(
+                    "text-primary/70 hover:text-accent transition-colors font-medium text-sm font-arabic",
+                    location.pathname === link.href && "text-accent font-bold"
+                  )}
+                >
+                  {link.name}
+                </Link>
+              );
+            }
+
+            return (
               <button
                 key={link.name}
                 onClick={() => {
-                  if (location.pathname !== "/") {
-                    navigate("/");
-                    setTimeout(() => {
-                      const el = document.querySelector(link.href);
+                  if (isHashInRoute) {
+                    const [path, hash] = link.href.split('#');
+                    if (location.pathname !== path) {
+                      navigate(path);
+                      setTimeout(() => {
+                        const el = document.getElementById(hash);
+                        el?.scrollIntoView({ behavior: "smooth" });
+                      }, 500);
+                    } else {
+                      const el = document.getElementById(hash);
                       el?.scrollIntoView({ behavior: "smooth" });
-                    }, 100);
+                    }
                   } else {
                     const el = document.querySelector(link.href);
-                    el?.scrollIntoView({ behavior: "smooth" });
+                    if (el) {
+                      el.scrollIntoView({ behavior: "smooth" });
+                    } else if (location.pathname !== "/") {
+                      navigate("/");
+                      setTimeout(() => {
+                        const el = document.querySelector(link.href);
+                        el?.scrollIntoView({ behavior: "smooth" });
+                      }, 500);
+                    }
                   }
                 }}
-                className="text-primary/70 hover:text-accent transition-colors font-medium text-sm font-arabic cursor-pointer"
+                className="text-primary/70 hover:text-accent transition-colors font-medium text-sm font-arabic"
               >
                 {link.name}
               </button>
-            )
-          ))}
+            );
+          })}
           <a 
             href="http://mis.bu.edu.eg/" 
             target="_blank" 
@@ -121,38 +143,62 @@ export default function Navbar() {
         className="md:hidden bg-white overflow-hidden border-t border-blue-50"
       >
         <div className="px-6 py-8 flex flex-col gap-6">
-          {navLinks.map((link) => (
-            link.isExternal ? (
-              <Link
-                key={link.name}
-                to={link.href}
-                onClick={() => setIsOpen(false)}
-                className="text-[#0A2540]/80 text-lg font-arabic text-right"
-              >
-                {link.name}
-              </Link>
-            ) : (
+          {navLinks.map((link) => {
+            const isRoute = link.href.startsWith('/') && !link.href.includes('#');
+            const isHashInRoute = link.href.includes('#');
+
+            if (isRoute) {
+              return (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className={cn(
+                    "text-[#0A2540]/80 text-lg font-arabic text-right transition-colors",
+                    location.pathname === link.href && "text-accent font-bold"
+                  )}
+                >
+                  {link.name}
+                </Link>
+              );
+            }
+
+            return (
               <button
                 key={link.name}
                 onClick={() => {
                   setIsOpen(false);
-                  if (location.pathname !== "/") {
-                    navigate("/");
-                    setTimeout(() => {
-                      const el = document.querySelector(link.href);
+                  if (isHashInRoute) {
+                    const [path, hash] = link.href.split('#');
+                    if (location.pathname !== path) {
+                      navigate(path);
+                      setTimeout(() => {
+                        const el = document.getElementById(hash);
+                        el?.scrollIntoView({ behavior: "smooth" });
+                      }, 500);
+                    } else {
+                      const el = document.getElementById(hash);
                       el?.scrollIntoView({ behavior: "smooth" });
-                    }, 100);
+                    }
                   } else {
                     const el = document.querySelector(link.href);
-                    el?.scrollIntoView({ behavior: "smooth" });
+                    if (el) {
+                      el.scrollIntoView({ behavior: "smooth" });
+                    } else if (location.pathname !== "/") {
+                      navigate("/");
+                      setTimeout(() => {
+                        const el = document.querySelector(link.href);
+                        el?.scrollIntoView({ behavior: "smooth" });
+                      }, 500);
+                    }
                   }
                 }}
-                className="text-[#0A2540]/80 text-lg font-arabic text-right"
+                className="text-[#0A2540]/80 text-lg font-arabic text-right transition-colors"
               >
                 {link.name}
               </button>
-            )
-          ))}
+            );
+          })}
           <a 
             href="http://mis.bu.edu.eg/"
             target="_blank"
