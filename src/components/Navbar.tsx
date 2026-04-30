@@ -32,7 +32,7 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "الرئيسية", href: "/" },
-    { name: "عن الكلية (تم التحديث)", href: "/about" },
+    { name: "عن الكلية", href: "/about" },
     { name: "الأقسام", href: "#departments" },
     { name: "أعضاء الجروب", href: "/team" },
     { name: "معرض الصور", href: "/about#gallery" },
