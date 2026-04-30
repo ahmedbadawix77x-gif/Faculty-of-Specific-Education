@@ -1,9 +1,11 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ChevronDown, Play, Sparkles } from "lucide-react";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import VideoModal from "./VideoModal";
 
 export default function Hero() {
+  const [showVideo, setShowVideo] = useState(false);
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -83,6 +85,7 @@ export default function Hero() {
               عن الكلية
             </Link>
             <motion.button
+              onClick={() => setShowVideo(true)}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="w-full sm:w-auto px-10 py-4 bg-white/50 backdrop-blur-md hover:bg-white text-primary border border-white/20 rounded-2xl font-bold text-lg transition-all flex items-center justify-center gap-3 font-arabic shadow-sm"
@@ -93,6 +96,14 @@ export default function Hero() {
           </div>
         </motion.div>
       </div>
+
+      {/* Video Modal for Dean's Speech */}
+      <VideoModal 
+        isOpen={showVideo} 
+        onClose={() => setShowVideo(false)} 
+        videoUrl="https://www.youtube.com/embed/zNf274_H3vM" 
+        title="كلمة السيد الأستاذ الدكتور هاني شحته - عميد الكلية"
+      />
 
       {/* Scroll Indicator */}
       <motion.div
