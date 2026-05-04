@@ -26,7 +26,7 @@ export default function DeanWord() {
               <div className="relative aspect-[4/5] rounded-[3.5rem] overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.15)] bg-gray-100 border-8 border-white">
                 <img 
                   src="/Faculty-of-Specific-Education/images/doctors/dean_hany.webp" 
-                  alt="أ.د. هاني شحته" 
+                  alt="أ.د. هاني شحته إبراهيم" 
                   className="w-full h-full object-cover relative z-10"
                   onError={(e) => {
                     (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800";
@@ -38,25 +38,9 @@ export default function DeanWord() {
                   صورة العميد
                 </div>
 
-                {/* Text Overlay on Image - Improved Visibility with Glassmorphism */}
-                <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent z-20" />
-                <div className="absolute bottom-8 right-6 left-6 z-30">
-                  <motion.div
-                    initial={{ y: 20, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ delay: 0.3 }}
-                    className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-6 text-center shadow-2xl"
-                  >
-                    <h4 className="text-2xl md:text-3xl font-bold font-arabic mb-1 text-white drop-shadow-md">أ.د. هاني شحته</h4>
-                    <p className="text-sm md:text-base text-accent font-arabic font-bold uppercase tracking-widest">عميد الكلية</p>
-                  </motion.div>
-                </div>
+
               </div>
 
-              {/* Floating Badge */}
-              <div className="absolute -top-6 -left-6 w-20 h-20 bg-accent rounded-3xl flex items-center justify-center text-white shadow-xl shadow-accent/20 z-40 rotate-12">
-                <Sparkles size={32} />
-              </div>
             </div>
           </motion.div>
 
@@ -96,12 +80,12 @@ export default function DeanWord() {
             {/* Signature & Logo Section - Improved Alignment */}
             <div className="pt-12 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-8">
               <div className="flex items-center gap-6">
-                <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center p-3 border border-primary/10 shadow-sm">
+                <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center overflow-hidden border border-primary/10 shadow-sm">
                   <img 
-                    src="/logo.png" 
-                    alt="University Logo" 
-                    className="w-full h-full object-contain" 
-                    onError={(e) => (e.target as HTMLImageElement).src = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Benha_University_Logo.png/600px-Benha_University_Logo.png"} 
+                    src="/Faculty-of-Specific-Education/images/doctors/dean_hany.webp" 
+                    alt="أ.د. هاني شحته إبراهيم" 
+                    className="w-full h-full object-cover" 
+                    onError={(e) => (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800"} 
                   />
                 </div>
                 <div className="text-right">
@@ -111,9 +95,7 @@ export default function DeanWord() {
               </div>
               
               <div className="text-center sm:text-left">
-                {/* Signature - Made more professional */}
-                <p className="font-arabic text-accent italic text-4xl opacity-30 select-none tracking-tighter">Hany Shehta</p>
-                <div className="h-[2px] w-24 bg-accent/20 mt-2 mx-auto sm:mr-auto sm:ml-0" />
+                {/* Removed Signature */}
               </div>
             </div>
           </motion.div>

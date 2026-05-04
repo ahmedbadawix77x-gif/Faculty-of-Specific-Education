@@ -9,8 +9,8 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-8">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center shadow-lg shadow-accent/10">
-                <span className="text-white font-bold text-2xl">B</span>
+              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-md overflow-hidden p-1">
+                <img src="/Faculty-of-Specific-Education/images/logo.png" alt="Logo" className="w-full h-full object-contain" />
               </div>
               <div>
                 <h2 className="text-primary font-bold text-xl font-arabic">تربية نوعية</h2>

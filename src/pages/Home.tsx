@@ -1,5 +1,6 @@
 import Hero from "../components/Hero";
 import DeanWord from "../components/DeanWord";
+import CinematicSection from "../components/CinematicSection";
 import Departments from "../components/Departments";
 import Videos from "../components/Videos";
 import Leadership from "../components/Leadership";
@@ -12,6 +13,7 @@ export default function Home() {
     <main>
       <Hero />
       <DeanWord />
+      <CinematicSection />
       <Departments />
       <Videos />
       <Leadership />

@@ -35,7 +35,7 @@ export default function Leadership() {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-6xl font-bold text-primary mb-6 font-arabic"
           >
-            قيادات <span className="text-accent">الأقسام</span>
+            قيادات <span className="text-accent">الكلية</span>
           </motion.h2>
           
           <motion.p

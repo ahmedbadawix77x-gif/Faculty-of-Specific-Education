@@ -3,6 +3,7 @@ import { ChevronDown, Play, Sparkles } from "lucide-react";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import VideoModal from "./VideoModal";
+import { MAIN_FACULTY_VIDEO } from "../data/constants";
 
 export default function Hero() {
   const [showVideo, setShowVideo] = useState(false);
@@ -44,7 +45,7 @@ export default function Hero() {
         ) : (
           <img
             src="https://images.unsplash.com/photo-1541339907198-e08756ebafe1?auto=format&fit=crop&q=80&w=1920"
-            alt="University Campus"
+            alt=""
             className="w-full h-full object-cover opacity-20"
           />
         )}
@@ -101,8 +102,8 @@ export default function Hero() {
       <VideoModal 
         isOpen={showVideo} 
         onClose={() => setShowVideo(false)} 
-        videoUrl="https://www.youtube.com/embed/AYDX4SUiD78" 
-        title="كلمة السيد الأستاذ الدكتور هاني شحته - عميد الكلية"
+        videoUrl={MAIN_FACULTY_VIDEO.videoUrl} 
+        title={MAIN_FACULTY_VIDEO.title}
       />
 
       {/* Scroll Indicator */}

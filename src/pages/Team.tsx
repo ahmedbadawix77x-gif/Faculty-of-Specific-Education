@@ -75,7 +75,7 @@ export default function Team() {
                     <h3 className="text-3xl font-bold text-primary font-arabic group-hover:text-accent transition-colors">
                       {member.name}
                     </h3>
-                    <p className="text-text-muted text-lg font-arabic mt-1">عضو فريق التطوير</p>
+                    <p className="text-text-muted text-lg font-arabic mt-1">{member.role || "عضو فريق التطوير"}</p>
                   </div>
                 </motion.div>
               ))}
@@ -91,9 +91,9 @@ export default function Team() {
             <ShieldCheck size={18} />
             <span>جميع الأعضاء معتمدون من إدارة المشروع</span>
           </div>
-          <p className="text-text-muted font-arabic">
+          <p className="text-text-muted font-arabic text-lg">
             تم إعداد هذا الموقع بواسطة طلاب كلية التربية النوعية - جامعة بنها <br />
-            تحت إشراف نخبة من أساتذة الكلية المتميزين.
+            تحت إشراف <span className="font-bold text-primary">د. مصطفى محجوب</span>
           </p>
         </div>
       </section>

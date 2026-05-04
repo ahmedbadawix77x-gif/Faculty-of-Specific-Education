@@ -39,9 +39,7 @@ const GALLERY_IMAGES = [
 
 export default function About() {
   const getImagePath = (path: string) => {
-    const isGithubPages = window.location.hostname.includes('github.io');
-    const repoName = '/Faculty-of-Specific-Education/';
-    return isGithubPages ? repoName + path : '/' + path;
+    return `/Faculty-of-Specific-Education/${path}`;
   };
 
   return (

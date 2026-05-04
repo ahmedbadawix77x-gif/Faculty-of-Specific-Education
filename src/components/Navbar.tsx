@@ -52,8 +52,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-accent rounded-xl flex items-center justify-center shadow-lg shadow-accent/10">
-            <span className="text-white font-bold text-xl">B</span>
+          <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-md overflow-hidden p-1">
+            <img src="/Faculty-of-Specific-Education/images/logo.png" alt="Logo" className="w-full h-full object-contain" />
           </div>
           <div className="hidden sm:block">
             <h2 className="text-primary font-bold text-lg leading-tight font-arabic">تربية نوعية</h2>
