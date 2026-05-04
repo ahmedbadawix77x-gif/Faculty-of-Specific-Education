@@ -318,7 +318,7 @@ export const DEPARTMENTS: Department[] = [
     headOfDept: {
       name: "أ.د. نهاد مرزوق قابيل",
       image: "/Faculty-of-Specific-Education/images/doctors/nehad_kabeel.webp",
-      role: "القائم بأعمال رئيس قسم العلوم التربوية",
+      role: "رئيس قسم العلوم التربوية والنفسية",
       gender: "female",
     },
     headWord: "العلوم التربوية والنفسية هي الأساس الرصين لكل ممارسة تعليمية ناجحة، وهدفنا إعداد كوادر بحثية وتدريسية قادرة على فهم نفسية المتعلم وتطوير المناهج.",
@@ -559,7 +559,7 @@ export const FACULTY_MESSAGES = [
   {
     id: 4,
     name: "أ.د. نهاد مرزوق قابيل",
-    role: "القائم بأعمال رئيس قسم العلوم التربوية",
+    role: "رئيسة قسم العلوم التربوية والنفسية",
     quote: "نركز على الجانب النفسي والتربوي لإعداد معلمين مؤهلين نفسياً وعلمياً للتعامل مع مختلف الفئات الطلابية.",
     image: "/Faculty-of-Specific-Education/images/doctors/nehad_kabeel.webp",
     gender: "female" as const
@@ -614,7 +614,7 @@ export const VIDEOS: VideoCard[] = [
   { id: 5, title: "كلمة رئيسة قسم الاقتصاد المنزلي", role: "أ.د. إيناس الدريدي", thumbnail: "/Faculty-of-Specific-Education/images/doctors/enas_elderidy.webp", videoUrl: "https://www.youtube.com/embed/VE8EYNoxzt8" },
   { id: 6, title: "كلمة رئيس قسم التربية الموسيقية", role: "أ.د. محمد عبد الغفار", thumbnail: "/Faculty-of-Specific-Education/images/doctors/mohamed_abdelghaffar.webp", videoUrl: "https://www.youtube.com/embed/DCVEqIn6eRw" },
   { id: 7, title: "كلمة رئيس قسم الإعلام التربوي", role: "أ.د. محمود منصور", thumbnail: "/Faculty-of-Specific-Education/images/doctors/mahmoud_mansour.webp", videoUrl: "https://www.youtube.com/embed/nvUFAITadCg" },
-  { id: 8, title: "كلمة رئيسة قسم العلوم التربوية", role: "أ.د. نهاد مرزوق قابيل", thumbnail: "/Faculty-of-Specific-Education/images/doctors/nehad_kabeel.webp", videoUrl: "https://www.youtube.com/embed/oZ6IMKPO_DI" },
+  { id: 8, title: "كلمة رئيسة قسم العلوم التربوية والنفسية", role: "أ.د. نهاد مرزوق قابيل", thumbnail: "/Faculty-of-Specific-Education/images/doctors/nehad_kabeel.webp", videoUrl: "https://www.youtube.com/embed/oZ6IMKPO_DI" },
   { id: 9, title: "كلمة منسق برنامج ذوي الاحتياجات الخاصة", role: "أ.د. أمل عبيد", thumbnail: "/Faculty-of-Specific-Education/images/doctors/amal_obeid.webp", videoUrl: "https://www.youtube.com/embed/nGenIi1iimI" },
   { id: 10, title: "كلمة منسق برنامج معلم الحاسب الآلي لذوي الاحتياجات الخاصة", role: "أ.د. نبيل السيد", thumbnail: "/Faculty-of-Specific-Education/images/doctors/nabil_elsayed.webp", videoUrl: "https://www.youtube.com/embed/px_xR5sN6eo" },
 ];
