@@ -90,7 +90,7 @@ export default function DeanWord() {
                 </div>
                 <div className="text-right">
                   <p className="font-bold text-primary font-arabic text-xl mb-1">أ.د. هاني شحته إبراهيم</p>
-                  <p className="text-base text-text-muted font-arabic">أستاذ دكتور وعميد الكلية</p>
+                  <p className="text-base text-text-muted font-arabic">عميد الكلية</p>
                 </div>
               </div>
               

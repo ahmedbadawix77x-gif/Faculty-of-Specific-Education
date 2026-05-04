@@ -67,7 +67,7 @@ export const DEPARTMENTS: Department[] = [
       }
     ],
     gallery: ["/Faculty-of-Specific-Education/images/tech-edu.png"],
-    videoUrl: "https://youtu.be/px_xR5sN6eo",
+    videoUrl: "https://www.youtube.com/embed/px_xR5sN6eo",
     isProgram: false
   },
   {
@@ -116,7 +116,7 @@ export const DEPARTMENTS: Department[] = [
       }
     ],
     gallery: ["https://images.unsplash.com/photo-1514320291944-ed90c6bd561e?auto=format&fit=crop&q=80&w=400"],
-    videoUrl: "https://youtu.be/9FIq7QrdyX8",
+    videoUrl: "https://www.youtube.com/embed/DCVEqIn6eRw",
     isProgram: false
   },
   {
@@ -161,7 +161,7 @@ export const DEPARTMENTS: Department[] = [
       }
     ],
     gallery: ["https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=400"],
-    videoUrl: "",
+    videoUrl: "https://www.youtube.com/embed/TkfY_84BJcM",
     isProgram: false
   },
   {
@@ -207,7 +207,7 @@ export const DEPARTMENTS: Department[] = [
       }
     ],
     gallery: ["https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=400"],
-    videoUrl: "https://youtu.be/VE8EYNoxzt8",
+    videoUrl: "https://www.youtube.com/embed/VE8EYNoxzt8",
     isProgram: false
   },
   {
@@ -254,7 +254,7 @@ export const DEPARTMENTS: Department[] = [
       }
     ],
     gallery: ["/Faculty-of-Specific-Education/images/early-childhood.png"],
-    videoUrl: "https://youtu.be/2N270-UbKy4",
+    videoUrl: "https://www.youtube.com/embed/2N270-UbKy4",
     isProgram: false
   },
   {
@@ -301,7 +301,7 @@ export const DEPARTMENTS: Department[] = [
       }
     ],
     gallery: ["/Faculty-of-Specific-Education/images/edu-media.png"],
-    videoUrl: "https://youtu.be/nvUFAITadCg",
+    videoUrl: "https://www.youtube.com/embed/nvUFAITadCg",
     isProgram: false
   },
   {
@@ -345,7 +345,7 @@ export const DEPARTMENTS: Department[] = [
       }
     ],
     gallery: ["https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=400"],
-    videoUrl: "https://youtu.be/oZ6IMKPO_DI",
+    videoUrl: "https://www.youtube.com/embed/oZ6IMKPO_DI",
     isProgram: false
   },
   {
@@ -389,7 +389,7 @@ export const DEPARTMENTS: Department[] = [
       }
     ],
     gallery: ["/Faculty-of-Specific-Education/images/theater-edu.png"],
-    videoUrl: "",
+    videoUrl: "https://www.youtube.com/embed/hdYDXqah6H4",
     isProgram: false
   },
   {
@@ -432,7 +432,7 @@ export const DEPARTMENTS: Department[] = [
       }
     ],
     gallery: ["https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=400"],
-    videoUrl: "https://youtu.be/nGenIi1iimI",
+    videoUrl: "https://www.youtube.com/embed/nGenIi1iimI",
     isProgram: true
   },
   {
@@ -475,7 +475,7 @@ export const DEPARTMENTS: Department[] = [
       }
     ],
     gallery: ["https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=400"],
-    videoUrl: "https://youtu.be/px_xR5sN6eo",
+    videoUrl: "https://www.youtube.com/embed/px_xR5sN6eo",
     isProgram: true
   },
   {
@@ -497,7 +497,7 @@ export const DEPARTMENTS: Department[] = [
     },
     headWord: "الفن والموسيقى علاج للروح قبل الجسد، ورسالتنا هي توظيف النغمات والألحان لتنمية قدرات ذوي الاحتياجات الخاصة وتحسين جودة حياتهم.",
     gallery: ["https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&q=80&w=400"],
-    videoUrl: "",
+    videoUrl: "https://www.youtube.com/embed/DCVEqIn6eRw",
     isProgram: true
   },
   {
@@ -519,7 +519,7 @@ export const DEPARTMENTS: Department[] = [
     },
     headWord: "التواصل الفعال هو حق أصيل لكل إنسان، وبرنامجنا متخصص في تخريج أخصائيين أكفاء في تشخيص وعلاج اضطرابات النطق والكلام لدمج الأفراد في مجتمعاتهم.",
     gallery: ["https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=400"],
-    videoUrl: "",
+    videoUrl: "https://www.youtube.com/embed/LFOKPOj-Tno",
     isProgram: true
   },
 ];
@@ -607,16 +607,16 @@ export const FACULTY_MESSAGES = [
 ];
 
 export const VIDEOS: VideoCard[] = [
-  { id: 1, title: "كلمة عميد الكلية", role: "أ.د. هاني شحته إبراهيم", thumbnail: "/Faculty-of-Specific-Education/images/doctors/dean_hany.webp", videoUrl: "https://youtu.be/AYDX4SUiD78" },
-  { id: 2, title: "كلمة وكيل الكلية لشؤون الدراسات العليا", role: "أ.د. بشرى عبد الباقي", thumbnail: "/Faculty-of-Specific-Education/images/doctors/bushra.webp", videoUrl: "https://youtube.com/shorts/P031X4zvZ3A?feature=share" },
-  { id: 3, title: "كلمة رئيس قسم تكنولوجيا التعليم", role: "أ.د. نبيل السيد", thumbnail: "/Faculty-of-Specific-Education/images/doctors/nabil_elsayed.webp", videoUrl: "https://youtu.be/px_xR5sN6eo" },
-  { id: 4, title: "كلمة رئيسة قسم الطفولة المبكرة", role: "أ.د. أمل عبيد", thumbnail: "/Faculty-of-Specific-Education/images/doctors/amal_obeid.webp", videoUrl: "https://youtu.be/2N270-UbKy4" },
-  { id: 5, title: "كلمة رئيسة قسم الاقتصاد المنزلي", role: "أ.د. إيناس الدريدي", thumbnail: "/Faculty-of-Specific-Education/images/doctors/enas_elderidy.webp", videoUrl: "https://youtu.be/VE8EYNoxzt8" },
-  { id: 6, title: "كلمة رئيس قسم التربية الموسيقية", role: "أ.د. محمد عبد الغفار", thumbnail: "/Faculty-of-Specific-Education/images/doctors/mohamed_abdelghaffar.webp", videoUrl: "https://youtu.be/9FIq7QrdyX8" },
-  { id: 7, title: "كلمة رئيس قسم الإعلام التربوي", role: "أ.د. محمود منصور", thumbnail: "/Faculty-of-Specific-Education/images/doctors/mahmoud_mansour.webp", videoUrl: "https://youtu.be/nvUFAITadCg" },
-  { id: 8, title: "كلمة رئيسة قسم العلوم التربوية", role: "أ.د. نهاد مرزوق قابيل", thumbnail: "/Faculty-of-Specific-Education/images/doctors/nehad_kabeel.webp", videoUrl: "https://youtu.be/oZ6IMKPO_DI" },
-  { id: 9, title: "كلمة منسق برنامج ذوي الاحتياجات الخاصة", role: "أ.د. أمل عبيد", thumbnail: "/Faculty-of-Specific-Education/images/doctors/amal_obeid.webp", videoUrl: "https://youtu.be/nGenIi1iimI" },
-  { id: 10, title: "كلمة منسق برنامج معلم الحاسب الآلي لذوي الاحتياجات الخاصة", role: "أ.د. نبيل السيد", thumbnail: "/Faculty-of-Specific-Education/images/doctors/nabil_elsayed.webp", videoUrl: "https://youtu.be/px_xR5sN6eo" },
+  { id: 1, title: "كلمة عميد الكلية", role: "أ.د. هاني شحته إبراهيم", thumbnail: "/Faculty-of-Specific-Education/images/doctors/dean_hany.webp", videoUrl: "https://www.youtube.com/embed/AYDX4SUiD78" },
+  { id: 2, title: "كلمة وكيل الكلية لشؤون الدراسات العليا", role: "أ.د. بشرى عبد الباقي", thumbnail: "/Faculty-of-Specific-Education/images/doctors/bushra.webp", videoUrl: "https://www.youtube.com/embed/P031X4zvZ3A?feature=share" },
+  { id: 3, title: "كلمة رئيس قسم تكنولوجيا التعليم", role: "أ.د. نبيل السيد", thumbnail: "/Faculty-of-Specific-Education/images/doctors/nabil_elsayed.webp", videoUrl: "https://www.youtube.com/embed/px_xR5sN6eo" },
+  { id: 4, title: "كلمة رئيسة قسم الطفولة المبكرة", role: "أ.د. أمل عبيد", thumbnail: "/Faculty-of-Specific-Education/images/doctors/amal_obeid.webp", videoUrl: "https://www.youtube.com/embed/2N270-UbKy4" },
+  { id: 5, title: "كلمة رئيسة قسم الاقتصاد المنزلي", role: "أ.د. إيناس الدريدي", thumbnail: "/Faculty-of-Specific-Education/images/doctors/enas_elderidy.webp", videoUrl: "https://www.youtube.com/embed/VE8EYNoxzt8" },
+  { id: 6, title: "كلمة رئيس قسم التربية الموسيقية", role: "أ.د. محمد عبد الغفار", thumbnail: "/Faculty-of-Specific-Education/images/doctors/mohamed_abdelghaffar.webp", videoUrl: "https://www.youtube.com/embed/DCVEqIn6eRw" },
+  { id: 7, title: "كلمة رئيس قسم الإعلام التربوي", role: "أ.د. محمود منصور", thumbnail: "/Faculty-of-Specific-Education/images/doctors/mahmoud_mansour.webp", videoUrl: "https://www.youtube.com/embed/nvUFAITadCg" },
+  { id: 8, title: "كلمة رئيسة قسم العلوم التربوية", role: "أ.د. نهاد مرزوق قابيل", thumbnail: "/Faculty-of-Specific-Education/images/doctors/nehad_kabeel.webp", videoUrl: "https://www.youtube.com/embed/oZ6IMKPO_DI" },
+  { id: 9, title: "كلمة منسق برنامج ذوي الاحتياجات الخاصة", role: "أ.د. أمل عبيد", thumbnail: "/Faculty-of-Specific-Education/images/doctors/amal_obeid.webp", videoUrl: "https://www.youtube.com/embed/nGenIi1iimI" },
+  { id: 10, title: "كلمة منسق برنامج معلم الحاسب الآلي لذوي الاحتياجات الخاصة", role: "أ.د. نبيل السيد", thumbnail: "/Faculty-of-Specific-Education/images/doctors/nabil_elsayed.webp", videoUrl: "https://www.youtube.com/embed/px_xR5sN6eo" },
 ];
 
 export const MAIN_FACULTY_VIDEO = {
@@ -636,7 +636,7 @@ export const FACULTY_LEADERSHIP = [
   {
     name: "أ.د. غادة شاكر عبد الفتاح",
     role: "وكيل الكلية لشؤون التعليم والطلاب",
-    image: "/Faculty-of-Specific-Education/images/logo.png",
+    image: "/Faculty-of-Specific-Education/images/doctors/ghada_shaker.jpg",
     gender: "female" as const
   },
   {
