@@ -37,14 +37,14 @@ export default function Hero() {
             loop
             playsInline
             preload="metadata"
-            poster="https://images.unsplash.com/photo-1541339907198-e08756ebafe1?auto=format&fit=crop&q=80&w=1920"
+            poster="https://images.unsplash.com/photo-1541339907198-e08756ebafe1?auto=format&fit=crop&q=60&w=1200"
             className="w-full h-full object-cover opacity-20 transition-opacity duration-1000"
           >
             <source src="https://assets.mixkit.co/videos/preview/mixkit-software-developer-working-on-code-screen-close-up-1728-large.mp4" type="video/mp4" />
           </video>
         ) : (
           <img
-            src="https://images.unsplash.com/photo-1541339907198-e08756ebafe1?auto=format&fit=crop&q=80&w=1920"
+            src="https://images.unsplash.com/photo-1541339907198-e08756ebafe1?auto=format&fit=crop&q=60&w=1200"
             alt=""
             className="w-full h-full object-cover opacity-20"
           />

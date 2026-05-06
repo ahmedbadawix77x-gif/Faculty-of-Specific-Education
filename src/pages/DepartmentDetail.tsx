@@ -146,6 +146,7 @@ export default function DepartmentDetail() {
               <img
                 src={getSafeImage(dept.image, 'dept')}
                 alt={dept.title}
+                loading="lazy"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent" />
@@ -313,7 +314,7 @@ export default function DepartmentDetail() {
                 )}
               >
                 <div className="aspect-video rounded-[2rem] overflow-hidden mb-6 shadow-md">
-                  <img src={getSafeImage(other.image, 'dept')} alt={other.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <img src={getSafeImage(other.image, 'dept')} alt={other.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 </div>
                 <h4 className="text-xl font-bold text-primary group-hover:text-accent transition-colors font-arabic text-center">
                   {other.title}

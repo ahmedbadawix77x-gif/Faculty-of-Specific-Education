@@ -8,7 +8,7 @@ export default function Preloader() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false);
-    }, 3000);
+    }, 1500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -60,7 +60,7 @@ export default function Preloader() {
               <motion.div
                 initial={{ x: "-100%" }}
                 animate={{ x: "0%" }}
-                transition={{ duration: 2.5, ease: "easeInOut" }}
+                transition={{ duration: 1.2, ease: "easeInOut" }}
                 className="h-full bg-accent"
               />
             </div>
