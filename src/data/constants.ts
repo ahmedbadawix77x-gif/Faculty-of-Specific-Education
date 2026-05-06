@@ -405,7 +405,7 @@ export const DEPARTMENTS: Department[] = [
     headOfDept: {
       name: "أ.د. أمل عبيد",
       image: "/Faculty-of-Specific-Education/images/doctors/amal_obeid.webp",
-      role: "منسق البرنامج",
+      role: "منسق برنامج إعداد معلم ذوي الاحتياجات الخاصة في مرحلة الطفولة المبكرة",
       gender: "female",
     },
     headWord: "نهدف إلى دمج الأطفال ذوي الاحتياجات الخاصة في المجتمع منذ نعومة أظافرهم، من خلال إعداد معلمين مؤهلين بأحدث استراتيجيات التدخل المبكر.",
