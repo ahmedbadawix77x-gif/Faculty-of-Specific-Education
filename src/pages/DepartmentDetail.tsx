@@ -16,7 +16,7 @@ export default function DepartmentDetail() {
   if (!dept) {
     return (
       <div className="min-h-screen flex items-center justify-center flex-col gap-4">
-        <h2 className="text-2xl font-bold font-arabic">القسم غير موجود</h2>
+        <h2 className="text-2xl font-bold font-arabic">الصفحة غير موجودة</h2>
         <Link to="/" className="text-blue-600 hover:underline font-arabic">العودة للرئيسية</Link>
       </div>
     );
@@ -79,7 +79,7 @@ export default function DepartmentDetail() {
               <div className="absolute top-0 left-0 w-2 h-full bg-accent" />
               <h3 className="text-2xl font-bold text-primary mb-8 font-arabic flex items-center gap-3">
                 <Sparkles className="text-accent w-6 h-6" />
-                نبذة عن القسم
+                {dept.isProgram ? "نبذة عن البرنامج" : "نبذة عن القسم"}
               </h3>
               <p className="text-text-muted text-lg leading-relaxed font-arabic font-medium">
                 {dept.overview}
@@ -92,7 +92,7 @@ export default function DepartmentDetail() {
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:scale-110 transition-transform duration-700" />
                 <h3 className="text-2xl font-bold mb-8 font-arabic flex items-center gap-3">
                   <Play className="text-accent w-6 h-6 fill-accent" />
-                  كلمة رئيس القسم
+                  {dept.isProgram ? "كلمة المنسق" : "كلمة رئيس القسم"}
                 </h3>
                 <blockquote className="text-xl font-arabic leading-relaxed italic opacity-90 relative">
                   <span className="text-6xl absolute -top-10 -right-8 opacity-20 font-serif">"</span>
@@ -227,7 +227,9 @@ export default function DepartmentDetail() {
 
             {/* Explore Other Departments (New) */}
             <section className="pt-12 border-t border-gray-100">
-              <h3 className="text-2xl font-bold text-primary mb-8 font-arabic">استكشف أقساماً أخرى</h3>
+              <h3 className="text-2xl font-bold text-primary mb-8 font-arabic">
+                {dept.isProgram ? "استكشف برامج وأقسام أخرى" : "استكشف أقساماً أخرى"}
+              </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {otherDepts.map((other) => (
                   <Link
@@ -278,7 +280,7 @@ export default function DepartmentDetail() {
                 تواصل مع أ/ قنديل (شؤون الطلاب) لبدء إجراءات التحاقك بالقسم.
               </p>
               <a 
-                href={`https://wa.me/201001107636?text=${encodeURIComponent(`أهلاً أ/ قنديل، أود الاستفسار عن التقديم في قسم ${dept.title}`)}`}
+                href={`https://wa.me/201001107636?text=${encodeURIComponent(`أهلاً أ/ قنديل، أود الاستفسار عن التقديم في ${dept.isProgram ? 'برنامج' : 'قسم'} ${dept.title}`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full py-4 bg-white text-accent rounded-xl font-bold transition-all hover:scale-[1.02] active:scale-[0.98] font-arabic shadow-lg text-center"

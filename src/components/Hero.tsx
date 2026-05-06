@@ -80,9 +80,6 @@ export default function Hero() {
               to="/about"
               className="w-full sm:w-auto px-10 py-4 bg-white/50 backdrop-blur-md hover:bg-white text-primary border border-white/20 rounded-2xl font-bold text-lg transition-all flex items-center justify-center gap-3 font-arabic shadow-sm group"
             >
-              <div className="w-8 h-8 bg-accent/10 rounded-lg flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-all">
-                <Sparkles className="w-5 h-5" />
-              </div>
               عن الكلية
             </Link>
             <motion.button

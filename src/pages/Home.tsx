@@ -1,5 +1,6 @@
 import Hero from "../components/Hero";
 import DeanWord from "../components/DeanWord";
+import SpecialProgramsSection from "../components/SpecialProgramsSection";
 import CinematicSection from "../components/CinematicSection";
 import Departments from "../components/Departments";
 import Videos from "../components/Videos";
@@ -13,10 +14,11 @@ export default function Home() {
     <main>
       <Hero />
       <DeanWord />
-      <CinematicSection />
+      <SpecialProgramsSection />
       <Departments />
-      <Videos />
+      <CinematicSection />
       <Leadership />
+      <Videos />
       <Testimonials />
       <Contact />
     </main>

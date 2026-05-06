@@ -13,9 +13,10 @@ interface VideoCardProps {
   image?: string;
   videoUrl?: string;
   duration?: string;
+  isProgram?: boolean;
 }
 
-export default function VideoCard({ id, title, description, image, videoUrl, duration }: VideoCardProps) {
+export default function VideoCard({ id, title, description, image, videoUrl, duration, isProgram }: VideoCardProps) {
   const navigate = useNavigate();
 
   return (
@@ -64,7 +65,7 @@ export default function VideoCard({ id, title, description, image, videoUrl, dur
             onClick={() => navigate(`/department/${id}`)}
             className="flex items-center gap-3 text-primary font-bold font-arabic group-hover:text-accent transition-all group/btn cursor-pointer"
           >
-            <span className="text-sm">تفاصيل القسم</span>
+            <span className="text-sm">{isProgram ? "تفاصيل البرنامج" : "تفاصيل القسم"}</span>
             <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center group-hover/btn:bg-accent group-hover/btn:text-white transition-all shadow-sm">
               <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-[-4px] transition-transform" />
             </div>

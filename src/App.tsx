@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import DepartmentDetail from "./pages/DepartmentDetail";
-import SpecialPrograms from "./pages/SpecialPrograms";
+
 import Regulations from "./pages/Regulations";
 import About from "./pages/About";
 import Team from "./pages/Team";
@@ -44,7 +44,7 @@ export default function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/team" element={<Team />} />
-                <Route path="/programs" element={<SpecialPrograms />} />
+
                 <Route path="/department/:id" element={<DepartmentDetail />} />
                 <Route path="/regulations" element={<Regulations />} />
               </Routes>
