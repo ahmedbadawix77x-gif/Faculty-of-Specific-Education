@@ -52,12 +52,7 @@ export default function DeanWord() {
             className="w-full lg:w-[60%] space-y-10"
           >
             <div className="space-y-4">
-              <div className="flex items-center gap-3 text-accent mb-2">
-                <span className="text-[11px] font-black uppercase tracking-[0.3em] font-sans">Message from the Dean</span>
-                <div className="h-[1px] w-12 bg-accent/30" />
-              </div>
-
-              <div className="relative">
+            <div className="relative">
                 <Quote className="absolute -top-12 -right-16 w-32 h-32 text-accent/5 rotate-180 pointer-events-none" />
                 <h2 className="text-4xl md:text-6xl font-bold text-primary mb-10 font-arabic leading-tight">
                   كلمة <span className="text-accent">عميد الكلية</span>

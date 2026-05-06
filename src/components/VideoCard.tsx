@@ -35,16 +35,22 @@ export default function VideoCard({ id, title, description, image, videoUrl, dur
         />
         {/* Overlay on hover to indicate clickability */}
         <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors pointer-events-none" />
+        
+        {isProgram && (
+          <div className="absolute top-4 left-4 bg-blue-600 text-white text-[9px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter z-20 shadow-lg">
+            برنامج مميز
+          </div>
+        )}
       </div>
 
       {/* Content Section */}
       <div className="p-8 flex-grow flex flex-col">
-        {/* Duration Badge - Matched to Image 1 */}
+        {/* Duration Badge */}
         <div className="flex items-center gap-2 mb-4 justify-end">
-          <span className="text-blue-600 text-[11px] font-bold font-arabic">
+          <span className={`text-[11px] font-bold font-arabic ${isProgram ? 'text-blue-600' : 'text-accent'}`}>
             {duration || "4 سنوات (ساعات معتمدة)"}
           </span>
-          <div className="w-1.5 h-1.5 rounded-full bg-blue-600" />
+          <div className={`w-1.5 h-1.5 rounded-full ${isProgram ? 'bg-blue-600' : 'bg-accent'}`} />
         </div>
 
         <h3 
@@ -58,18 +64,20 @@ export default function VideoCard({ id, title, description, image, videoUrl, dur
           {description}
         </p>
 
-        {/* Footer - Matched to Image 1 */}
+        {/* Footer */}
         <div className="mt-auto flex items-center justify-between pt-6 border-t border-gray-50 flex-row-reverse">
           {/* Right side: Details */}
-          <div 
+          <button 
             onClick={() => navigate(`/department/${id}`)}
-            className="flex items-center gap-3 text-primary font-bold font-arabic group-hover:text-accent transition-all group/btn cursor-pointer"
+            className={`flex items-center gap-3 font-bold font-arabic transition-all group/btn px-6 py-2 rounded-xl border ${
+              isProgram 
+              ? 'border-blue-100 text-blue-700 hover:bg-blue-600 hover:text-white hover:border-blue-600' 
+              : 'border-accent/10 text-accent hover:bg-accent hover:text-white hover:border-accent'
+            }`}
           >
             <span className="text-sm">{isProgram ? "تفاصيل البرنامج" : "تفاصيل القسم"}</span>
-            <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center group-hover/btn:bg-accent group-hover/btn:text-white transition-all shadow-sm">
-              <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-[-4px] transition-transform" />
-            </div>
-          </div>
+            <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-[-4px] transition-transform" />
+          </button>
           
           {/* Left side: Status */}
           <div className="flex items-center gap-2 text-text-muted text-[10px] font-sans font-bold uppercase tracking-wider">

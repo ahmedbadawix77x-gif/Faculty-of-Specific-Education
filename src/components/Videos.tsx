@@ -7,17 +7,7 @@ export default function Videos() {
   return (
     <section id="videos" className="py-32 bg-[#F8FAFC] relative overflow-hidden" dir="rtl">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-24">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="flex items-center justify-center gap-3 mb-4"
-          >
-            <Sparkles className="text-accent w-5 h-5" />
-            <span className="text-accent font-bold tracking-widest uppercase text-[10px] font-sans">Visual Gallery</span>
-          </motion.div>
-          
+        <div className="text-center mb-20">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -25,7 +15,7 @@ export default function Videos() {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-5xl font-bold text-primary mb-6 font-arabic"
           >
-            جولة بصرية في <span className="text-accent">أروقة الكلية</span>
+            رسائل <span className="text-accent">قيادات الكلية</span>
           </motion.h2>
         </div>
 

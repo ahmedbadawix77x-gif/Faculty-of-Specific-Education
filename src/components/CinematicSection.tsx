@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Play, Sparkles } from "lucide-react";
+import { Play } from "lucide-react";
 import { useRef, useState } from "react";
 import { MAIN_FACULTY_VIDEO } from "../data/constants";
 import VideoModal from "./VideoModal";
@@ -29,15 +29,6 @@ export default function CinematicSection() {
       <div className="max-w-6xl mx-auto px-4 md:px-6 relative z-10 text-center">
         {/* Compact Header */}
         <div className="max-w-2xl mx-auto mb-10 md:mb-16">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 rounded-full text-accent text-[10px] md:text-xs font-bold mb-4 font-arabic border border-blue-100"
-          >
-            <Sparkles size={14} />
-            الفيلم التعريفي الرسمي
-          </motion.div>
-          
           <motion.h2 
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -92,16 +83,6 @@ export default function CinematicSection() {
               <h3 className="text-white text-xs md:text-xl font-bold font-arabic">{MAIN_FACULTY_VIDEO.title}</h3>
             </div>
           </div>
-
-          {/* Simple Bottom Badge */}
-          <motion.div 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mt-6 inline-flex items-center gap-2 px-4 py-2 bg-white shadow-md rounded-full border border-gray-50"
-          >
-            <div className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
-            <span className="text-primary font-bold font-arabic text-[10px] md:text-xs">استكشف جميع الأقسام</span>
-          </motion.div>
         </motion.div>
       </div>
 

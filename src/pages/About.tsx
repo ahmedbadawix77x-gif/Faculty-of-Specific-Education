@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { Sparkles, History, Target, Eye, BookOpen } from "lucide-react";
+import { Sparkles, History, Target, Eye, BookOpen, ArrowLeft, ArrowRight } from "lucide-react";
 import { DEPARTMENTS } from "../data/constants";
+import { useNavigate } from "react-router-dom";
 
 const GALLERY_IMAGES = [
   "images/gallery/WhatsApp%20Image%202026-04-29%20at%2010.05.06%20PM%20(1).webp",
@@ -38,6 +39,7 @@ const GALLERY_IMAGES = [
 ];
 
 export default function About() {
+  const navigate = useNavigate();
   const getImagePath = (path: string) => {
     return `/Faculty-of-Specific-Education/${path}`;
   };
@@ -47,14 +49,6 @@ export default function About() {
       {/* Centered Hero Section - Clean & Simple */}
       <section className="relative pt-32 pb-20 overflow-hidden bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent font-bold text-xs uppercase tracking-widest mb-8"
-          >
-            <Sparkles size={14} />
-            <span>نبذة عن الكلية</span>
-          </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -115,29 +109,55 @@ export default function About() {
         </div>
       </section>
 
-      {/* Departments Overview Section - Pure White Theme */}
+      {/* Departments Overview Section - Unified List */}
       <section className="py-24 bg-white overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold font-arabic mb-4 text-primary">أقسام <span className="text-accent">الكلية</span></h2>
-            <p className="text-text-muted font-arabic max-w-2xl mx-auto">تضم الكلية نخبة من الأقسام العلمية المتميزة التي تغطي مختلف المجالات التربوية والنوعية.</p>
+            <h2 className="text-4xl md:text-5xl font-bold font-arabic mb-4 text-primary">الأقسام <span className="text-accent">والبرامج</span></h2>
+            <p className="text-text-muted font-arabic max-w-2xl mx-auto">تضم الكلية نخبة من الأقسام العلمية والبرامج النوعية المتميزة التي تلبي احتياجات سوق العمل.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {DEPARTMENTS.filter(d => !d.isProgram).map((dept, idx) => (
+            {[...DEPARTMENTS].sort((a, b) => (b.isProgram ? 1 : 0) - (a.isProgram ? 1 : 0)).map((dept, idx) => (
               <motion.div
                 key={dept.id}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05 }}
-                className="bg-white border border-gray-100 p-8 rounded-3xl hover:border-accent/30 hover:shadow-xl hover:shadow-accent/5 transition-all group"
+                onClick={() => navigate(`/department/${dept.id}`)}
+                className={`cursor-pointer p-8 rounded-3xl transition-all group flex flex-col h-full relative overflow-hidden border ${
+                  dept.isProgram 
+                  ? 'bg-blue-50/30 border-blue-100 hover:border-blue-400 hover:shadow-blue-500/10' 
+                  : 'bg-white border-gray-100 hover:border-accent/30 hover:shadow-accent/10'
+                } hover:shadow-xl`}
               >
-                <div className="w-12 h-12 bg-accent rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-accent/20">
+                {dept.isProgram && (
+                  <div className="absolute top-4 left-4 bg-blue-600 text-white text-[9px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter z-20">
+                    برنامج مميز
+                  </div>
+                )}
+
+                <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-6 shadow-lg transition-transform group-hover:rotate-12 ${
+                  dept.isProgram ? 'bg-blue-600 shadow-blue-600/20' : 'bg-accent shadow-accent/20'
+                }`}>
                   <BookOpen className="text-white" size={24} />
                 </div>
-                <h4 className="text-xl font-bold mb-3 font-arabic text-primary group-hover:text-accent transition-colors">{dept.title}</h4>
-                <p className="text-text-muted text-sm font-arabic leading-relaxed line-clamp-3">{dept.description}</p>
+
+                <h4 className={`text-xl font-bold mb-3 font-arabic transition-colors ${
+                  dept.isProgram ? 'text-blue-900 group-hover:text-blue-700' : 'text-primary group-hover:text-accent'
+                }`}>{dept.title}</h4>
+                
+                <p className="text-text-muted text-sm font-arabic leading-relaxed line-clamp-3 mb-8 flex-grow">
+                  {dept.description}
+                </p>
+
+                <div className="mt-auto flex items-center gap-2 text-primary font-bold font-arabic group-hover:translate-x-[-4px] transition-transform">
+                  <span className={`text-sm ${dept.isProgram ? 'text-blue-700' : 'text-accent'}`}>
+                    {dept.isProgram ? "تفاصيل البرنامج" : "تفاصيل القسم"}
+                  </span>
+                  <ArrowLeft size={16} className={dept.isProgram ? 'text-blue-700' : 'text-accent'} />
+                </div>
               </motion.div>
             ))}
           </div>

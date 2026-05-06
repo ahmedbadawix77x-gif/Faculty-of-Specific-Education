@@ -74,11 +74,6 @@ export default function Features() {
               viewport={{ once: true }}
               className="mb-20"
             >
-              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-accent/5 border border-accent/10 mb-8">
-                <div className="w-2 h-2 rounded-full bg-accent animate-ping" />
-                <span className="text-accent font-bold tracking-widest uppercase text-[10px] font-sans">Why Choose Benha Faculty</span>
-              </div>
-              
               <h2 className="text-4xl md:text-7xl font-bold text-primary mb-10 font-arabic leading-[1.1] tracking-tight">
                 نصنع مستقبلاً <br />
                 <span className="bg-gradient-to-l from-accent to-blue-700 bg-clip-text text-transparent">بمعايير عالمية</span>
