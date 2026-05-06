@@ -121,7 +121,7 @@ export const DEPARTMENTS: Department[] = [
   },
   {
     id: "art-edu",
-    title: "برنامج معلم التربية الفنية",
+    title: "قسم التربية الفنية",
     description: "منصة لإطلاق طاقات الإبداع والجمال، تجمع بين الرسم والنحت والفنون التشكيلية لإعداد فنان ومعلم متميز.",
     image: "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&q=60&w=800",
     overview: "يهدف قسم التربية الفنية إلى إعداد خريج يعمل معلماً في المجالات التي تخدم الحركة الفنية والمجتمع مثل التصميم وفنون النسيج والطباعة والنحت والرسم والأشغال الفنية والمعدنية والخشبية والخزف.",
@@ -162,7 +162,7 @@ export const DEPARTMENTS: Department[] = [
     ],
     gallery: ["https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=400"],
     videoUrl: "https://www.youtube.com/embed/TkfY_84BJcM",
-    isProgram: true
+    isProgram: false
   },
   {
     id: "home-economics",
