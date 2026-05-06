@@ -88,24 +88,24 @@ export default function DepartmentDetail() {
 
             {/* Head Word Section */}
             {dept.headWord && (
-              <section className="bg-primary text-white p-10 md:p-12 rounded-[3rem] shadow-xl relative overflow-hidden group">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:scale-110 transition-transform duration-700" />
-                <h3 className="text-2xl font-bold mb-8 font-arabic flex items-center gap-3">
+              <section className="bg-white border border-gray-100 p-10 md:p-12 rounded-[3rem] shadow-sm relative overflow-hidden group">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:scale-110 transition-transform duration-700" />
+                <h3 className="text-2xl font-bold mb-8 font-arabic flex items-center gap-3 text-primary">
                   <Play className="text-accent w-6 h-6 fill-accent" />
                   {dept.isProgram ? "كلمة المنسق" : "كلمة رئيس القسم"}
                 </h3>
-                <blockquote className="text-xl font-arabic leading-relaxed italic opacity-90 relative">
-                  <span className="text-6xl absolute -top-10 -right-8 opacity-20 font-serif">"</span>
+                <blockquote className="text-xl font-arabic leading-relaxed italic text-text-muted relative">
+                  <span className="text-6xl absolute -top-10 -right-8 opacity-10 font-serif text-accent">"</span>
                   {dept.headWord}
-                  <span className="text-6xl absolute -bottom-16 -left-4 opacity-20 font-serif">"</span>
+                  <span className="text-6xl absolute -bottom-16 -left-4 opacity-10 font-serif text-accent">"</span>
                 </blockquote>
-                <div className="mt-8 pt-8 border-t border-white/10 flex items-center gap-4">
+                <div className="mt-8 pt-8 border-t border-gray-50 flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-accent">
                     <img src={dept.headOfDept.image} alt={dept.headOfDept.name} className="w-full h-full object-cover" />
                   </div>
                   <div>
-                    <p className="font-bold font-arabic">{dept.headOfDept.name}</p>
-                    <p className="text-sm opacity-60 font-arabic">{dept.headOfDept.role}</p>
+                    <p className="font-bold font-arabic text-primary">{dept.headOfDept.name}</p>
+                    <p className="text-sm text-text-muted font-arabic">{dept.headOfDept.role}</p>
                   </div>
                 </div>
               </section>

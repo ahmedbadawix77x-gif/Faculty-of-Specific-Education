@@ -8,7 +8,7 @@ export default function SpecialPrograms() {
   const programs = DEPARTMENTS.filter((dept) => dept.isProgram);
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC] pt-32 pb-20" dir="rtl">
+    <div className="min-h-screen bg-white pb-20 pt-24" dir="rtl">
       {/* Hero Section */}
       <section className="relative overflow-hidden mb-20 px-6">
         <div className="max-w-7xl mx-auto">
@@ -55,10 +55,10 @@ export default function SpecialPrograms() {
 
       {/* Why Choose These Programs? */}
       <section className="max-w-7xl mx-auto px-6 mt-32">
-        <div className="bg-primary rounded-[3rem] p-12 md:p-20 relative overflow-hidden text-white">
+        <div className="bg-white border border-gray-100 rounded-[3rem] p-12 md:p-20 relative overflow-hidden shadow-sm">
           <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-5xl font-bold mb-8 font-arabic leading-tight">
+              <h2 className="text-3xl md:text-5xl font-bold mb-8 font-arabic leading-tight text-primary">
                 لماذا تختار برامجنا النوعية؟
               </h2>
               <div className="space-y-8">
@@ -67,13 +67,13 @@ export default function SpecialPrograms() {
                   { icon: Users, title: "نخبة المتخصصين", text: "يُشرف على هذه البرامج صفوة من الأساتذة والخبراء في كل تخصص." },
                   { icon: Zap, title: "تكنولوجيا حديثة", text: "نوفر أحدث المعامل والتقنيات لضمان تجربة تعليمية فريدة." }
                 ].map((item, i) => (
-                  <div key={i} className="flex gap-6">
-                    <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center shrink-0">
+                  <div key={i} className="flex gap-6 group">
+                    <div className="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                       <item.icon className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <h4 className="text-xl font-bold mb-2 font-arabic">{item.title}</h4>
-                      <p className="text-white/60 font-arabic leading-relaxed">{item.text}</p>
+                      <h4 className="text-xl font-bold mb-2 font-arabic text-primary">{item.title}</h4>
+                      <p className="text-text-muted font-arabic leading-relaxed">{item.text}</p>
                     </div>
                   </div>
                 ))}
@@ -90,8 +90,8 @@ export default function SpecialPrograms() {
           </div>
           
           {/* Decorative shapes */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 blur-[100px]" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/20 blur-[100px]" />
+          <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 blur-[100px]" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-50/50 blur-[100px]" />
         </div>
       </section>
     </div>

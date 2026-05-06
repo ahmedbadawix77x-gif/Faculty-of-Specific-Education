@@ -72,24 +72,24 @@ export default function Regulations() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-primary text-white p-10 rounded-[3rem] shadow-xl relative overflow-hidden"
+            className="bg-white p-10 rounded-[3rem] shadow-sm border border-gray-100 relative overflow-hidden"
           >
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
             <div className="flex items-center gap-4 mb-10 relative z-10">
-              <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center">
+              <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center">
                 <Scale className="text-accent w-7 h-7" />
               </div>
-              <h2 className="text-3xl font-bold font-arabic">نظام الساعات المعتمدة</h2>
+              <h2 className="text-3xl font-bold text-primary font-arabic">نظام الساعات المعتمدة</h2>
             </div>
 
             <div className="space-y-6 relative z-10">
               {creditHourRules.map((rule, idx) => (
-                <div key={idx} className="p-6 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 transition-all">
+                <div key={idx} className="p-6 bg-gray-50 rounded-2xl border border-transparent hover:border-accent/10 hover:bg-white hover:shadow-md transition-all group">
                   <h4 className="text-lg font-bold text-accent mb-2 font-arabic flex items-center gap-2">
                     <Calendar className="w-5 h-5" />
                     {rule.title}
                   </h4>
-                  <p className="text-white/70 font-arabic leading-relaxed">
+                  <p className="text-text-muted font-arabic leading-relaxed group-hover:text-primary transition-colors">
                     {rule.content}
                   </p>
                 </div>

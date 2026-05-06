@@ -8,7 +8,7 @@ export default function Library() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen bg-[#F8FAFC] pb-20 pt-24"
+      className="min-h-screen bg-white pb-20 pt-24"
       dir="rtl"
     >
       <div className="max-w-7xl mx-auto px-6">
@@ -18,7 +18,7 @@ export default function Library() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-6xl font-bold text-primary mb-6 font-arabic"
+            className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 font-arabic"
           >
             مكتبة <span className="text-accent">الكلية</span>
           </motion.h1>
@@ -27,7 +27,7 @@ export default function Library() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-primary/60 text-lg max-w-2xl mx-auto font-arabic leading-relaxed"
+            className="text-gray-600 text-lg max-w-2xl mx-auto font-arabic leading-relaxed"
           >
             {LIBRARY_INFO.description}
           </motion.p>
