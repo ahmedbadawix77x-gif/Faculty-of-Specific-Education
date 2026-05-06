@@ -25,7 +25,7 @@ export default function DeanWord() {
               
               <div className="relative aspect-[4/5] rounded-[3.5rem] overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.15)] bg-gray-100 border-8 border-white">
                 <img 
-                  src="/Faculty-of-Specific-Education/images/doctors/dean_hany.webp" 
+                  src="images/doctors/dean_hany.webp" 
                   alt="أ.د. هاني شحته إبراهيم" 
                   className="w-full h-full object-cover relative z-10"
                   onError={(e) => {
@@ -77,7 +77,7 @@ export default function DeanWord() {
               <div className="flex items-center gap-6">
                 <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center overflow-hidden border border-primary/10 shadow-sm">
                   <img 
-                    src="/Faculty-of-Specific-Education/images/doctors/dean_hany.webp" 
+                    src="images/doctors/dean_hany.webp" 
                     alt="أ.د. هاني شحته إبراهيم" 
                     className="w-full h-full object-cover" 
                     onError={(e) => (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800"} 

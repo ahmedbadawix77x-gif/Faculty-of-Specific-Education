@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="space-y-8">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-md overflow-hidden p-1">
-                <img src="/Faculty-of-Specific-Education/images/logo.png" alt="Logo" className="w-full h-full object-contain" />
+                <img src="images/logo.png" alt="Logo" className="w-full h-full object-contain" />
               </div>
               <div>
                 <h2 className="text-primary font-bold text-xl font-arabic">تربية نوعية</h2>
@@ -23,10 +23,17 @@ export default function Footer() {
               كلية التربية النوعية - بنها - حى الزهور.
             </p>
             <div className="flex items-center gap-4">
-              {[Facebook, Twitter, Instagram, Youtube].map((Icon, i) => (
+              {[
+                { Icon: Facebook, href: "https://www.facebook.com/fsed.bu.edu.eg" },
+                { Icon: Twitter, href: "https://twitter.com/BenhaUniversity" },
+                { Icon: Instagram, href: "https://www.instagram.com/benha_university" },
+                { Icon: Youtube, href: "https://www.youtube.com/user/BenhaUniversity" }
+              ].map(({ Icon, href }, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-accent-soft hover:bg-accent text-accent hover:text-white rounded-xl flex items-center justify-center transition-all shadow-sm"
                 >
                   <Icon className="w-5 h-5" />
@@ -42,10 +49,10 @@ export default function Footer() {
               {[
                 { name: "الرئيسية", href: "/" },
                 { name: "عن الكلية", href: "/about" },
-                { name: "الأقسام العلمية", href: "/#departments" },
+                { name: "الأقسام العلمية", href: "#departments" },
                 { name: "أعضاء الجروب", href: "/team" },
                 { name: "مكتبة الكلية", href: "/library" },
-                { name: "تواصل معنا", href: "/#contact" },
+                { name: "تواصل معنا", href: "#contact" },
               ].map((link) => (
                 <li key={link.name}>
                   {link.href.startsWith("/") && !link.href.includes('#') ? (
@@ -58,9 +65,15 @@ export default function Footer() {
                   ) : (
                     <button 
                       onClick={() => {
-                        const [path, hash] = link.href.split('#');
-                        if (window.location.pathname !== path) {
-                          window.location.href = link.href;
+                        let [path, hash] = link.href.split('#');
+                        if (!hash) {
+                          hash = path.startsWith('#') ? path.substring(1) : '';
+                          path = '/';
+                        }
+                        if (!path) path = '/';
+                        
+                        if (window.location.hash.split('?')[0].replace('#', '') !== path) {
+                          window.location.href = `/#${path === '/' ? '' : path}#${hash}`;
                         } else {
                           document.getElementById(hash)?.scrollIntoView({ behavior: 'smooth' });
                         }
@@ -82,10 +95,17 @@ export default function Footer() {
               يمكنك متابعتنا على منصات التواصل الاجتماعي لمعرفة آخر الأخبار.
             </p>
             <div className="flex items-center gap-4">
-              {[Facebook, Twitter, Instagram, Youtube].map((Icon, i) => (
+              {[
+                { Icon: Facebook, href: "https://www.facebook.com/fsed.bu.edu.eg" },
+                { Icon: Twitter, href: "https://twitter.com/BenhaUniversity" },
+                { Icon: Instagram, href: "https://www.instagram.com/benha_university" },
+                { Icon: Youtube, href: "https://www.youtube.com/user/BenhaUniversity" }
+              ].map(({ Icon, href }, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-12 h-12 bg-gray-50 hover:bg-accent text-primary hover:text-white rounded-2xl flex items-center justify-center transition-all shadow-sm border border-gray-100"
                 >
                   <Icon className="w-5 h-5" />
@@ -100,8 +120,8 @@ export default function Footer() {
             {/* Attribution removed as requested */}
           </div>
           <div className="flex items-center gap-8">
-            <a href="#" className="text-text-muted/40 hover:text-accent transition-colors text-[10px] font-arabic font-bold uppercase tracking-widest">سياسة الخصوصية</a>
-            <a href="#" className="text-text-muted/40 hover:text-accent transition-colors text-[10px] font-arabic font-bold uppercase tracking-widest">شروط الاستخدام</a>
+            <a href="https://bu.edu.eg/univ_council/Privacy_Policy.php" target="_blank" rel="noopener noreferrer" className="text-text-muted/40 hover:text-accent transition-colors text-[10px] font-arabic font-bold uppercase tracking-widest">سياسة الخصوصية</a>
+            <a href="https://bu.edu.eg/" target="_blank" rel="noopener noreferrer" className="text-text-muted/40 hover:text-accent transition-colors text-[10px] font-arabic font-bold uppercase tracking-widest">شروط الاستخدام</a>
           </div>
         </div>
       </div>

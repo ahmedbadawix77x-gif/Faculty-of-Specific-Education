@@ -11,6 +11,7 @@ const Regulations = lazy(() => import("./pages/Regulations"));
 const About = lazy(() => import("./pages/About"));
 const Team = lazy(() => import("./pages/Team"));
 const Library = lazy(() => import("./pages/Library"));
+const SpecialPrograms = lazy(() => import("./pages/SpecialPrograms"));
 
 // Loading fallback component
 const PageLoader = () => (
@@ -55,6 +56,7 @@ export default function App() {
                   <Route path="/team" element={<Team />} />
 
                   <Route path="/department/:id" element={<DepartmentDetail />} />
+                  <Route path="/special-programs" element={<SpecialPrograms />} />
                   <Route path="/library" element={<Library />} />
                   <Route path="/regulations" element={<Regulations />} />
                 </Routes>

@@ -64,7 +64,7 @@ export default function Contact() {
             {/* Map Embed */}
             <div className="mt-12 rounded-[2.5rem] overflow-hidden border border-gray-100 h-64 grayscale-[0.5] hover:grayscale-0 transition-all duration-700 shadow-sm">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3439.123456789!2d31.185!3d30.466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDI3JzU3LjYiTiAzMcKwMTEnMDYuMCJF!5e0!3m2!1sen!2seg!4v1620000000000!5m2!1sen!2seg"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3439.023223011409!2d31.1852033!3d30.4660893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145895e63e26f8d3%3A0xc3f545a909772413!2z2YPZhNmK2Kkg2KfZhNiq2LHYqNmK2Kkg2KfZhNmG2YjYudmK2KkgLSDYrNin2YXYudipINio2YbZh9in!5e0!3m2!1sar!2seg!4v1700000000000!5m2!1sar!2seg"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -81,7 +81,14 @@ export default function Contact() {
             viewport={{ once: true }}
             className="bg-[#F8FAFC] p-8 md:p-12 rounded-[3rem] border border-gray-100 shadow-sm"
           >
-            <form className="space-y-8">
+            <form 
+              className="space-y-8"
+              onSubmit={(e) => {
+                e.preventDefault();
+                alert('تم استلام رسالتك بنجاح. سنقوم بالرد عليك في أقرب وقت ممكن.');
+                (e.target as HTMLFormElement).reset();
+              }}
+            >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="space-y-3">
                   <label className="text-[#0A2540]/60 text-sm font-arabic mr-2">الاسم بالكامل</label>

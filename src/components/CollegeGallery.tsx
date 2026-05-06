@@ -4,13 +4,13 @@ import { useState } from "react";
 
 // This list should be updated based on the actual images in public/images/gallery/
 const GALLERY_IMAGES = [
-  { id: 1, url: "/Faculty-of-Specific-Education/images/gallery/WhatsApp Image 2026-04-29 at 10.09.30 PM.webp", title: "مبنى الكلية" },
-  { id: 2, url: "/Faculty-of-Specific-Education/images/gallery/WhatsApp Image 2026-04-29 at 10.09.32 PM.webp", title: "مداخل الكلية" },
-  { id: 3, url: "/Faculty-of-Specific-Education/images/gallery/WhatsApp Image 2026-04-29 at 10.09.33 PM.webp", title: "القاعات الدراسية" },
-  { id: 4, url: "/Faculty-of-Specific-Education/images/gallery/WhatsApp Image 2026-04-29 at 10.09.35 PM.webp", title: "الأنشطة الطلابية" },
-  { id: 5, url: "/Faculty-of-Specific-Education/images/gallery/WhatsApp Image 2026-04-29 at 10.09.36 PM.webp", title: "المعامل التقنية" },
-  { id: 6, url: "/Faculty-of-Specific-Education/images/gallery/WhatsApp Image 2026-04-29 at 10.09.37 PM.webp", title: "مساحات تعليمية" },
-  { id: 7, url: "/Faculty-of-Specific-Education/images/gallery/WhatsApp Image 2026-04-29 at 10.09.38 PM.webp", title: "أروقة الكلية" },
+  { id: 1, url: "images/gallery/WhatsApp Image 2026-04-29 at 10.09.30 PM.webp", title: "مبنى الكلية" },
+  { id: 2, url: "images/gallery/WhatsApp Image 2026-04-29 at 10.09.32 PM.webp", title: "مداخل الكلية" },
+  { id: 3, url: "images/gallery/WhatsApp Image 2026-04-29 at 10.09.33 PM.webp", title: "القاعات الدراسية" },
+  { id: 4, url: "images/gallery/WhatsApp Image 2026-04-29 at 10.09.35 PM.webp", title: "الأنشطة الطلابية" },
+  { id: 5, url: "images/gallery/WhatsApp Image 2026-04-29 at 10.09.36 PM.webp", title: "المعامل التقنية" },
+  { id: 6, url: "images/gallery/WhatsApp Image 2026-04-29 at 10.09.37 PM.webp", title: "مساحات تعليمية" },
+  { id: 7, url: "images/gallery/WhatsApp Image 2026-04-29 at 10.09.38 PM.webp", title: "أروقة الكلية" },
 ];
 
 export default function CollegeGallery() {

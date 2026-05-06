@@ -68,14 +68,16 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <motion.a
-              href="#departments"
+            <motion.button
+              onClick={() => {
+                document.getElementById('departments')?.scrollIntoView({ behavior: 'smooth' });
+              }}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="btn-primary font-arabic"
+              className="w-full sm:w-auto px-10 py-4 bg-accent text-white rounded-2xl font-bold text-lg shadow-lg shadow-accent/20 hover:bg-blue-700 transition-all font-arabic"
             >
               استكشف الأقسام
-            </motion.a>
+            </motion.button>
             <Link
               to="/about"
               className="w-full sm:w-auto px-10 py-4 bg-white/50 backdrop-blur-md hover:bg-white text-primary border border-white/20 rounded-2xl font-bold text-lg transition-all flex items-center justify-center gap-3 font-arabic shadow-sm group"

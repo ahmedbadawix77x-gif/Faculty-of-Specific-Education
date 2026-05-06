@@ -41,7 +41,7 @@ const GALLERY_IMAGES = [
 export default function About() {
   const navigate = useNavigate();
   const getImagePath = (path: string) => {
-    return `/Faculty-of-Specific-Education/${path}`;
+    return path;
   };
 
   return (

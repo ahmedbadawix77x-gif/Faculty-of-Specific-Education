@@ -44,7 +44,7 @@ export default function Navbar() {
   const navLinks = [
     { name: "الرئيسية", href: "/", icon: "Home" },
     { name: "عن الكلية", href: "/about", icon: "Info" },
-    { name: "البرامج النوعية", href: "#special-programs", icon: "Sparkles" },
+    { name: "البرامج النوعية", href: "/special-programs", icon: "Sparkles" },
     { name: "الأقسام", href: "#departments", icon: "LayoutGrid" },
     { name: "مكتبة الكلية", href: "/library", icon: "BookOpen" },
     { name: "معرض الصور", href: "/about#gallery", icon: "ImageIcon" },
@@ -66,7 +66,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
           <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-md overflow-hidden p-1">
-            <img src="/Faculty-of-Specific-Education/images/logo.png" alt="Logo" className="w-full h-full object-contain" />
+            <img src="images/logo.png" alt="Logo" className="w-full h-full object-contain" />
           </div>
           <div className="hidden sm:block text-right">
             <h2 className="text-primary font-bold text-lg leading-tight font-arabic">تربية نوعية</h2>
@@ -102,26 +102,57 @@ export default function Navbar() {
                 key={link.name}
                 onClick={() => {
                   if (isHashInRoute) {
-                    const [path, hash] = link.href.split('#');
+                    let [path, hash] = link.href.split('#');
+                    if (!path) path = '/';
                     if (location.pathname !== path) {
                       navigate(path);
                       setTimeout(() => {
                         const el = document.getElementById(hash);
-                        el?.scrollIntoView({ behavior: "smooth" });
+                        if (el) {
+                          const navHeight = 100;
+                          const elementPosition = el.getBoundingClientRect().top;
+                          const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+                          window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                          });
+                        }
                       }, 500);
                     } else {
                       const el = document.getElementById(hash);
-                      el?.scrollIntoView({ behavior: "smooth" });
+                      if (el) {
+                        const navHeight = 100;
+                        const elementPosition = el.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+                        window.scrollTo({
+                          top: offsetPosition,
+                          behavior: "smooth"
+                        });
+                      }
                     }
                   } else {
                     const el = document.querySelector(link.href);
                     if (el) {
-                      el.scrollIntoView({ behavior: "smooth" });
+                      const navHeight = 100;
+                      const elementPosition = el.getBoundingClientRect().top;
+                      const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+                      window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                      });
                     } else if (location.pathname !== "/") {
                       navigate("/");
                       setTimeout(() => {
                         const el = document.querySelector(link.href);
-                        el?.scrollIntoView({ behavior: "smooth" });
+                        if (el) {
+                          const navHeight = 100;
+                          const elementPosition = el.getBoundingClientRect().top;
+                          const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+                          window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                          });
+                        }
                       }, 500);
                     }
                   }
@@ -187,26 +218,57 @@ export default function Navbar() {
                 onClick={() => {
                   setIsOpen(false);
                   if (isHashInRoute) {
-                    const [path, hash] = link.href.split('#');
+                    let [path, hash] = link.href.split('#');
+                    if (!path) path = '/';
                     if (location.pathname !== path) {
                       navigate(path);
                       setTimeout(() => {
                         const el = document.getElementById(hash);
-                        el?.scrollIntoView({ behavior: "smooth" });
+                        if (el) {
+                          const navHeight = 80;
+                          const elementPosition = el.getBoundingClientRect().top;
+                          const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+                          window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                          });
+                        }
                       }, 500);
                     } else {
                       const el = document.getElementById(hash);
-                      el?.scrollIntoView({ behavior: "smooth" });
+                      if (el) {
+                        const navHeight = 80;
+                        const elementPosition = el.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+                        window.scrollTo({
+                          top: offsetPosition,
+                          behavior: "smooth"
+                        });
+                      }
                     }
                   } else {
                     const el = document.querySelector(link.href);
                     if (el) {
-                      el.scrollIntoView({ behavior: "smooth" });
+                      const navHeight = 80;
+                      const elementPosition = el.getBoundingClientRect().top;
+                      const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+                      window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                      });
                     } else if (location.pathname !== "/") {
                       navigate("/");
                       setTimeout(() => {
                         const el = document.querySelector(link.href);
-                        el?.scrollIntoView({ behavior: "smooth" });
+                        if (el) {
+                          const navHeight = 80;
+                          const elementPosition = el.getBoundingClientRect().top;
+                          const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+                          window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                          });
+                        }
                       }, 500);
                     }
                   }
