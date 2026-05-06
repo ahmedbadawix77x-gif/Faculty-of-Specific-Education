@@ -15,7 +15,7 @@ export default function Contact() {
               className="flex items-center gap-3 mb-6"
             >
               <Sparkles className="text-blue-500 w-5 h-5" />
-              <span className="text-blue-500 font-bold tracking-widest uppercase text-[10px] font-sans">Get In Touch</span>
+              <span className="text-blue-500 font-bold tracking-widest uppercase text-[10px] font-arabic">Get In Touch</span>
             </motion.div>
             
             <motion.h2
@@ -45,7 +45,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-primary font-bold font-arabic mb-1">الهاتف</h4>
-                  <p className="text-text-muted text-sm font-sans">0133266983 - 0133282977</p>
+                  <p className="text-text-muted text-sm font-arabic">0133266983 - 0133282977</p>
                   <p className="text-text-muted text-sm font-arabic">الفاكس: 0133266983</p>
                 </div>
               </div>
@@ -55,8 +55,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-primary font-bold font-arabic mb-1">البريد الإلكتروني</h4>
-                  <p className="text-text-muted text-sm font-sans">info@fsed.bu.edu.eg</p>
-                  <p className="text-text-muted text-[10px] font-sans mt-1">الرقم البريدي: 13511</p>
+                  <p className="text-text-muted text-sm font-arabic">info@fsed.bu.edu.eg</p>
+                  <p className="text-text-muted text-[10px] font-arabic mt-1">الرقم البريدي: 13511</p>
                 </div>
               </div>
             </div>
@@ -95,7 +95,7 @@ export default function Contact() {
                   <label className="text-[#0A2540]/60 text-sm font-arabic mr-2">البريد الإلكتروني</label>
                   <input
                     type="email"
-                    className="w-full bg-white border border-gray-200 rounded-2xl px-6 py-4 text-[#0A2540] focus:border-blue-500 focus:outline-none transition-all font-sans shadow-sm"
+                    className="w-full bg-white border border-gray-200 rounded-2xl px-6 py-4 text-[#0A2540] focus:border-blue-500 focus:outline-none transition-all font-arabic shadow-sm"
                     placeholder="example@mail.com"
                   />
                 </div>

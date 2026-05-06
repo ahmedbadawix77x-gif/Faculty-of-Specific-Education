@@ -50,7 +50,7 @@ export default function Preloader() {
               <h1 className="text-xl md:text-2xl font-bold text-primary font-arabic">
                 كلية التربية النوعية
               </h1>
-              <p className="text-accent/60 mt-2 tracking-[0.2em] uppercase text-[9px] font-sans font-bold">
+              <p className="text-accent/60 mt-2 tracking-[0.2em] uppercase text-[9px] font-arabic font-bold">
                 Faculty of Specific Education
               </p>
             </motion.div>

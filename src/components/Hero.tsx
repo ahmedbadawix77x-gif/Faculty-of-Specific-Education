@@ -110,7 +110,7 @@ export default function Hero() {
         transition={{ duration: 2, repeat: Infinity }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2"
       >
-        <span className="text-blue-400/50 text-[10px] uppercase tracking-[0.3em] font-sans font-bold">Scroll</span>
+        <span className="text-blue-400/50 text-[10px] uppercase tracking-[0.3em] font-arabic font-bold">Scroll</span>
         <ChevronDown className="text-blue-400 w-5 h-5" />
       </motion.div>
 

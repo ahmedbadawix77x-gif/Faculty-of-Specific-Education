@@ -14,7 +14,7 @@ export default function Footer() {
               </div>
               <div>
                 <h2 className="text-primary font-bold text-xl font-arabic">تربية نوعية</h2>
-                <p className="text-accent text-[10px] uppercase tracking-widest font-sans font-bold">Benha University</p>
+                <p className="text-accent text-[10px] uppercase tracking-widest font-arabic font-bold">Benha University</p>
               </div>
             </div>
             <p className="text-text-muted text-sm font-arabic leading-relaxed">

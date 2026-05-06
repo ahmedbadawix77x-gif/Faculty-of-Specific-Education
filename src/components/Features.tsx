@@ -58,7 +58,7 @@ export default function Features() {
                     <Sparkles size={32} />
                   </div>
                   <div>
-                    <h4 className="text-4xl font-black text-primary font-sans leading-none mb-1">25+</h4>
+                    <h4 className="text-4xl font-black text-primary font-arabic leading-none mb-1">25+</h4>
                     <p className="text-accent text-[10px] font-black uppercase tracking-[0.2em]">عام من التميز</p>
                   </div>
                 </div>

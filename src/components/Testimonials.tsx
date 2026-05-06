@@ -20,7 +20,7 @@ export default function Testimonials() {
             className="flex items-center justify-center gap-3 mb-4"
           >
             <Sparkles className="text-accent w-5 h-5" />
-            <span className="text-accent font-bold tracking-widest uppercase text-[10px] font-sans">Departmental Messages</span>
+            <span className="text-accent font-bold tracking-widest uppercase text-[10px] font-arabic">Departmental Messages</span>
           </motion.div>
           
           <motion.h2

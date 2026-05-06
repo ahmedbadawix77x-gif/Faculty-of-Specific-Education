@@ -2,8 +2,19 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { cn } from "../lib/utils";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Home, Info, Sparkles, LayoutGrid, Users, BookOpen, Image as ImageIcon, MessageSquare } from "lucide-react";
 import { useState, useEffect } from "react";
+
+const IconMap: { [key: string]: any } = {
+  Home,
+  Info,
+  Sparkles,
+  LayoutGrid,
+  Users,
+  BookOpen,
+  ImageIcon,
+  MessageSquare,
+};
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -15,7 +26,7 @@ export default function Navbar() {
   const navBg = useTransform(
     scrollY,
     [0, 100],
-    ["rgba(255, 255, 255, 0)", "rgba(255, 255, 255, 0.8)"]
+    ["rgba(255, 255, 255, 0)", "rgba(255, 255, 255, 0.95)"]
   );
 
   const navBlur = useTransform(
@@ -31,13 +42,14 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "الرئيسية", href: "/" },
-    { name: "عن الكلية", href: "/about" },
-    { name: "الأقسام", href: "#departments" },
-    { name: "أعضاء الجروب", href: "/team" },
-    { name: "مكتبة الكلية", href: "/library" },
-    { name: "معرض الصور", href: "/about#gallery" },
-    { name: "تواصل معنا", href: "#contact" },
+    { name: "الرئيسية", href: "/", icon: "Home" },
+    { name: "عن الكلية", href: "/about", icon: "Info" },
+    { name: "البرامج النوعية", href: "#special-programs", icon: "Sparkles" },
+    { name: "الأقسام", href: "#departments", icon: "LayoutGrid" },
+    { name: "مكتبة الكلية", href: "/library", icon: "BookOpen" },
+    { name: "معرض الصور", href: "/about#gallery", icon: "ImageIcon" },
+    { name: "أعضاء الجروب", href: "/team", icon: "Users" },
+    { name: "تواصل معنا", href: "#contact", icon: "MessageSquare" },
   ];
 
   return (
@@ -56,9 +68,9 @@ export default function Navbar() {
           <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-md overflow-hidden p-1">
             <img src="/Faculty-of-Specific-Education/images/logo.png" alt="Logo" className="w-full h-full object-contain" />
           </div>
-          <div className="hidden sm:block">
+          <div className="hidden sm:block text-right">
             <h2 className="text-primary font-bold text-lg leading-tight font-arabic">تربية نوعية</h2>
-            <p className="text-accent text-[10px] uppercase tracking-wider font-sans font-semibold">Benha University</p>
+            <p className="text-accent text-[10px] uppercase tracking-wider font-arabic font-bold">Benha University</p>
           </div>
         </Link>
 
@@ -67,6 +79,7 @@ export default function Navbar() {
           {navLinks.map((link) => {
             const isRoute = link.href.startsWith('/') && !link.href.includes('#');
             const isHashInRoute = link.href.includes('#');
+            const Icon = IconMap[link.icon];
 
             if (isRoute) {
               return (
@@ -74,10 +87,11 @@ export default function Navbar() {
                   key={link.name}
                   to={link.href}
                   className={cn(
-                    "text-primary/70 hover:text-accent transition-colors font-medium text-sm font-arabic",
+                    "text-primary/70 hover:text-accent transition-colors font-medium text-sm font-arabic flex items-center gap-2",
                     location.pathname === link.href && "text-accent font-bold"
                   )}
                 >
+                  <Icon className="w-4 h-4 opacity-50" />
                   {link.name}
                 </Link>
               );
@@ -112,8 +126,9 @@ export default function Navbar() {
                     }
                   }
                 }}
-                className="text-primary/70 hover:text-accent transition-colors font-medium text-sm font-arabic"
+                className="text-primary/70 hover:text-accent transition-colors font-medium text-sm font-arabic flex items-center gap-2"
               >
+                <Icon className="w-4 h-4 opacity-50" />
                 {link.name}
               </button>
             );
@@ -143,10 +158,11 @@ export default function Navbar() {
         animate={isOpen ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
         className="md:hidden bg-white overflow-hidden border-t border-blue-50"
       >
-        <div className="px-6 py-8 flex flex-col gap-6">
+        <div className="px-6 py-8 flex flex-col gap-4">
           {navLinks.map((link) => {
             const isRoute = link.href.startsWith('/') && !link.href.includes('#');
             const isHashInRoute = link.href.includes('#');
+            const Icon = IconMap[link.icon];
 
             if (isRoute) {
               return (
@@ -155,11 +171,12 @@ export default function Navbar() {
                   to={link.href}
                   onClick={() => setIsOpen(false)}
                   className={cn(
-                    "text-[#0A2540]/80 text-lg font-arabic text-right transition-colors",
-                    location.pathname === link.href && "text-accent font-bold"
+                    "flex items-center gap-4 p-4 rounded-2xl transition-all font-arabic",
+                    location.pathname === link.href ? "bg-accent/10 text-accent font-bold" : "text-primary/70 hover:bg-gray-50"
                   )}
                 >
-                  {link.name}
+                  <Icon className={cn("w-5 h-5", location.pathname === link.href ? "text-accent" : "opacity-40")} />
+                  <span className="text-lg">{link.name}</span>
                 </Link>
               );
             }
@@ -194,9 +211,10 @@ export default function Navbar() {
                     }
                   }
                 }}
-                className="text-[#0A2540]/80 text-lg font-arabic text-right transition-colors"
+                className="flex items-center gap-4 p-4 rounded-2xl text-primary/70 hover:bg-gray-50 transition-all font-arabic text-right"
               >
-                {link.name}
+                <Icon className="w-5 h-5 opacity-40" />
+                <span className="text-lg">{link.name}</span>
               </button>
             );
           })}
@@ -204,7 +222,7 @@ export default function Navbar() {
             href="http://mis.bu.edu.eg/"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-blue-600 text-white py-4 rounded-xl font-bold font-arabic text-center"
+            className="bg-accent text-white py-4 rounded-2xl font-bold font-arabic text-center shadow-lg shadow-accent/20 mt-4"
           >
             قدّم الآن
           </a>

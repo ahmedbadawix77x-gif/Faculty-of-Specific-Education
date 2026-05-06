@@ -14,11 +14,13 @@ export default function Home() {
     <main>
       <Hero />
       <DeanWord />
-      <SpecialProgramsSection />
-      <Departments />
       <CinematicSection />
-      <Leadership />
+      <div id="special-programs">
+        <SpecialProgramsSection />
+      </div>
+      <Departments />
       <Videos />
+      <Leadership />
       <Testimonials />
       <Contact />
     </main>

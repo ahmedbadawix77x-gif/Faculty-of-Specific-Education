@@ -18,7 +18,7 @@ export default function Departments() {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-6xl font-bold text-primary mb-6 font-arabic leading-tight"
           >
-            الأقسام <span className="text-accent">والبرامج النوعية</span>
+            الأقسام <span className="text-accent">العلمية</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -27,12 +27,12 @@ export default function Departments() {
             transition={{ delay: 0.2 }}
             className="text-primary/60 text-lg font-arabic max-w-2xl mx-auto"
           >
-            تضم الكلية نخبة من الأقسام العلمية والبرامج النوعية المتميزة التي تغطي مختلف المجالات التربوية والنوعية.
+            تضم الكلية مجموعة متميزة من الأقسام العلمية العريقة التي تساهم في بناء الكوادر المتخصصة.
           </motion.p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {[...DEPARTMENTS].sort((a, b) => (b.isProgram ? 1 : 0) - (a.isProgram ? 1 : 0)).map((dept) => (
+          {DEPARTMENTS.filter(d => !d.isProgram).map((dept) => (
             <VideoCard
               key={dept.id}
               id={dept.id}
@@ -41,7 +41,7 @@ export default function Departments() {
               image={dept.image}
               videoUrl={dept.videoUrl}
               duration={dept.duration}
-              isProgram={dept.isProgram}
+              isProgram={false}
             />
           ))}
         </div>

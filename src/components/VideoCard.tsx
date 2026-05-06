@@ -36,11 +36,7 @@ export default function VideoCard({ id, title, description, image, videoUrl, dur
         {/* Overlay on hover to indicate clickability */}
         <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors pointer-events-none" />
         
-        {isProgram && (
-          <div className="absolute top-4 left-4 bg-blue-600 text-white text-[9px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter z-20 shadow-lg">
-            برنامج مميز
-          </div>
-        )}
+        {/* Badge removed as requested */}
       </div>
 
       {/* Content Section */}
@@ -80,7 +76,7 @@ export default function VideoCard({ id, title, description, image, videoUrl, dur
           </button>
           
           {/* Left side: Status */}
-          <div className="flex items-center gap-2 text-text-muted text-[10px] font-sans font-bold uppercase tracking-wider">
+          <div className="flex items-center gap-2 text-text-muted text-[10px] font-arabic font-bold uppercase tracking-wider">
             <Clock size={12} className="opacity-50" />
             <span>Full Time</span>
           </div>
