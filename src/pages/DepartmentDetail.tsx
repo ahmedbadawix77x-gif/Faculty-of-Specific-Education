@@ -111,6 +111,32 @@ export default function DepartmentDetail() {
               </section>
             )}
 
+            {/* Video Section (Moved Up) */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <section className="md:col-span-2 bg-white p-8 rounded-[2.5rem] shadow-sm border border-gray-100 overflow-hidden">
+                <h3 className="text-xl font-bold text-primary mb-6 font-arabic flex items-center gap-3">
+                  <Play className="text-accent w-6 h-6" />
+                  فيديو تعريفي
+                </h3>
+                <div className="relative rounded-3xl overflow-hidden aspect-video shadow-2xl">
+                  <VideoPlayer 
+                    videoUrl={dept.videoUrl || "https://assets.mixkit.co/videos/preview/mixkit-software-developer-working-on-code-screen-close-up-1728-large.mp4"}
+                    poster={dept.image}
+                    title={dept.title}
+                  />
+                </div>
+              </section>
+              
+              <div className="md:col-span-1">
+                <StaffCard 
+                  name={dept.headOfDept.name}
+                  role={dept.headOfDept.role}
+                  gender={dept.headOfDept.gender}
+                  image={dept.headOfDept.image}
+                />
+              </div>
+            </div>
+
             {/* Vision & Mission */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <section className="bg-white p-10 rounded-[2.5rem] shadow-sm border border-gray-100 hover:shadow-lg transition-shadow">
@@ -249,31 +275,8 @@ export default function DepartmentDetail() {
             </section>
           </div>
 
-          {/* Sidebar */}
+          {/* Sidebar (Only CTA) */}
           <div className="space-y-8">
-            <StaffCard 
-              name={dept.headOfDept.name}
-              role={dept.headOfDept.role}
-              gender={dept.headOfDept.gender}
-              image={dept.headOfDept.image}
-            />
-
-            {/* Video Section */}
-            <section className="bg-white p-8 rounded-[2.5rem] shadow-sm border border-gray-100 overflow-hidden">
-              <h3 className="text-lg font-bold text-primary mb-6 font-arabic flex items-center gap-2">
-                <Play className="text-accent w-5 h-5" />
-                فيديو تعريفي
-              </h3>
-              <div className="relative aspect-video rounded-3xl overflow-hidden">
-                <VideoPlayer 
-                  videoUrl={dept.videoUrl || "https://assets.mixkit.co/videos/preview/mixkit-software-developer-working-on-code-screen-close-up-1728-large.mp4"}
-                  poster={dept.image}
-                  title={dept.title}
-                />
-              </div>
-            </section>
-
-            {/* Apply CTA */}
             <section className="bg-accent p-10 rounded-[2rem] text-white text-center shadow-xl shadow-accent/20">
               <h3 className="text-2xl font-bold font-arabic mb-4">هل أنت مستعد؟</h3>
               <p className="text-blue-100 text-sm font-arabic mb-8">

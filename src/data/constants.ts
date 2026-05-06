@@ -656,6 +656,32 @@ export const MAIN_FACULTY_VIDEO = {
   thumbnail: "/Faculty-of-Specific-Education/images/faculty_16k.png",
 };
 
+export const LIBRARY_INFO = {
+  title: "مكتبة الكلية",
+  description: "منارة المعرفة ومركز البحث العلمي بالكلية، تضم آلاف المراجع والكتب المتخصصة.",
+  overview: "تعد مكتبة الكلية ركناً أساسياً في العملية التعليمية والبحثية، حيث توفر للطلاب والباحثين بيئة هادئة ومجهزة بكافة المصادر الورقية والرقمية اللازمة لتفوقهم الأكاديمي.",
+  vision: "أن تصبح المكتبة مركزاً إشعاعياً متطوراً للمعرفة الرقمية والورقية.",
+  mission: "توفير أحدث مصادر المعلومات والخدمات المكتبية المتطورة لدعم البحث العلمي والعملية التعليمية.",
+  sections: [
+    { title: "قاعة الكتب العربية", description: "تضم أمهات الكتب في التخصصات النوعية المختلفة." },
+    { title: "قاعة المراجع الأجنبية", description: "تحتوي على أحدث الإصدارات العلمية العالمية." },
+    { title: "المكتبة الرقمية", description: "إمكانية الوصول لقواعد البيانات العالمية وبنك المعرفة المصري." },
+    { title: "قاعة الرسائل العلمية", description: "تضم أبحاث الماجستير والدكتوراه لخريجي الكلية." }
+  ],
+  services: [
+    { title: "الإطلاع الداخلي", description: "توفير أماكن هادئة للدراسة والبحث." },
+    { title: "الإعارة الخارجية", description: "نظام إعارة مرن للطلاب وأعضاء هيئة التدريس." },
+    { title: "البحث الآلي", description: "نظام بحث إلكتروني متطور للعثور على الكتب بسهولة." },
+    { title: "التصوير والطباعة", description: "خدمات نسخ وتصوير الأوراق والمراجع." }
+  ],
+  gallery: [
+    "/Faculty-of-Specific-Education/images/library/library-1.jpg",
+    "/Faculty-of-Specific-Education/images/library/library-2.jpg",
+    "/Faculty-of-Specific-Education/images/library/library-3.jpg",
+    "/Faculty-of-Specific-Education/images/library/library-4.jpg"
+  ]
+};
+
 export const FACULTY_LEADERSHIP = [
   {
     name: "أ.د. هاني شحته إبراهيم",

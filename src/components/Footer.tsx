@@ -44,6 +44,7 @@ export default function Footer() {
                 { name: "عن الكلية", href: "/about" },
                 { name: "الأقسام العلمية", href: "/#departments" },
                 { name: "أعضاء الجروب", href: "/team" },
+                { name: "مكتبة الكلية", href: "/library" },
                 { name: "تواصل معنا", href: "/#contact" },
               ].map((link) => (
                 <li key={link.name}>

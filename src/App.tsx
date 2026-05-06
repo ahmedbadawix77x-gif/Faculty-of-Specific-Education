@@ -10,6 +10,7 @@ import DepartmentDetail from "./pages/DepartmentDetail";
 import Regulations from "./pages/Regulations";
 import About from "./pages/About";
 import Team from "./pages/Team";
+import Library from "./pages/Library";
 
 // Component to handle scroll to top on route change
 function ScrollToTop() {
@@ -46,6 +47,7 @@ export default function App() {
                 <Route path="/team" element={<Team />} />
 
                 <Route path="/department/:id" element={<DepartmentDetail />} />
+                <Route path="/library" element={<Library />} />
                 <Route path="/regulations" element={<Regulations />} />
               </Routes>
             </AnimatePresence>

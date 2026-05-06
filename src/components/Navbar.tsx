@@ -35,6 +35,7 @@ export default function Navbar() {
     { name: "عن الكلية", href: "/about" },
     { name: "الأقسام", href: "#departments" },
     { name: "أعضاء الجروب", href: "/team" },
+    { name: "مكتبة الكلية", href: "/library" },
     { name: "معرض الصور", href: "/about#gallery" },
     { name: "تواصل معنا", href: "#contact" },
   ];

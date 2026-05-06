@@ -50,7 +50,7 @@ export default function VideoPlayer({ videoUrl, poster, title }: VideoPlayerProp
 
   if (!videoUrl) {
     return (
-      <div className="relative aspect-video overflow-hidden rounded-t-[2rem] group/player">
+      <div className="relative w-full h-full overflow-hidden group/player">
         <img
           src={getSafeImage(poster, 'dept')}
           alt={title}
@@ -73,7 +73,7 @@ export default function VideoPlayer({ videoUrl, poster, title }: VideoPlayerProp
   return (
     <>
       <div 
-        className="relative aspect-video overflow-hidden rounded-t-[2rem] cursor-pointer bg-black group/player"
+        className="relative w-full h-full overflow-hidden cursor-pointer bg-black group/player"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onClick={openModal}
@@ -157,7 +157,7 @@ export default function VideoPlayer({ videoUrl, poster, title }: VideoPlayerProp
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-12 bg-primary/95 backdrop-blur-sm"
+            className="fixed inset-0 z-[100] flex items-center justify-center p-2 md:p-12 bg-primary/95 backdrop-blur-sm"
             onClick={() => setShowModal(false)}
           >
             <motion.div
@@ -169,9 +169,9 @@ export default function VideoPlayer({ videoUrl, poster, title }: VideoPlayerProp
             >
               <button
                 onClick={() => setShowModal(false)}
-                className="absolute top-6 left-6 z-10 p-3 bg-white/10 hover:bg-white/20 text-white rounded-full backdrop-blur-md transition-all"
+                className="absolute top-4 right-4 z-10 p-2 bg-white/20 hover:bg-white/30 text-white rounded-full backdrop-blur-md transition-all border border-white/10"
               >
-                <X className="w-6 h-6" />
+                <X className="w-5 h-5" />
               </button>
               
               {isYouTube ? (
