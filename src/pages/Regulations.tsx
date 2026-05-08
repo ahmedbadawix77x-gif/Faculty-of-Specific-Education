@@ -122,25 +122,7 @@ export default function Regulations() {
           ))}
         </section>
 
-        {/* Download Section */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          className="mt-20 bg-accent p-12 rounded-[3rem] text-white flex flex-col md:flex-row items-center justify-between gap-8"
-        >
-          <div className="text-right">
-            <h3 className="text-3xl font-bold font-arabic mb-2">دليل الطالب 2025</h3>
-            <p className="text-white/80 font-arabic">يمكنك تحميل النسخة الكاملة من دليل الطالب واللوائح الداخلية.</p>
-          </div>
-          <a 
-            href="https://bu.edu.eg/univ_council/Regulations.php" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="px-10 py-4 bg-white text-accent rounded-2xl font-bold font-arabic hover:scale-105 transition-transform shadow-xl inline-block"
-          >
-            تحميل الدليل (PDF)
-          </a>
-        </motion.div>
+
       </div>
     </div>
   );

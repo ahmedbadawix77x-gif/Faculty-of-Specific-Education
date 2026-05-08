@@ -121,7 +121,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-4 lg:gap-6 xl:gap-8">
           {navLinks.map((link) => {
             const isRoute = link.href.startsWith('/') && !link.href.includes('#');
             const Icon = IconMap[link.icon];
@@ -132,11 +132,11 @@ export default function Navbar() {
                   key={link.name}
                   to={link.href}
                   className={cn(
-                    "text-primary/70 hover:text-accent transition-colors font-medium text-sm font-arabic flex items-center gap-2",
+                    "text-primary/70 hover:text-accent transition-colors font-medium text-[13px] xl:text-sm font-arabic flex items-center gap-2 whitespace-nowrap",
                     location.pathname === link.href && "text-accent font-bold"
                   )}
                 >
-                  <Icon className="w-4 h-4 opacity-50" />
+                  <Icon className="w-4 h-4 opacity-50 hidden xl:block" />
                   {link.name}
                 </Link>
               );
@@ -146,21 +146,19 @@ export default function Navbar() {
               <button
                 key={link.name}
                 onClick={() => handleLinkClick(link.href)}
-                className="text-primary/70 hover:text-accent transition-colors font-medium text-sm font-arabic flex items-center gap-2"
+                className="text-primary/70 hover:text-accent transition-colors font-medium text-[13px] xl:text-sm font-arabic flex items-center gap-2 whitespace-nowrap"
               >
-                <Icon className="w-4 h-4 opacity-50" />
+                <Icon className="w-4 h-4 opacity-50 hidden xl:block" />
                 {link.name}
               </button>
             );
           })}
-          <a 
-            href="http://mis.bu.edu.eg/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="bg-accent hover:bg-blue-700 text-white px-6 py-2.5 rounded-xl text-sm font-bold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-accent/10 font-arabic flex items-center justify-center"
+          <Link 
+            to="/regulations"
+            className="bg-accent hover:bg-blue-700 text-white px-5 xl:px-6 py-2.5 rounded-xl text-[13px] xl:text-sm font-bold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-accent/10 font-arabic flex items-center justify-center whitespace-nowrap min-w-fit"
           >
-            قدّم الآن
-          </a>
+            شروط القبول
+          </Link>
         </div>
 
         {/* Mobile Toggle */}
@@ -211,14 +209,13 @@ export default function Navbar() {
               </button>
             );
           })}
-          <a 
-            href="http://mis.bu.edu.eg/"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link 
+            to="/regulations"
+            onClick={() => setIsOpen(false)}
             className="bg-accent text-white py-4 rounded-2xl font-bold font-arabic text-center shadow-lg shadow-accent/20 mt-4"
           >
-            قدّم الآن
-          </a>
+            شروط القبول
+          </Link>
         </div>
       </motion.div>
     </motion.nav>
