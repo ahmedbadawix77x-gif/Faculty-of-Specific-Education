@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Book, Bookmark, Search, Printer, Sparkles, Target, Eye, Image as ImageIcon, ShieldAlert, Clock, Ban, CheckCircle2, Heart } from "lucide-react";
 import { LIBRARY_INFO } from "../data/constants";
 
 export default function Library() {
@@ -42,8 +41,7 @@ export default function Library() {
             className="bg-white p-10 md:p-12 rounded-[3rem] shadow-sm border border-gray-100 relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-2 h-full bg-accent" />
-            <h3 className="text-2xl font-bold text-primary mb-6 font-arabic flex items-center gap-3">
-              <Target className="text-accent w-6 h-6" />
+            <h3 className="text-2xl font-bold text-primary mb-6 font-arabic text-center">
               الرسالة
             </h3>
             <p className="text-text-muted text-lg leading-relaxed font-arabic">
@@ -58,8 +56,7 @@ export default function Library() {
             className="bg-white p-10 md:p-12 rounded-[3rem] shadow-sm border border-accent/20 relative overflow-hidden group"
           >
             <div className="absolute top-0 right-0 w-2 h-full bg-blue-500" />
-            <h3 className="text-2xl font-bold text-primary mb-6 font-arabic flex items-center gap-3">
-              <Eye className="text-blue-500 w-6 h-6" />
+            <h3 className="text-2xl font-bold text-primary mb-6 font-arabic text-center">
               الرؤية
             </h3>
             <p className="text-text-muted text-lg leading-relaxed font-arabic">
@@ -75,8 +72,7 @@ export default function Library() {
           viewport={{ once: true }}
           className="bg-white p-10 md:p-12 rounded-[3rem] shadow-sm border border-gray-100 mb-12"
         >
-          <h3 className="text-2xl font-bold text-primary mb-6 font-arabic flex items-center gap-3">
-            <Heart className="text-red-500 w-6 h-6" />
+          <h3 className="text-2xl font-bold text-primary mb-6 font-arabic text-center">
             القيم
           </h3>
           <p className="text-text-muted text-lg leading-relaxed font-arabic">
@@ -95,11 +91,8 @@ export default function Library() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05 }}
-                className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-4 hover:shadow-md transition-shadow"
+                className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow"
               >
-                <div className="w-8 h-8 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <CheckCircle2 className="text-accent w-5 h-5" />
-                </div>
                 <p className="text-text-muted font-arabic text-sm leading-relaxed">{obj}</p>
               </motion.div>
             ))}
@@ -114,8 +107,7 @@ export default function Library() {
             viewport={{ once: true }}
             className="lg:col-span-2 bg-white p-10 md:p-12 rounded-[3rem] shadow-sm border border-gray-100"
           >
-            <h3 className="text-2xl font-bold text-primary mb-6 font-arabic flex items-center gap-3">
-              <Bookmark className="text-accent w-6 h-6" />
+            <h3 className="text-2xl font-bold text-primary mb-6 font-arabic text-center">
               سياسة دخول المكتبة
             </h3>
             <p className="text-text-muted mb-8 font-arabic leading-relaxed">
@@ -123,8 +115,7 @@ export default function Library() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {LIBRARY_INFO.policy.rules.map((rule, idx) => (
-                <div key={idx} className="flex items-start gap-3 p-3 bg-gray-50 rounded-xl">
-                  <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                <div key={idx} className="p-4 bg-gray-50 rounded-xl text-center">
                   <p className="text-text-muted text-xs font-arabic leading-relaxed">{rule}</p>
                 </div>
               ))}
@@ -138,8 +129,7 @@ export default function Library() {
               viewport={{ once: true }}
               className="bg-red-50 border border-red-100 p-8 rounded-[2.5rem] shadow-sm"
             >
-              <h3 className="text-xl font-bold text-red-700 mb-4 font-arabic flex items-center gap-2">
-                <ShieldAlert className="w-5 h-5" />
+              <h3 className="text-xl font-bold text-red-700 mb-4 font-arabic text-center">
                 العواقب
               </h3>
               <p className="text-red-600/80 font-arabic text-sm leading-relaxed">
@@ -154,8 +144,7 @@ export default function Library() {
               transition={{ delay: 0.1 }}
               className="bg-blue-50 border border-blue-100 p-8 rounded-[2.5rem] shadow-sm"
             >
-              <h3 className="text-xl font-bold text-blue-700 mb-4 font-arabic flex items-center gap-2">
-                <Clock className="w-5 h-5" />
+              <h3 className="text-xl font-bold text-blue-700 mb-4 font-arabic text-center">
                 مواعيد العمل
               </h3>
               <p className="text-blue-600/80 font-arabic text-sm leading-relaxed font-bold">
@@ -173,10 +162,7 @@ export default function Library() {
             <h2 className="text-3xl font-bold mb-16 font-arabic text-center">الخدمات التي تقدمها المكتبة</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {LIBRARY_INFO.services.map((service, idx) => (
-                <div key={idx} className="flex gap-4 p-6 bg-gray-50/50 rounded-3xl border border-transparent hover:border-accent/10 transition-all">
-                  <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Sparkles className="text-accent w-6 h-6" />
-                  </div>
+                <div key={idx} className="p-8 bg-gray-50/50 rounded-3xl border border-transparent hover:border-accent/10 transition-all text-center">
                   <p className="text-text-muted font-arabic text-sm leading-relaxed">{service}</p>
                 </div>
               ))}
@@ -191,8 +177,7 @@ export default function Library() {
           viewport={{ once: true }}
           className="bg-white p-10 md:p-12 rounded-[3rem] shadow-sm border border-gray-100 mb-12"
         >
-          <h3 className="text-2xl font-bold text-primary mb-8 font-arabic flex items-center gap-3">
-            <Ban className="text-red-500 w-6 h-6" />
+          <h3 className="text-2xl font-bold text-primary mb-8 font-arabic text-center">
             الممنوع من الاستعارة
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
