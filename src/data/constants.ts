@@ -67,7 +67,7 @@ export const DEPARTMENTS: Department[] = [
       }
     ],
     gallery: ["images/tech-edu.png"],
-    videoUrl: "https://www.youtube.com/embed/px_xR5sN6eo",
+    videoUrl: "https://www.youtube.com/embed/RepFKkqsAXM",
     isProgram: false
   },
   {
@@ -116,7 +116,7 @@ export const DEPARTMENTS: Department[] = [
       }
     ],
     gallery: ["https://images.unsplash.com/photo-1514320291944-ed90c6bd561e?auto=format&fit=crop&q=80&w=400"],
-    videoUrl: "https://www.youtube.com/embed/DCVEqIn6eRw",
+    videoUrl: "https://www.youtube.com/embed/7bQPdiGJa5o",
     isProgram: false
   },
   {
@@ -207,7 +207,7 @@ export const DEPARTMENTS: Department[] = [
       }
     ],
     gallery: ["https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=400"],
-    videoUrl: "https://www.youtube.com/embed/VE8EYNoxzt8",
+    videoUrl: "https://www.youtube.com/embed/NvlfzSXev3s",
     isProgram: false
   },
   {
@@ -254,7 +254,7 @@ export const DEPARTMENTS: Department[] = [
       }
     ],
     gallery: ["images/early-childhood.png"],
-    videoUrl: "https://www.youtube.com/embed/2N270-UbKy4",
+    videoUrl: "https://www.youtube.com/embed/ty0YfIUpcmY",
     isProgram: false
   },
   {
@@ -301,7 +301,7 @@ export const DEPARTMENTS: Department[] = [
       }
     ],
     gallery: ["images/edu-media.png"],
-    videoUrl: "https://www.youtube.com/embed/nvUFAITadCg",
+    videoUrl: "https://www.youtube.com/embed/Yls8xkWHcIA",
     isProgram: false
   },
   {
@@ -345,7 +345,7 @@ export const DEPARTMENTS: Department[] = [
       }
     ],
     gallery: ["https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=400"],
-    videoUrl: "https://www.youtube.com/embed/oZ6IMKPO_DI",
+    videoUrl: "https://www.youtube.com/embed/qOlnURV_9Ps",
     isProgram: false
   },
   {
@@ -432,7 +432,7 @@ export const DEPARTMENTS: Department[] = [
       }
     ],
     gallery: ["https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=400"],
-    videoUrl: "https://www.youtube.com/embed/nGenIi1iimI",
+    videoUrl: "https://www.youtube.com/embed/ETbAYPC1K6U",
     isProgram: true
   },
   {
@@ -466,7 +466,7 @@ export const DEPARTMENTS: Department[] = [
       }
     ],
     gallery: ["https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=400"],
-    videoUrl: "https://www.youtube.com/embed/px_xR5sN6eo",
+    videoUrl: "https://www.youtube.com/embed/y5ohmoWbc6k",
     isProgram: true
   },
   {
@@ -500,7 +500,7 @@ export const DEPARTMENTS: Department[] = [
       }
     ],
     gallery: ["https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&q=80&w=400"],
-    videoUrl: "https://www.youtube.com/embed/DCVEqIn6eRw",
+    videoUrl: "https://www.youtube.com/embed/7bQPdiGJa5o",
     isProgram: true
   },
   {
@@ -640,16 +640,16 @@ export const FACULTY_MESSAGES = [
 ];
 
 export const VIDEOS: VideoCard[] = [
-  { id: 1, title: "كلمة عميد الكلية", role: "أ.د. هاني شحته إبراهيم", thumbnail: "images/doctors/dean_hany.webp", videoUrl: "https://www.youtube.com/embed/AYDX4SUiD78" },
-  { id: 2, title: "كلمة وكيل الكلية لشؤون الدراسات العليا", role: "أ.د. بشرى عبد الباقي", thumbnail: "images/doctors/bushra.webp", videoUrl: "https://www.youtube.com/embed/P031X4zvZ3A?feature=share" },
-  { id: 3, title: "كلمة رئيس قسم تكنولوجيا التعليم", role: "أ.د. نبيل السيد", thumbnail: "images/doctors/nabil_elsayed.webp", videoUrl: "https://www.youtube.com/embed/px_xR5sN6eo" },
-  { id: 4, title: "كلمة رئيسة قسم الطفولة المبكرة", role: "أ.د. أمل عبيد", thumbnail: "images/doctors/amal_obeid.webp", videoUrl: "https://www.youtube.com/embed/2N270-UbKy4" },
-  { id: 5, title: "كلمة رئيسة قسم الاقتصاد المنزلي", role: "أ.د. إيناس الدريدي", thumbnail: "images/doctors/enas_elderidy.webp", videoUrl: "https://www.youtube.com/embed/VE8EYNoxzt8" },
-  { id: 6, title: "كلمة رئيس قسم التربية الموسيقية", role: "أ.د. محمد عبد الغفار", thumbnail: "images/doctors/mohamed_abdelghaffar.webp", videoUrl: "https://www.youtube.com/embed/DCVEqIn6eRw" },
-  { id: 7, title: "كلمة رئيس قسم الإعلام التربوي", role: "أ.د. محمود منصور", thumbnail: "images/doctors/mahmoud_mansour.webp", videoUrl: "https://www.youtube.com/embed/nvUFAITadCg" },
-  { id: 8, title: "كلمة رئيسة قسم العلوم التربوية والنفسية", role: "أ.د. نهاد مرزوق قابيل", thumbnail: "images/doctors/nehad_kabeel.webp", videoUrl: "https://www.youtube.com/embed/oZ6IMKPO_DI" },
-  { id: 9, title: "كلمة منسق برنامج ذوي الاحتياجات الخاصة", role: "أ.د. أمل عبيد", thumbnail: "images/doctors/amal_obeid.webp", videoUrl: "https://www.youtube.com/embed/nGenIi1iimI" },
-  { id: 10, title: "كلمة منسق برنامج معلم الحاسب الآلي لذوي الاحتياجات الخاصة", role: "أ.د. نبيل السيد", thumbnail: "images/doctors/nabil_elsayed.webp", videoUrl: "https://www.youtube.com/embed/px_xR5sN6eo" },
+  { id: 1, title: "كلمة عميد الكلية", role: "أ.د. هاني شحته إبراهيم", thumbnail: "images/doctors/dean_hany.webp", videoUrl: "https://www.youtube.com/embed/jv4eZvk41-k" },
+  { id: 2, title: "كلمة وكيل الكلية لشؤون الدراسات العليا", role: "أ.د. بشرى عبد الباقي", thumbnail: "images/doctors/bushra.webp", videoUrl: "https://www.youtube.com/embed/d8C2caGf7_I" },
+  { id: 3, title: "كلمة رئيس قسم تكنولوجيا التعليم", role: "أ.د. نبيل السيد", thumbnail: "images/doctors/nabil_elsayed.webp", videoUrl: "https://www.youtube.com/embed/RepFKkqsAXM" },
+  { id: 4, title: "كلمة رئيسة قسم الطفولة المبكرة", role: "أ.د. أمل عبيد", thumbnail: "images/doctors/amal_obeid.webp", videoUrl: "https://www.youtube.com/embed/ty0YfIUpcmY" },
+  { id: 5, title: "كلمة رئيسة قسم الاقتصاد المنزلي", role: "أ.د. إيناس الدريدي", thumbnail: "images/doctors/enas_elderidy.webp", videoUrl: "https://www.youtube.com/embed/NvlfzSXev3s" },
+  { id: 6, title: "كلمة رئيس قسم التربية الموسيقية", role: "أ.د. محمد عبد الغفار", thumbnail: "images/doctors/mohamed_abdelghaffar.webp", videoUrl: "https://www.youtube.com/embed/7bQPdiGJa5o" },
+  { id: 7, title: "كلمة رئيس قسم الإعلام التربوي", role: "أ.د. محمود منصور", thumbnail: "images/doctors/mahmoud_mansour.webp", videoUrl: "https://www.youtube.com/embed/Yls8xkWHcIA" },
+  { id: 8, title: "كلمة رئيسة قسم العلوم التربوية والنفسية", role: "أ.د. نهاد مرزوق قابيل", thumbnail: "images/doctors/nehad_kabeel.webp", videoUrl: "https://www.youtube.com/embed/qOlnURV_9Ps" },
+  { id: 9, title: "كلمة منسق برنامج ذوي الاحتياجات الخاصة", role: "أ.د. أمل عبيد", thumbnail: "images/doctors/amal_obeid.webp", videoUrl: "https://www.youtube.com/embed/ETbAYPC1K6U" },
+  { id: 10, title: "كلمة منسق برنامج معلم الحاسب الآلي لذوي الاحتياجات الخاصة", role: "أ.د. نبيل السيد", thumbnail: "images/doctors/nabil_elsayed.webp", videoUrl: "https://www.youtube.com/embed/y5ohmoWbc6k" },
 ];
 
 export const MAIN_FACULTY_VIDEO = {

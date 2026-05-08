@@ -52,6 +52,52 @@ export default function Navbar() {
     { name: "تواصل معنا", href: "#contact", icon: "MessageSquare" },
   ];
 
+  const handleLinkClick = (href: string, isMobile: boolean = false) => {
+    if (isMobile) setIsOpen(false);
+
+    const isRoute = href.startsWith('/') && !href.includes('#');
+
+    if (isRoute) {
+      navigate(href);
+      return;
+    }
+
+    let [path, hash] = href.split('#');
+    if (!path && href.startsWith('#')) {
+      hash = href.substring(1);
+      path = '/';
+    } else if (!path) {
+      path = '/';
+    }
+
+    const navHeight = isMobile ? 80 : 100;
+
+    if (location.pathname !== path) {
+      navigate(path);
+      setTimeout(() => {
+        const el = document.getElementById(hash);
+        if (el) {
+          const elementPosition = el.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+          });
+        }
+      }, 500);
+    } else {
+      const el = document.getElementById(hash);
+      if (el) {
+        const elementPosition = el.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }
+    }
+  };
+
   return (
     <motion.nav
       style={{ backgroundColor: navBg, backdropFilter: navBlur }}
@@ -78,7 +124,6 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => {
             const isRoute = link.href.startsWith('/') && !link.href.includes('#');
-            const isHashInRoute = link.href.includes('#');
             const Icon = IconMap[link.icon];
 
             if (isRoute) {
@@ -100,63 +145,7 @@ export default function Navbar() {
             return (
               <button
                 key={link.name}
-                onClick={() => {
-                  if (isHashInRoute) {
-                    let [path, hash] = link.href.split('#');
-                    if (!path) path = '/';
-                    if (location.pathname !== path) {
-                      navigate(path);
-                      setTimeout(() => {
-                        const el = document.getElementById(hash);
-                        if (el) {
-                          const navHeight = 100;
-                          const elementPosition = el.getBoundingClientRect().top;
-                          const offsetPosition = elementPosition + window.pageYOffset - navHeight;
-                          window.scrollTo({
-                            top: offsetPosition,
-                            behavior: "smooth"
-                          });
-                        }
-                      }, 500);
-                    } else {
-                      const el = document.getElementById(hash);
-                      if (el) {
-                        const navHeight = 100;
-                        const elementPosition = el.getBoundingClientRect().top;
-                        const offsetPosition = elementPosition + window.pageYOffset - navHeight;
-                        window.scrollTo({
-                          top: offsetPosition,
-                          behavior: "smooth"
-                        });
-                      }
-                    }
-                  } else {
-                    const el = document.querySelector(link.href);
-                    if (el) {
-                      const navHeight = 100;
-                      const elementPosition = el.getBoundingClientRect().top;
-                      const offsetPosition = elementPosition + window.pageYOffset - navHeight;
-                      window.scrollTo({
-                        top: offsetPosition,
-                        behavior: "smooth"
-                      });
-                    } else if (location.pathname !== "/") {
-                      navigate("/");
-                      setTimeout(() => {
-                        const el = document.querySelector(link.href);
-                        if (el) {
-                          const navHeight = 100;
-                          const elementPosition = el.getBoundingClientRect().top;
-                          const offsetPosition = elementPosition + window.pageYOffset - navHeight;
-                          window.scrollTo({
-                            top: offsetPosition,
-                            behavior: "smooth"
-                          });
-                        }
-                      }, 500);
-                    }
-                  }
-                }}
+                onClick={() => handleLinkClick(link.href)}
                 className="text-primary/70 hover:text-accent transition-colors font-medium text-sm font-arabic flex items-center gap-2"
               >
                 <Icon className="w-4 h-4 opacity-50" />
@@ -192,7 +181,6 @@ export default function Navbar() {
         <div className="px-6 py-8 flex flex-col gap-4">
           {navLinks.map((link) => {
             const isRoute = link.href.startsWith('/') && !link.href.includes('#');
-            const isHashInRoute = link.href.includes('#');
             const Icon = IconMap[link.icon];
 
             if (isRoute) {
@@ -215,65 +203,8 @@ export default function Navbar() {
             return (
               <button
                 key={link.name}
-                onClick={() => {
-                  setIsOpen(false);
-                  if (isHashInRoute) {
-                    let [path, hash] = link.href.split('#');
-                    if (!path) path = '/';
-                    if (location.pathname !== path) {
-                      navigate(path);
-                      setTimeout(() => {
-                        const el = document.getElementById(hash);
-                        if (el) {
-                          const navHeight = 80;
-                          const elementPosition = el.getBoundingClientRect().top;
-                          const offsetPosition = elementPosition + window.pageYOffset - navHeight;
-                          window.scrollTo({
-                            top: offsetPosition,
-                            behavior: "smooth"
-                          });
-                        }
-                      }, 500);
-                    } else {
-                      const el = document.getElementById(hash);
-                      if (el) {
-                        const navHeight = 80;
-                        const elementPosition = el.getBoundingClientRect().top;
-                        const offsetPosition = elementPosition + window.pageYOffset - navHeight;
-                        window.scrollTo({
-                          top: offsetPosition,
-                          behavior: "smooth"
-                        });
-                      }
-                    }
-                  } else {
-                    const el = document.querySelector(link.href);
-                    if (el) {
-                      const navHeight = 80;
-                      const elementPosition = el.getBoundingClientRect().top;
-                      const offsetPosition = elementPosition + window.pageYOffset - navHeight;
-                      window.scrollTo({
-                        top: offsetPosition,
-                        behavior: "smooth"
-                      });
-                    } else if (location.pathname !== "/") {
-                      navigate("/");
-                      setTimeout(() => {
-                        const el = document.querySelector(link.href);
-                        if (el) {
-                          const navHeight = 80;
-                          const elementPosition = el.getBoundingClientRect().top;
-                          const offsetPosition = elementPosition + window.pageYOffset - navHeight;
-                          window.scrollTo({
-                            top: offsetPosition,
-                            behavior: "smooth"
-                          });
-                        }
-                      }, 500);
-                    }
-                  }
-                }}
-                className="flex items-center gap-4 p-4 rounded-2xl text-primary/70 hover:bg-gray-50 transition-all font-arabic text-right"
+                onClick={() => handleLinkClick(link.href, true)}
+                className="flex items-center gap-4 p-4 rounded-2xl text-primary/70 hover:bg-gray-50 transition-all font-arabic text-right w-full"
               >
                 <Icon className="w-5 h-5 opacity-40" />
                 <span className="text-lg">{link.name}</span>
