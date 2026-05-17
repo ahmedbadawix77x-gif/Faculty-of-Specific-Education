@@ -4,6 +4,7 @@ import { AnimatePresence } from "framer-motion";
 import Preloader from "./components/Preloader";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Chatbot from "./components/Chatbot";
 
 const Home = lazy(() => import("./pages/Home"));
 const DepartmentDetail = lazy(() => import("./pages/DepartmentDetail"));
@@ -63,9 +64,11 @@ export default function App() {
               </Suspense>
             </AnimatePresence>
             <Footer />
+            <Chatbot />
           </>
         )}
       </div>
     </Router>
+
   );
 }
