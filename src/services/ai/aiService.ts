@@ -60,8 +60,14 @@ ${userQuery}
     });
 
     return response.text || "عذراً، حدث خطأ أثناء توليد الرد.";
-  } catch (error) {
+  } catch (error: any) {
     console.error("AI Service Error:", error);
-    return "عذراً، حدث خطأ في الاتصال بالخادم. يرجى التأكد من اتصالك بالإنترنت والمحاولة لاحقاً.";
+    
+    const errorString = String(error).toLowerCase();
+    if (errorString.includes("quota") || errorString.includes("429") || errorString.includes("rate limit") || errorString.includes("exhausted")) {
+      return "عذراً، لقد استنفدت الحد الأقصى للأسئلة المجانية المسموح بها حالياً من جوجل (Quota Exceeded). يرجى المحاولة لاحقاً أو استخدام مفتاح API جديد.";
+    }
+    
+    return "عذراً، حدث خطأ في الاتصال بخوادم الذكاء الاصطناعي. يرجى التأكد من اتصالك بالإنترنت والمحاولة لاحقاً.";
   }
 }
