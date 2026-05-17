@@ -6,9 +6,17 @@ export default function Preloader() {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
+    // Check if preloader has already run in this session
+    const hasRun = sessionStorage.getItem("preloader_run");
+    if (hasRun === "true") {
+      setIsVisible(false);
+      return;
+    }
+
     const timer = setTimeout(() => {
       setIsVisible(false);
-    }, 1500);
+      sessionStorage.setItem("preloader_run", "true");
+    }, 800); // Shorter duration for high-speed premium feel
     return () => clearTimeout(timer);
   }, []);
 
