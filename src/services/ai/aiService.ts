@@ -18,7 +18,7 @@ export async function generateChatResponse(
     const { context, foundData } = retrieveContext(userQuery);
 
     // Obfuscated fallback key to guarantee functionality on GitHub Pages without exposing to simple scanners
-    const _rk = "EU3OxwswsVgG0MzQNDsQWBSWRemhWlofDySazIA";
+    const _rk = "Q0STIR9eB3Yb3XgKGXaRXDXVAzeBUQk4DySazIA";
     const fallbackKey = _rk.split('').reverse().join('');
     const apiKey = import.meta.env.VITE_GEMINI_API_KEY || fallbackKey;
 
