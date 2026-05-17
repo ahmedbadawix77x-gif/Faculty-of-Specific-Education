@@ -23,3 +23,5 @@ export default defineConfig(({mode}) => {
     },
   };
 });
+
+// Trigger fresh deploy to inject repository secrets
