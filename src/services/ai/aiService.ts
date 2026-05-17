@@ -2,10 +2,6 @@ import { GoogleGenAI } from "@google/genai";
 import { SYSTEM_PROMPT } from "./systemPrompt";
 import { retrieveContext } from "./contentService";
 
-const ai = new GoogleGenAI({
-  apiKey: import.meta.env.VITE_GEMINI_API_KEY || "", 
-});
-
 export interface AIMessage {
   id: string;
   text: string;
@@ -21,9 +17,13 @@ export async function generateChatResponse(
     // 1. Retrieve Context
     const { context, foundData } = retrieveContext(userQuery);
 
-    if (!import.meta.env.VITE_GEMINI_API_KEY) {
-      return "عذراً، لم يتم العثور على مفتاح **Gemini API**. يرجى إضافة `VITE_GEMINI_API_KEY` في ملف `.env.local` وإعادة تشغيل السيرفر.";
+    const apiKey = import.meta.env.VITE_GEMINI_API_KEY || "";
+
+    if (!apiKey) {
+      return "عذراً، لم يتم العثور على مفتاح **Gemini API**. يرجى عمل تحديث كامل لصفحة المتصفح (F5) أو إعادة تشغيل السيرفر بعد التأكد من وجود ملف `.env` المحتوي على المفتاح.";
     }
+
+    const ai = new GoogleGenAI({ apiKey });
 
     // 2. Prepare Context
     const finalContext = foundData 
