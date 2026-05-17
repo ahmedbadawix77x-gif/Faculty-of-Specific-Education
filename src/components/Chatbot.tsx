@@ -27,7 +27,7 @@ export default function Chatbot() {
   const [messages, setMessages] = useState<AIMessage[]>([
     {
       id: "1",
-      text: "أهلاً بك! أنا **المساعد الذكي** لكلية التربية النوعية بجامعة بنها 🎓\nاختر أحد الأسئلة التالية وسأجيبك فوراً من قاعدة بيانات الكلية المعتمدة:",
+      text: "أهلاً بك! أنا **Naway AI**، المساعد الذكي الرسمي لكلية التربية النوعية بجامعة بنها 🎓\nاختر أحد الأسئلة التالية وسأجيبك فوراً من قاعدة بيانات الكلية المعتمدة:",
       sender: "bot",
       timestamp: new Date(),
     },
@@ -126,7 +126,7 @@ export default function Chatbot() {
                   <span className="absolute bottom-[-2px] left-[-2px] w-3.5 h-3.5 bg-green-400 border-2 border-white rounded-full"></span>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg tracking-wide drop-shadow-sm font-sans">مساعد الكلية</h3>
+                  <h3 className="font-bold text-lg tracking-wide drop-shadow-sm font-sans">Naway AI</h3>
                   <p className="text-xs text-sky-100 font-medium">كلية التربية النوعية</p>
                 </div>
               </div>
