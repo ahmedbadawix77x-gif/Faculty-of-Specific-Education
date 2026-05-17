@@ -3,13 +3,22 @@ import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, X, Send, Bot, User, Sparkles, ChevronDown } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { generateChatResponse, AIMessage } from "../services/ai/aiService";
+import { retrieveContext } from "../services/ai/contentService";
+
+export interface AIMessage {
+  id: string;
+  text: string;
+  sender: "user" | "bot";
+  timestamp: Date;
+}
 
 const SUGGESTED_QUESTIONS = [
-  "ما هي شروط القبول بالكلية؟",
+  "ما هي شروط القبول والمصروفات؟",
+  "ما هي الأقسام والبرامج المتاحة بالكلية؟",
   "ما الفرق بين قسم تكنولوجيا التعليم والحاسب؟",
-  "كم تبلغ مصروفات البرامج الخاصة؟",
-  "ما هي مجالات العمل المتاحة للخريجين؟",
+  "ما هي مجالات وفرص العمل للخريجين؟",
+  "من هم قيادات الكلية ورؤساء الأقسام؟",
+  "ما هي قواعد المكتبة وشروط الاستعارة؟",
 ];
 
 export default function Chatbot() {
@@ -18,20 +27,19 @@ export default function Chatbot() {
   const [messages, setMessages] = useState<AIMessage[]>([
     {
       id: "1",
-      text: "أهلاً بك! أنا **Naway AI**، المساعد الذكي الرسمي لكلية التربية النوعية بجامعة بنها 🎓\nكيف يمكنني مساعدتك اليوم؟",
+      text: "أهلاً بك! أنا **المساعد الذكي** لكلية التربية النوعية بجامعة بنها 🎓\nاختر أحد الأسئلة التالية وسأجيبك فوراً من قاعدة بيانات الكلية المعتمدة:",
       sender: "bot",
       timestamp: new Date(),
     },
   ]);
-  const [inputValue, setInputValue] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, isOpen, isTyping]);
 
-  const handleSendMessage = async (text: string) => {
-    if (!text.trim()) return;
+  const handleSendMessage = (text: string) => {
+    if (!text.trim() || isTyping) return;
 
     const newUserMessage: AIMessage = {
       id: Date.now().toString(),
@@ -41,12 +49,16 @@ export default function Chatbot() {
     };
     
     setMessages((prev) => [...prev, newUserMessage]);
-    setInputValue("");
     setIsTyping(true);
 
-    try {
-      // Call AI Service
-      const botResponseText = await generateChatResponse(text, messages);
+    // Fake typing delay for a natural feel, then reply instantly using local static data!
+    setTimeout(() => {
+      const { context, foundData } = retrieveContext(text);
+      let botResponseText = context;
+      
+      if (!foundData || !context) {
+        botResponseText = "عذراً، لا تتوفر معلومات جاهزة حول هذا الاستفسار حالياً. يرجى مراجعة إدارة شؤون الطلاب للحصول على التفاصيل.";
+      }
       
       const newBotMessage: AIMessage = {
         id: (Date.now() + 1).toString(),
@@ -56,17 +68,8 @@ export default function Chatbot() {
       };
       
       setMessages((prev) => [...prev, newBotMessage]);
-    } catch (error) {
-      const errorMessage: AIMessage = {
-        id: (Date.now() + 1).toString(),
-        text: "حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى.",
-        sender: "bot",
-        timestamp: new Date(),
-      };
-      setMessages((prev) => [...prev, errorMessage]);
-    } finally {
       setIsTyping(false);
-    }
+    }, 600);
   };
 
   const formatTime = (date: Date) => {
@@ -123,7 +126,7 @@ export default function Chatbot() {
                   <span className="absolute bottom-[-2px] left-[-2px] w-3.5 h-3.5 bg-green-400 border-2 border-white rounded-full"></span>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg tracking-wide drop-shadow-sm font-sans">Naway AI</h3>
+                  <h3 className="font-bold text-lg tracking-wide drop-shadow-sm font-sans">مساعد الكلية</h3>
                   <p className="text-xs text-sky-100 font-medium">كلية التربية النوعية</p>
                 </div>
               </div>
@@ -205,54 +208,24 @@ export default function Chatbot() {
                 </motion.div>
               )}
 
-              {/* Suggested Questions removed from here, moving to input area */}
               <div ref={messagesEndRef} />
             </div>
 
-            {/* Input Area with Persistent Suggestions */}
-            <div className="bg-white border-t border-gray-100 shrink-0 flex flex-col">
-              {/* Persistent Suggestions */}
-              <div className="flex gap-2 overflow-x-auto p-3 scrollbar-hide border-b border-gray-50/50" dir="rtl" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
-                <style>{`.scrollbar-hide::-webkit-scrollbar { display: none; }`}</style>
+            {/* Static Options Area (Replacing Text Input) */}
+            <div className="bg-white border-t border-gray-100 p-4 shrink-0 flex flex-col gap-2 shadow-[0_-10px_20px_rgba(0,0,0,0.02)] relative z-20">
+              <p className="text-xs text-center text-gray-500 font-medium mb-1">الرجاء اختيار أحد الاستفسارات الشائعة المتاحة:</p>
+              <div className="flex flex-wrap gap-2 justify-center max-h-[160px] overflow-y-auto pr-1 pb-1 custom-scrollbar">
                 {SUGGESTED_QUESTIONS.map((q, i) => (
                   <button
                     key={i}
                     onClick={() => handleSendMessage(q)}
                     disabled={isTyping}
-                    className="whitespace-nowrap text-[13px] bg-sky-50/50 border border-sky-100 text-sky-700 hover:bg-sky-100 hover:border-sky-200 transition-all px-4 py-1.5 rounded-full flex-shrink-0 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm hover:shadow-md"
+                    className="text-[13px] bg-sky-50/70 border border-sky-100 text-sky-700 hover:bg-sky-500 hover:text-white hover:border-sky-500 transition-all px-3 py-2 rounded-xl disabled:opacity-50 disabled:cursor-not-allowed shadow-sm hover:shadow-md text-right w-full font-medium"
                   >
                     {q}
                   </button>
                 ))}
               </div>
-
-              {/* Chat Input */}
-              <div className="p-4 pt-3">
-                <form
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    handleSendMessage(inputValue);
-                  }}
-                  className="relative flex items-center gap-2"
-                >
-                <input
-                  type="text"
-                  value={inputValue}
-                  onChange={(e) => setInputValue(e.target.value)}
-                  placeholder="اكتب سؤالك هنا..."
-                  className="flex-1 bg-gray-50 border border-gray-200 rounded-full pl-14 pr-5 py-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500/30 focus:border-sky-500 focus:bg-white transition-all"
-                  dir="rtl"
-                  disabled={isTyping}
-                />
-                <button
-                  type="submit"
-                  disabled={!inputValue.trim() || isTyping}
-                  className="absolute left-1.5 top-1.5 bottom-1.5 w-11 bg-sky-500 text-white rounded-full flex items-center justify-center hover:bg-sky-600 disabled:opacity-40 disabled:hover:bg-sky-500 transition-all shadow-md"
-                >
-                  <Send size={18} className="rtl:-ml-1" />
-                </button>
-              </form>
-            </div>
             </div>
           </motion.div>
         )}
