@@ -432,7 +432,7 @@ export const DEPARTMENTS: Department[] = [
       }
     ],
     gallery: ["https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=400"],
-    videoUrl: "https://www.youtube.com/embed/ETbAYPC1K6U",
+    videoUrl: "https://www.youtube.com/embed/n8Z0La7_XjE",
     isProgram: true
   },
   {
@@ -641,21 +641,23 @@ export const FACULTY_MESSAGES = [
 
 export const VIDEOS: VideoCard[] = [
   { id: 1, title: "كلمة عميد الكلية", role: "أ.د. هاني شحته إبراهيم", thumbnail: "images/doctors/dean_hany.webp", videoUrl: "https://www.youtube.com/embed/jv4eZvk41-k" },
-  { id: 2, title: "كلمة وكيل الكلية لشؤون الدراسات العليا", role: "أ.د. بشرى عبد الباقي", thumbnail: "images/doctors/bushra.webp", videoUrl: "https://www.youtube.com/embed/d8C2caGf7_I" },
-  { id: 3, title: "كلمة رئيس قسم تكنولوجيا التعليم", role: "أ.د. نبيل السيد", thumbnail: "images/doctors/nabil_elsayed.webp", videoUrl: "https://www.youtube.com/embed/RepFKkqsAXM" },
-  { id: 4, title: "كلمة رئيسة قسم الطفولة المبكرة", role: "أ.د. أمل عبيد", thumbnail: "images/doctors/amal_obeid.webp", videoUrl: "https://www.youtube.com/embed/ty0YfIUpcmY" },
-  { id: 5, title: "كلمة رئيسة قسم الاقتصاد المنزلي", role: "أ.د. إيناس الدريدي", thumbnail: "images/doctors/enas_elderidy.webp", videoUrl: "https://www.youtube.com/embed/NvlfzSXev3s" },
-  { id: 6, title: "كلمة رئيس قسم التربية الموسيقية", role: "أ.د. محمد عبد الغفار", thumbnail: "images/doctors/mohamed_abdelghaffar.webp", videoUrl: "https://www.youtube.com/embed/7bQPdiGJa5o" },
-  { id: 7, title: "كلمة رئيس قسم الإعلام التربوي", role: "أ.د. محمود منصور", thumbnail: "images/doctors/mahmoud_mansour.webp", videoUrl: "https://www.youtube.com/embed/Yls8xkWHcIA" },
-  { id: 8, title: "كلمة رئيسة قسم العلوم التربوية والنفسية", role: "أ.د. نهاد مرزوق قابيل", thumbnail: "images/doctors/nehad_kabeel.webp", videoUrl: "https://www.youtube.com/embed/qOlnURV_9Ps" },
-  { id: 9, title: "كلمة منسق برنامج ذوي الاحتياجات الخاصة", role: "أ.د. أمل عبيد", thumbnail: "images/doctors/amal_obeid.webp", videoUrl: "https://www.youtube.com/embed/ETbAYPC1K6U" },
-  { id: 10, title: "كلمة منسق برنامج معلم الحاسب الآلي لذوي الاحتياجات الخاصة", role: "أ.د. نبيل السيد", thumbnail: "images/doctors/nabil_elsayed.webp", videoUrl: "https://www.youtube.com/embed/y5ohmoWbc6k" },
+  { id: 2, title: "كلمة وكيل الكلية لشؤون التعليم والطلاب", role: "أ.د. غادة شاكر عبد الفتاح", thumbnail: "images/doctors/ghada_shaker.jpg", videoUrl: "https://www.youtube.com/embed/qevtHFSgIqc" },
+  { id: 3, title: "كلمة وكيل الكلية لشؤون خدمة المجتمع وتنمية البيئة", role: "أ.د. ياسر عبد الرحمن عيسى", thumbnail: "images/doctors/yasser.webp", videoUrl: "https://www.youtube.com/embed/o6N4YM1w-nw" },
+  { id: 4, title: "كلمة وكيل الكلية لشؤون الدراسات العليا", role: "أ.د. بشرى عبد الباقي", thumbnail: "images/doctors/bushra.webp", videoUrl: "https://www.youtube.com/embed/d8C2caGf7_I" },
+  { id: 5, title: "كلمة رئيس قسم تكنولوجيا التعليم", role: "أ.د. نبيل السيد", thumbnail: "images/doctors/nabil_elsayed.webp", videoUrl: "https://www.youtube.com/embed/RepFKkqsAXM" },
+  { id: 6, title: "كلمة رئيسة قسم الطفولة المبكرة", role: "أ.د. أمل عبيد", thumbnail: "images/doctors/amal_obeid.webp", videoUrl: "https://www.youtube.com/embed/ty0YfIUpcmY" },
+  { id: 7, title: "كلمة رئيسة قسم الاقتصاد المنزلي", role: "أ.د. إيناس الدريدي", thumbnail: "images/doctors/enas_elderidy.webp", videoUrl: "https://www.youtube.com/embed/NvlfzSXev3s" },
+  { id: 8, title: "كلمة رئيس قسم التربية الموسيقية", role: "أ.د. محمد عبد الغفار", thumbnail: "images/doctors/mohamed_abdelghaffar.webp", videoUrl: "https://www.youtube.com/embed/7bQPdiGJa5o" },
+  { id: 9, title: "كلمة رئيس قسم الإعلام التربوي", role: "أ.د. محمود منصور", thumbnail: "images/doctors/mahmoud_mansour.webp", videoUrl: "https://www.youtube.com/embed/Yls8xkWHcIA" },
+  { id: 10, title: "كلمة رئيسة قسم العلوم التربوية والنفسية", role: "أ.د. نهاد مرزوق قابيل", thumbnail: "images/doctors/nehad_kabeel.webp", videoUrl: "https://www.youtube.com/embed/qOlnURV_9Ps" },
+  { id: 11, title: "كلمة منسق برنامج ذوي الاحتياجات الخاصة", role: "أ.د. أمل عبيد", thumbnail: "images/doctors/amal_obeid.webp", videoUrl: "https://www.youtube.com/embed/n8Z0La7_XjE" },
+  { id: 12, title: "كلمة منسق برنامج معلم الحاسب الآلي لذوي الاحتياجات الخاصة", role: "أ.د. نبيل السيد", thumbnail: "images/doctors/nabil_elsayed.webp", videoUrl: "https://www.youtube.com/embed/y5ohmoWbc6k" },
 ];
 
 export const MAIN_FACULTY_VIDEO = {
   title: "الفيلم التعريفي الشامل",
   subtitle: "استكشف أروقة كلية التربية النوعية وتعرف على أقسامنا المبدعة في فيلم واحد مجمع.",
-  videoUrl: "https://www.youtube.com/embed/Wkl48QFIozQ",
+  videoUrl: "https://www.youtube.com/embed/WjyRVbHx5kI",
   thumbnail: "images/faculty_16k.png",
 };
 
