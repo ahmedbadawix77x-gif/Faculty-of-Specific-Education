@@ -500,7 +500,7 @@ export const DEPARTMENTS: Department[] = [
       }
     ],
     gallery: ["https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&q=80&w=400"],
-    videoUrl: "https://www.youtube.com/embed/7bQPdiGJa5o",
+    videoUrl: "https://www.youtube.com/embed/DCVEqIn6eRw",
     isProgram: true
   },
   {
