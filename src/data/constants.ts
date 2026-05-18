@@ -650,7 +650,7 @@ export const VIDEOS: VideoCard[] = [
   { id: 8, title: "كلمة رئيس قسم التربية الموسيقية", role: "أ.د. محمد عبد الغفار", thumbnail: "images/doctors/mohamed_abdelghaffar.webp", videoUrl: "https://www.youtube.com/embed/7bQPdiGJa5o" },
   { id: 9, title: "كلمة رئيس قسم الإعلام التربوي", role: "أ.د. محمود منصور", thumbnail: "images/doctors/mahmoud_mansour.webp", videoUrl: "https://www.youtube.com/embed/Yls8xkWHcIA" },
   { id: 10, title: "كلمة رئيسة قسم العلوم التربوية والنفسية", role: "أ.د. نهاد مرزوق قابيل", thumbnail: "images/doctors/nehad_kabeel.webp", videoUrl: "https://www.youtube.com/embed/qOlnURV_9Ps" },
-  { id: 11, title: "كلمة منسق برنامج ذوي الاحتياجات الخاصة", role: "أ.د. أمل عبيد", thumbnail: "images/doctors/amal_obeid.webp", videoUrl: "https://www.youtube.com/embed/n8Z0La7_XjE" },
+  { id: 11, title: "كلمة منسق برنامج ذوي الاحتياجات الخاصة في مرحلة الطفولة المبكرة", role: "أ.د. أمل عبيد", thumbnail: "images/doctors/amal_obeid.webp", videoUrl: "https://www.youtube.com/embed/n8Z0La7_XjE" },
   { id: 12, title: "كلمة منسق برنامج معلم الحاسب الآلي لذوي الاحتياجات الخاصة", role: "أ.د. نبيل السيد", thumbnail: "images/doctors/nabil_elsayed.webp", videoUrl: "https://www.youtube.com/embed/y5ohmoWbc6k" },
 ];
 
