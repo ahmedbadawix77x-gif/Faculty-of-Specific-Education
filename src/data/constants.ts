@@ -466,7 +466,7 @@ export const DEPARTMENTS: Department[] = [
       }
     ],
     gallery: ["https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=400"],
-    videoUrl: "https://www.youtube.com/embed/y5ohmoWbc6k",
+    videoUrl: "https://www.youtube.com/embed/pJeEWwZC0UE",
     isProgram: true
   },
   {
@@ -651,7 +651,6 @@ export const VIDEOS: VideoCard[] = [
   { id: 9, title: "كلمة رئيس قسم الإعلام التربوي", role: "أ.د. محمود منصور", thumbnail: "images/doctors/mahmoud_mansour.webp", videoUrl: "https://www.youtube.com/embed/Yls8xkWHcIA" },
   { id: 10, title: "كلمة رئيسة قسم العلوم التربوية والنفسية", role: "أ.د. نهاد مرزوق قابيل", thumbnail: "images/doctors/nehad_kabeel.webp", videoUrl: "https://www.youtube.com/embed/qOlnURV_9Ps" },
   { id: 11, title: "كلمة منسق برنامج ذوي الاحتياجات الخاصة في مرحلة الطفولة المبكرة", role: "أ.د. أمل عبيد", thumbnail: "images/doctors/amal_obeid.webp", videoUrl: "https://www.youtube.com/embed/n8Z0La7_XjE" },
-  { id: 12, title: "كلمة منسق برنامج معلم الحاسب الآلي لذوي الاحتياجات الخاصة", role: "أ.د. نبيل السيد", thumbnail: "images/doctors/nabil_elsayed.webp", videoUrl: "https://www.youtube.com/embed/y5ohmoWbc6k" },
 ];
 
 export const MAIN_FACULTY_VIDEO = {
